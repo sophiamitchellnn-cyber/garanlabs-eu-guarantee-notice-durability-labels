@@ -1,0 +1,91 @@
+<?php
+/**
+ * Email withdrawal details
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/emails/plain/email-withdrawal-details.php.
+ *
+ * HOWEVER, on occasion EU OWB will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @package EGGL/Withdrawal/Templates
+ * @version 2.4.0
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+$text_align                 = is_rtl() ? 'right' : 'left';
+$email_improvements_enabled = \EGGL\Withdrawal\Package::has_email_improvements_enabled();
+$verified_notice            = $withdrawal->has_verified_email() ? esc_html_x( 'verified', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) : esc_html_x( 'unknown', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' );
+
+do_action( 'eggl_wd_withdrawal_before_order_table', $order, $sent_to_admin, $plain_text, $email, $withdrawal ); ?>
+
+<?php
+	echo wp_kses_post( _x( 'Withdrawal summary', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) );
+	echo "\n==========\n";
+?>
+
+<?php echo wp_kses_post( _x( 'Contract Identification', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) ); ?>: <?php echo wp_kses_post( $withdrawal->get_contract_identification() ) . "\n"; ?>
+<?php echo wp_kses_post( _x( 'Received on', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) ); ?>: <?php echo esc_html( sprintf( _x( '%1$s at %2$s', 'owb-datetime', 'garanlabs-eu-guarantee-notice-durability-labels' ), wc_format_datetime( $withdrawal->get_date_received() ), wc_format_datetime( $withdrawal->get_date_received(), wc_time_format() ) ) ) . "\n"; ?>
+<?php echo wp_kses_post( _x( 'Email', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) ); ?>: <?php echo wp_kses_post( $withdrawal->get_email() ) . ( $sent_to_admin ? ' (' . esc_html( $verified_notice ) . ')' : '' ) . "\n"; ?>
+<?php echo wp_kses_post( _x( 'Full name', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) ); ?>: <?php echo wp_kses_post( $withdrawal->get_formatted_full_name( true, 'email' ) ) . "\n"; ?>
+<?php
+if ( apply_filters( 'eu_order_woocommerce_withdrawal_email_show_verification_code', true, $withdrawal, $email, $sent_to_admin ) ) :
+	echo wp_kses_post( _x( 'Verification code', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) );
+	?>
+	: 
+	<?php
+	echo wp_kses_post( $withdrawal->get_verification_code() ) . "\n";
+endif;
+?>
+
+<?php if ( $withdrawal->get_additional_information() ) : ?>
+	<?php if ( $email_improvements_enabled ) : ?>
+		<?php echo "\n" . esc_html_x( 'Additional Information', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) . "\n" . wp_kses( eggl_wd_wptexturize_withdrawal_additional_information( $withdrawal->get_additional_information() ), array() ) . "\n"; ?>
+	<?php else : ?>
+		<?php echo esc_html_x( 'Additional Information', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) . "\t " . wp_kses( eggl_wd_wptexturize_withdrawal_additional_information( $withdrawal->get_additional_information() ), array() ) . "\n"; ?>
+	<?php endif; ?>
+<?php endif; ?>
+
+<?php if ( $show_deleted_original && ( $original_order_id = eggl_wd_order_withdrawal_request_get_original_order_id( $withdrawal ) ) ) : ?>
+	<?php echo wp_kses_post( sprintf( _x( 'As you requested, we have deleted your original withdrawal request to %1$s.', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ), esc_html( $original_order_id ) ) ) . "\n"; ?>
+<?php endif; ?>
+
+<?php echo "\n==========\n"; ?>
+
+<?php
+if ( ! $hide_items ) :
+	echo "\n" . eggl_wd_get_email_withdrawal_items( // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		$withdrawal,
+		array(
+			'show_sku'      => $sent_to_admin,
+			'show_image'    => false,
+			'image_size'    => array( 32, 32 ),
+			'plain_text'    => true,
+			'sent_to_admin' => $sent_to_admin,
+		)
+	);
+endif;
+
+echo "==========\n\n";
+
+if ( $sent_to_admin ) {
+	/* translators: %s: Order link. */
+	echo "\n" . sprintf( esc_html_x( 'View order: %s', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ), esc_url( $withdrawal->get_edit_order_url() ) ) . "\n";
+}
+?>
+
+<?php
+/**
+ * Action hook to add custom content after order details in email.
+ *
+ * @param WC_Order $order Order object.
+ * @param bool     $sent_to_admin Whether it's sent to admin or customer.
+ * @param bool     $plain_text Whether it's a plain text email.
+ * @param WC_Email $email Email object.
+ * @since 2.5.0
+ */
+do_action( 'eggl_wd_withdrawal_after_order_table', $order, $sent_to_admin, $plain_text, $email, $withdrawal );
+?>

@@ -1,0 +1,84 @@
+/* EU Guarantee Notice & GARAN Labels — product data "EU Guarantee" tab
+ * WooCommerce's .woocommerce_options_panel styles float labels/inputs and
+ * force input widths to 50% for a fixed "label | field" row layout. This
+ * panel uses its own two-column card layout instead, so those rules are
+ * reset below, scoped to this panel only. */
+
+#eggl_guarantee_data.woocommerce_options_panel{min-height:0}
+
+#eggl_guarantee_data .eggl-garan-editor,
+#eggl_guarantee_data .eggl-garan-editor *{
+    box-sizing:border-box;
+}
+
+#eggl_guarantee_data .eggl-garan-editor label,
+#eggl_guarantee_data .eggl-garan-editor legend{
+    float:none !important;
+    width:auto !important;
+    margin:0 0 4px !important;
+    padding:0 !important;
+    display:block;
+}
+
+#eggl_guarantee_data .eggl-garan-editor input[type="text"],
+#eggl_guarantee_data .eggl-garan-editor input[type="number"]{
+    float:none !important;
+    width:100% !important;
+    max-width:380px;
+}
+
+#eggl_guarantee_data .eggl-garan-editor input[type="checkbox"]{
+    float:none !important;
+    width:auto !important;
+    margin:3px 8px 0 0 !important;
+}
+
+#eggl_guarantee_data .eggl-garan-editor p{
+    margin:0 0 8px;
+    padding:0;
+    line-height:1.4;
+}
+#eggl_guarantee_data .eggl-garan-editor p::after{content:none}
+
+#eggl_guarantee_data .eggl-garan-editor{display:flex;gap:24px;flex-wrap:wrap;padding:16px 12px 20px}
+#eggl_guarantee_data .eggl-garan-editor__form{flex:1 1 320px;min-width:280px}
+#eggl_guarantee_data .eggl-garan-editor__preview{flex:1 1 320px;min-width:280px}
+#eggl_guarantee_data .eggl-garan-editor__preview-title{font-weight:600;margin:0 0 8px}
+#eggl_guarantee_data .eggl-garan-editor__preview-caption{color:#666;font-size:12px;margin:8px 0 0}
+#eggl_guarantee_data .eggl-garan-editor__preview-note{color:#b32d2e;font-size:12px;margin:4px 0 0}
+#eggl_guarantee_data .eggl-garan-editor__hint{color:#666;font-size:12px;font-style:italic;margin:4px 0 0}
+
+#eggl_guarantee_data .eggl-field{margin:0 0 16px}
+#eggl_guarantee_data .eggl-field label{font-weight:600}
+#eggl_guarantee_data .eggl-field .description{margin:4px 0 0 !important;color:#666;display:block;clear:both}
+#eggl_guarantee_data .eggl-field--checkbox{display:flex;align-items:flex-start;gap:0;font-weight:400}
+
+#eggl_guarantee_data .eggl-field__input-wrap{position:relative;max-width:380px}
+#eggl_guarantee_data .eggl-field__input-wrap input{padding-right:52px}
+#eggl_guarantee_data .eggl-field__count{position:absolute;right:8px;top:50%;transform:translateY(-50%);color:#888;font-size:12px;pointer-events:none}
+
+#eggl_guarantee_data .eggl-garan-preview{border:1px solid #ccd0d4;border-radius:8px;overflow:hidden;background:#fff;transition:opacity .15s ease}
+#eggl_guarantee_data .eggl-garan-preview.is-off{opacity:.45}
+#eggl_guarantee_data .eggl-garan-preview svg{display:block;width:100%;height:auto}
+
+/* Per-variation GARAN fields + preview (Variations tab). */
+.eggl-variation-fields{clear:both;border-top:1px solid #eee;margin-top:8px;padding-top:4px}
+.eggl-variation-fields .eggl-variation-preview{max-width:280px}
+.eggl-variation-fields .eggl-garan-editor__preview-title{font-weight:600;margin:0 0 6px}
+.eggl-variation-fields .eggl-garan-editor__preview-note{color:#b32d2e;font-size:12px;margin:4px 0 0}
+.eggl-variation-fields .eggl-garan-preview{border:1px solid #ccd0d4;border-radius:8px;overflow:hidden;background:#fff;transition:opacity .15s ease}
+.eggl-variation-fields .eggl-garan-preview.is-off{opacity:.45}
+.eggl-variation-fields .eggl-garan-preview svg{display:block;width:100%;height:auto}
+
+/* Live "text too long for the label" warning under each preview. */
+.eggl-garan-editor__fit-warning{margin:6px 0 0 !important;padding:6px 10px 6px 26px !important;list-style:disc;
+    background:#fcf9e8;border-left:3px solid #dba617;color:#50575e;font-size:12px;line-height:1.45}
+.eggl-garan-editor__fit-warning[hidden]{display:none}
+.eggl-garan-editor__fit-warning li{margin:0 0 2px}
+
+/* Section headings: legal guarantee (seller) vs GARAN commercial guarantee (manufacturer) */
+#eggl_guarantee_data .eggl-section__head{padding:12px 12px 4px}
+#eggl_guarantee_data .eggl-section__head h4{margin:0 0 4px;font-size:13px}
+#eggl_guarantee_data .eggl-section__head p{margin:0;color:#50575e;font-size:12px;line-height:1.5}
+#eggl_guarantee_data .eggl-section__head--garan{border-top:1px solid #eee;margin-top:4px}
+#eggl_guarantee_data .eggl-section--legal .form-field .description{display:block;clear:both;margin-top:4px}

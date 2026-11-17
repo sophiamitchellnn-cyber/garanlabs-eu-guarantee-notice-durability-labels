@@ -1,0 +1,4645 @@
+# Copyright (C) 2026 GARAN Labs
+# This file is distributed under the GPLv3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: EU Legal-Guarantee Notice & GARAN Durability Label for WooCommerce 2.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-06 14:36+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Domain: garanlabs-eu-guarantee-notice-durability-labels\n"
+
+#: admin/class-eggl-admin-notices.php:69
+msgid "New: EU order withdrawal button"
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:70
+msgid "From 19 June 2026, online shops selling to consumers in the EU must offer an easy way to withdraw from a contract online (Directive (EU) 2023/2673). This plugin now adds a withdrawal form, a \"Withdraw from contract\" button in the footer and header menu, and a Withdraw button in My account, with confirmation emails and a list of requests to confirm or reject."
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:72
+msgid "Your withdrawal page is live. Review the settings and manage incoming requests under EU Guarantee & GARAN → Withdrawals."
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:73
+msgid "A \"Withdraw from contract\" page has been created as a draft, so nothing has changed on your shop yet. Review the settings, then publish the page to switch it on."
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:75
+msgid "Set up withdrawals"
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:76 admin/class-eggl-admin-notices.php:106
+msgid "Dismiss"
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:100
+msgid "EU Legal-Guarantee Notice & GARAN Durability Label is active."
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:102
+msgid "The legal-guarantee notice is already showing on your product pages. Choose its language, placement and look, and switch on checkout and email copies, in the settings."
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:103
+msgid "WooCommerce is not active, so place the notice yourself with the [eu_guarantee_notice] shortcode or the \"EU Guarantee Notice\" block. Choose its language and look in the settings."
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:105
+msgid "Open settings"
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:115
+msgid "Is the EU Guarantee Notice & GARAN Label plugin helping your shop get ready for the new EU rules? A short review on WordPress.org helps other shop owners find it — it takes a minute."
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:118
+msgid "Leave a review"
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:119
+msgid "Maybe later"
+msgstr ""
+
+#: admin/class-eggl-admin-notices.php:120
+msgid "Don't ask again"
+msgstr ""
+
+#: admin/class-eggl-health.php:16
+msgid "EU legal-guarantee notice"
+msgstr ""
+
+#: admin/class-eggl-health.php:20
+msgid "GARAN durability label"
+msgstr ""
+
+#: admin/class-eggl-health.php:50
+msgid "EU guarantee"
+msgstr ""
+
+#: admin/class-eggl-health.php:52
+msgid "Open the EU Guarantee settings"
+msgstr ""
+
+#: admin/class-eggl-health.php:64
+msgid "The legal-guarantee notice is switched off"
+msgstr ""
+
+#: admin/class-eggl-health.php:65
+msgid "The notice is turned off in the plugin settings, so it is not shown anywhere. Every trader selling goods to EU consumers must display it — turn \"Enable\" back on."
+msgstr ""
+
+#: admin/class-eggl-health.php:74
+msgid "The legal-guarantee notice artwork is missing"
+msgstr ""
+
+#: admin/class-eggl-health.php:75
+msgid "The official notice image files are missing from the plugin folder, so the notice cannot be shown anywhere. Reinstall the plugin to restore them."
+msgstr ""
+
+#: admin/class-eggl-health.php:80
+msgid "The notice is shown in English instead of your language"
+msgstr ""
+
+#. translators: %s: language code, e.g. "de"
+#: admin/class-eggl-health.php:82
+#, php-format
+msgid "The official notice for your display language (%s) is missing from the plugin folder, so the English version is shown instead. Reinstall the plugin to restore it."
+msgstr ""
+
+#: admin/class-eggl-health.php:89
+msgid "The legal-guarantee notice is not placed automatically"
+msgstr ""
+
+#: admin/class-eggl-health.php:90
+msgid "Automatic placement on product pages, the checkout and order emails needs WooCommerce. Without it, add the [eu_guarantee_notice] shortcode or the \"EU Guarantee Notice\" block to your pages yourself — this plugin cannot see where you put it, so it cannot check that for you."
+msgstr ""
+
+#: admin/class-eggl-health.php:95
+msgid "product pages"
+msgstr ""
+
+#: admin/class-eggl-health.php:96
+msgid "the checkout"
+msgstr ""
+
+#: admin/class-eggl-health.php:97
+msgid "order confirmation emails"
+msgstr ""
+
+#: admin/class-eggl-health.php:98
+msgid "the site header"
+msgstr ""
+
+#: admin/class-eggl-health.php:102
+msgid "The legal-guarantee notice is shown automatically"
+msgstr ""
+
+#. translators: %s: list of places, e.g. "product pages, the checkout"
+#: admin/class-eggl-health.php:104
+#, php-format
+msgid "Shown on %s."
+msgstr ""
+
+#: admin/class-eggl-health.php:115
+msgid "The GARAN label is placed manually"
+msgstr ""
+
+#: admin/class-eggl-health.php:116
+msgid "Without WooCommerce, add the [eu_garan years=\"…\" brand=\"…\" model=\"…\"] shortcode or the \"GARAN Label\" block wherever a product carries a qualifying durability guarantee."
+msgstr ""
+
+#: admin/class-eggl-health.php:126
+msgid "The GARAN label is switched off"
+msgstr ""
+
+#: admin/class-eggl-health.php:127
+msgid "No product has a qualifying durability guarantee filled in, so nothing is missing."
+msgstr ""
+
+#: admin/class-eggl-health.php:132
+msgid "The GARAN label is switched off, but products qualify for it"
+msgstr ""
+
+#. translators: %d: number of products
+#: admin/class-eggl-health.php:134
+#, php-format
+msgid "%d product has a qualifying durability guarantee, but the GARAN label is turned off site-wide, so it is not shown."
+msgid_plural "%d products have a qualifying durability guarantee, but the GARAN label is turned off site-wide, so it is not shown."
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/class-eggl-health.php:141
+msgid "No product carries a GARAN label yet"
+msgstr ""
+
+#: admin/class-eggl-health.php:142
+msgid "The label only applies where the producer offers a free, whole-product durability guarantee of more than 2 years. Fill in the EU Guarantee tab on those products (or upload a vendor label) and it appears automatically."
+msgstr ""
+
+#: admin/class-eggl-health.php:148
+msgid "The GARAN label is shown automatically"
+msgstr ""
+
+#. translators: %d: number of products
+#: admin/class-eggl-health.php:150
+#, php-format
+msgid "%d product shows the GARAN label."
+msgid_plural "%d products show the GARAN label."
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/class-eggl-health.php:161
+msgid "Some GARAN labels have text that is too long"
+msgstr ""
+
+#. translators: %s: list of product names
+#: admin/class-eggl-health.php:163
+#, php-format
+msgid "The brand, model or duration is too wide for the official label on: %s. It is squeezed to fit — shorten it on the product's EU Guarantee tab."
+msgstr ""
+
+#: admin/class-eggl-health.php:170
+msgid "The GARAN label is not shown at checkout"
+msgstr ""
+
+#: admin/class-eggl-health.php:171
+msgid "Article 8(2) of the Consumer Rights Directive names the durability label among the information to show directly before the order is placed. Turn on \"Checkout page\" in the GARAN settings."
+msgstr ""
+
+#: admin/class-eggl-health.php:180
+msgid "Your server cannot draw GARAN label images for emails"
+msgstr ""
+
+#: admin/class-eggl-health.php:181
+msgid "PHP's GD image extension (with FreeType) is missing, so label images for emails are drawn in your browser instead whenever you open a product in the editor. Until a product has been opened once, its emails carry a text line with a link. Ask your host to enable GD for fully automatic images."
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:16
+msgid "EU Guarantee"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:47
+msgid "Brand/Trademark is too wide for the label and will be squeezed to fit — shorten it if you can."
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:48
+msgid "Model identifier is too wide for the label and will be squeezed to fit — shorten it if you can."
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:49
+msgid "Duration has too many digits for the label."
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:70
+msgid "Legal guarantee (seller — by law)"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:71
+msgid "The guarantee every consumer has against your shop by law (at least 2 years in the EU). Used for the legal-guarantee notice and for right-to-repair defect claims."
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:76
+msgid "EU guarantee applies"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:77
+msgid "On for physical goods (B2C). Turn off for out-of-scope items (e.g. food)."
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:82
+#: admin/class-eggl-product-fields.php:200
+msgid "Legal guarantee (months)"
+msgstr ""
+
+#. translators: %d: number of months
+#: admin/class-eggl-product-fields.php:86
+#, php-format
+msgid "Store default: %d months"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:88
+msgid "Leave empty to use the store default (Right to Repair → Settings). Fill in only if this product differs by law — e.g. 12 for used goods where your country allows a shorter period, or longer where the period depends on the product's expected lifespan (Netherlands, Finland). This is not the manufacturer's guarantee below."
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:94
+msgid "GARAN label — commercial durability guarantee (manufacturer)"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:95
+msgid "A voluntary guarantee the manufacturer offers on top of the legal guarantee, shown with the GARAN label. It does not change the legal guarantee period above."
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:103
+msgid "Show GARAN label for this product"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:107
+#: admin/class-eggl-product-fields.php:223
+msgid "Commercial guarantee (whole years)"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:110
+msgid "The manufacturer's durability guarantee for the whole product. Only durations of more than 2 years qualify for the GARAN label — enter 3 or more."
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:114
+#: admin/class-eggl-product-fields.php:233
+msgid "Brand/Trademark (producer)"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:123
+#: admin/class-eggl-product-fields.php:242
+msgid "Model identifier"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:131
+#: gpsr/includes/class-eggl-gpsr-admin.php:101
+msgid "Saved with this product’s Update/Publish button."
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:135
+#: admin/class-eggl-product-fields.php:250
+msgid "Preview"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:143
+#: admin/class-eggl-product-fields.php:255 public/class-eggl-frontend.php:1372
+msgid "GARAN durability label preview"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:147
+msgid "This is exactly how the label will render in your storefront."
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:148
+msgid "This label will not show on the frontend while \"Show GARAN label\" is off."
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:192
+msgid "Inherited from the parent product when blank"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:195
+msgid "EU Guarantee — legal guarantee (seller) and GARAN label (manufacturer)"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:210
+msgid "GARAN label"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:213
+msgid "Same as parent product"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:214
+msgid "Show for this variation"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:215
+msgid "Hide for this variation"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:258
+msgid "This label will not show on the frontend for this variation."
+msgstr ""
+
+#. translators: 1: variation name, 2: the problem
+#: admin/class-eggl-product-fields.php:347
+#, php-format
+msgid "%1$s: %2$s"
+msgstr ""
+
+#: admin/class-eggl-product-fields.php:353
+msgid "GARAN label: some text is too long for the official label."
+msgstr ""
+
+#: admin/class-eggl-settings.php:26 admin/class-eggl-settings.php:27
+msgid "EU Guarantee & GARAN"
+msgstr ""
+
+#: admin/class-eggl-settings.php:38
+#: repair/includes/class-eggl-repair-admin.php:141
+msgid "Settings"
+msgstr ""
+
+#: admin/class-eggl-settings.php:137
+#: gpsr/includes/class-eggl-gpsr-settings.php:75
+#: price-history/admin/settings.php:42
+msgid "General"
+msgstr ""
+
+#: admin/class-eggl-settings.php:139
+msgid "Display language"
+msgstr ""
+
+#: admin/class-eggl-settings.php:142
+msgid "Legal Guarantee Notice (Annex I)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:144 admin/class-eggl-settings.php:171
+#: price-history/modules/anchor-price/admin.php:66
+#: price-history/modules/chart/admin.php:142
+#: price-history/modules/digital-price-list/admin.php:139
+#: price-history/modules/lowest-price/admin.php:60
+msgid "Enable"
+msgstr ""
+
+#: admin/class-eggl-settings.php:146 admin/class-eggl-settings.php:173
+msgid "Display mode"
+msgstr ""
+
+#: admin/class-eggl-settings.php:148
+msgid "Row style"
+msgstr ""
+
+#: admin/class-eggl-settings.php:150 price-history/modules/chart/admin.php:177
+msgid "Trigger text"
+msgstr ""
+
+#: admin/class-eggl-settings.php:152
+msgid "Trigger text size"
+msgstr ""
+
+#: admin/class-eggl-settings.php:154
+msgid "Notice width"
+msgstr ""
+
+#: admin/class-eggl-settings.php:156 admin/class-eggl-settings.php:175
+#: repair/includes/class-eggl-repair-settings.php:240
+msgid "Product page position"
+msgstr ""
+
+#: admin/class-eggl-settings.php:158
+msgid "Header notice"
+msgstr ""
+
+#: admin/class-eggl-settings.php:160 admin/class-eggl-settings.php:179
+msgid "Checkout page"
+msgstr ""
+
+#: admin/class-eggl-settings.php:162 admin/class-eggl-settings.php:183
+msgid "Order confirmation email"
+msgstr ""
+
+#: admin/class-eggl-settings.php:164 admin/class-eggl-settings.php:185
+msgid "Email content"
+msgstr ""
+
+#: admin/class-eggl-settings.php:166 admin/class-eggl-settings.php:187
+#: repair/includes/class-eggl-repair-settings.php:250
+msgid "Manual placement"
+msgstr ""
+
+#: admin/class-eggl-settings.php:169
+msgid "GARAN Durability Label (Annex II)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:177
+msgid "Badge width"
+msgstr ""
+
+#: admin/class-eggl-settings.php:181
+msgid "Checkout badge size"
+msgstr ""
+
+#: admin/class-eggl-settings.php:190 admin/views/eggl-settings-page.php:19
+#: gpsr/includes/class-eggl-gpsr-settings.php:102
+#: price-history/modules/digital-price-list/admin.php:198
+msgid "Advanced"
+msgstr ""
+
+#: admin/class-eggl-settings.php:192
+msgid "Plugin credit"
+msgstr ""
+
+#: admin/class-eggl-settings.php:194
+#: gpsr/includes/class-eggl-gpsr-settings.php:107
+msgid "On plugin deletion"
+msgstr ""
+
+#: admin/class-eggl-settings.php:199
+msgid "Settings that apply site-wide, to both the legal-guarantee notice and the GARAN label."
+msgstr ""
+
+#: admin/class-eggl-settings.php:203
+msgid "Everything related to the harmonised EU legal-guarantee notice: where and how it appears."
+msgstr ""
+
+#: admin/class-eggl-settings.php:207
+msgid "Everything related to the GARAN commercial durability label: where and how it appears. Set the manufacturer guarantee per product under Product data → EU Guarantee."
+msgstr ""
+
+#: admin/class-eggl-settings.php:208
+msgid "Edit a WooCommerce product and open the \"EU Guarantee\" tab in the product data box. Fill Guarantee duration, brand and model there and the label appears on that product."
+msgstr ""
+
+#: admin/class-eggl-settings.php:212
+msgid "Housekeeping: plugin credit and what happens to your settings on removal."
+msgstr ""
+
+#: admin/class-eggl-settings.php:294
+#, php-format
+msgid "Automatic — matches your site language (currently %s)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:300
+msgid "Language of the official legal-guarantee notice (Annex I). \"Automatic\" follows your site's own language (Settings → General → Site Language) and updates if that ever changes; pick a specific language instead to keep the notice fixed regardless of site language."
+msgstr ""
+
+#: admin/class-eggl-settings.php:306
+#: repair/includes/class-eggl-repair-settings.php:264
+msgid "Before the product summary (above the title)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:307
+#: repair/includes/class-eggl-repair-settings.php:265
+msgid "Under the product image (inside the gallery)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:308
+#: repair/includes/class-eggl-repair-settings.php:266
+msgid "After the product title"
+msgstr ""
+
+#: admin/class-eggl-settings.php:309
+#: repair/includes/class-eggl-repair-settings.php:267
+msgid "After the price"
+msgstr ""
+
+#: admin/class-eggl-settings.php:310
+#: repair/includes/class-eggl-repair-settings.php:268
+msgid "After the short description (default)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:311
+#: repair/includes/class-eggl-repair-settings.php:269
+msgid "After Add to cart"
+msgstr ""
+
+#: admin/class-eggl-settings.php:312
+#: repair/includes/class-eggl-repair-settings.php:270
+msgid "After the product summary (near the tabs)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:326
+msgid "Popup — compact summary that opens the full graphic in a dialog"
+msgstr ""
+
+#: admin/class-eggl-settings.php:327
+msgid "Full — display the full graphic directly on the page"
+msgstr ""
+
+#: admin/class-eggl-settings.php:328
+msgid "Nested — compact trigger that expands the full graphic in place when clicked (default)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:338
+msgid "How the legal-guarantee notice displays on the product page."
+msgstr ""
+
+#: admin/class-eggl-settings.php:347
+msgid "How the GARAN durability label displays on the product page."
+msgstr ""
+
+#: admin/class-eggl-settings.php:353
+msgid "Minimal — light neutral row with a chevron (default)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:354
+msgid "Classic — teal-accented row with a \"View\" button"
+msgstr ""
+
+#: admin/class-eggl-settings.php:355
+msgid "Custom — your own text, click to open the notice"
+msgstr ""
+
+#: admin/class-eggl-settings.php:357
+msgid "Visual style of the compact notice trigger shown in \"popup\" and \"nested\" display mode, and on the checkout page."
+msgstr ""
+
+#: admin/class-eggl-settings.php:363
+msgid "Text shown on the compact notice row for every Row style — click opens the legal-guarantee notice. Leave empty to use the default, \"Your legal guarantee rights\", in your store's language."
+msgstr ""
+
+#: admin/class-eggl-settings.php:369
+msgid "Font size (px)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:371
+msgid "Text size of the notice row for every Row style (default 14). With the Custom style, the shield icon and chevron scale with it automatically."
+msgstr ""
+
+#: admin/class-eggl-settings.php:375 admin/class-eggl-settings.php:438
+#: repair/includes/class-eggl-repair-settings.php:251
+msgid "Shortcode:"
+msgstr ""
+
+#: admin/class-eggl-settings.php:376
+msgid "Or add the \"EU Guarantee Notice\" block in the editor."
+msgstr ""
+
+#: admin/class-eggl-settings.php:377
+msgid "Always available — uses the same display mode and row style settings above. Also requires \"Enable\" above to be on."
+msgstr ""
+
+#: admin/class-eggl-settings.php:382
+msgid "Where the legal-guarantee notice appears on the product page."
+msgstr ""
+
+#: admin/class-eggl-settings.php:387
+msgid "Where the GARAN durability label appears on the product page."
+msgstr ""
+
+#: admin/class-eggl-settings.php:393
+msgid "Maximum width (px)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:395
+msgid "How wide the notice can grow on the product page — the compact row, the expanded graphic in \"nested\" mode, and the graphic in \"full\" mode. It never exceeds the space available, and the graphic keeps its proportions. Default 460."
+msgstr ""
+
+#: admin/class-eggl-settings.php:401 admin/class-eggl-settings.php:416
+msgid "Width (px)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:403
+msgid "Sets the size of the compact GARAN badge shown in \"popup\" and \"nested\" display mode. Height adjusts automatically to keep the graphic in proportion. Does not affect \"full\" display mode, which always shows the complete graphic at its standard size."
+msgstr ""
+
+#: admin/class-eggl-settings.php:408
+msgid "Show the label at checkout for products in the basket that have one"
+msgstr ""
+
+#: admin/class-eggl-settings.php:409
+msgid "Article 8(2) of the Consumer Rights Directive names the durability label among the information that must be shown directly before the consumer places the order."
+msgstr ""
+
+#: admin/class-eggl-settings.php:410
+msgid "Works on the classic checkout and the block checkout. Also shows on the classic Cart page, under each qualifying item's thumbnail image."
+msgstr ""
+
+#: admin/class-eggl-settings.php:418
+msgid "Sets the size of the compact GARAN badge shown at checkout and on the Cart page. Kept separate from the main \"Badge width\" above, since checkout/cart item rows are usually much narrower."
+msgstr ""
+
+#: admin/class-eggl-settings.php:423
+msgid "Add the GARAN durability label to WooCommerce order confirmation emails"
+msgstr ""
+
+#: admin/class-eggl-settings.php:424
+msgid "Shown to the customer only (never in the admin's copy), once per qualifying product in the order, on the processing, on-hold, and completed order emails, and on the customer invoice email."
+msgstr ""
+
+#: admin/class-eggl-settings.php:430
+msgid "Short text line per product with a link that opens the label graphic"
+msgstr ""
+
+#: admin/class-eggl-settings.php:431
+msgid "Full label graphic (embedded per product)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:432
+msgid "Short text line per product, with the label graphic sent as a file attachment"
+msgstr ""
+
+#: admin/class-eggl-settings.php:434
+msgid "\"Short text line\" keeps the email compact: product name and guarantee duration, with a link that opens that product's actual GARAN badge (brand/model/years) as a standalone image. \"Full label graphic\" renders that same badge as a real image directly in the email for every qualifying product — this adds real height with multiple products. \"Attachment\" keeps the same short text line but attaches each qualifying product's label graphic as a PNG file to the email instead of embedding or linking it. Rendered with the bundled font and template graphic (no server configuration needed); if that ever isn't possible it automatically falls back to the same short text line instead of showing nothing."
+msgstr ""
+
+#: admin/class-eggl-settings.php:439
+msgid "Placed on a single product page with no attributes, it pulls the duration/brand/model straight from that product's saved EU Guarantee data (Product data → EU Guarantee) and only shows if that product actually qualifies."
+msgstr ""
+
+#: admin/class-eggl-settings.php:440
+msgid "Or add the \"GARAN label\" block, which defaults to the same \"use saved product data\" behaviour, or fills in the same three fields with a live preview when turned off."
+msgstr ""
+
+#: admin/class-eggl-settings.php:441
+msgid "Give it years/brand/model explicitly — e.g. [eu_garan years=\"5\" brand=\"Acme\" model=\"AC-1200\"] — to override the saved product data and render unconditionally wherever placed, skipping the eligibility check. Uses the same display mode setting above either way. Also requires \"Enable\" above to be on."
+msgstr ""
+
+#: admin/class-eggl-settings.php:446
+msgid "Show the EU legal-guarantee notice on product pages"
+msgstr ""
+
+#: admin/class-eggl-settings.php:447
+msgid "Site-wide switch. Turn off to hide the notice everywhere, regardless of per-product settings."
+msgstr ""
+
+#: admin/class-eggl-settings.php:452
+msgid "Show the GARAN durability label for qualifying products"
+msgstr ""
+
+#: admin/class-eggl-settings.php:453
+msgid "Site-wide switch. Turn off to hide the GARAN label everywhere, even for products set up to show it. Set the manufacturer guarantee per product under Product data → EU Guarantee."
+msgstr ""
+
+#: admin/class-eggl-settings.php:458
+msgid "Show a \"Your legal guarantee rights\" sentence in the site header, on every page"
+msgstr ""
+
+#: admin/class-eggl-settings.php:459
+msgid "Automatically added as a menu item next to Home / Cart / Checkout — in the desktop, tablet, and mobile navigation alike. The harmonised legal-guarantee notice appears in a small preview on mouse roll-over, and in full on click or tap. Falls back to a standalone banner if no navigation menu can be resolved."
+msgstr ""
+
+#: admin/class-eggl-settings.php:464
+msgid "Show the legal-guarantee notice on the Checkout page, under the \"Checkout\" heading"
+msgstr ""
+
+#: admin/class-eggl-settings.php:465
+msgid "Works with both the classic checkout shortcode and the block-based Checkout page."
+msgstr ""
+
+#: admin/class-eggl-settings.php:470
+msgid "Add the notice to WooCommerce order confirmation emails"
+msgstr ""
+
+#: admin/class-eggl-settings.php:471
+msgid "Shown to the customer only (never in the admin's copy) on the processing, on-hold, and completed order emails, and on the customer invoice email."
+msgstr ""
+
+#: admin/class-eggl-settings.php:477
+msgid "Full notice graphic (embedded image)"
+msgstr ""
+
+#: admin/class-eggl-settings.php:478
+msgid "Short text line with a link that opens the notice graphic"
+msgstr ""
+
+#: admin/class-eggl-settings.php:479
+msgid "Short text line, with the notice graphic sent as a file attachment"
+msgstr ""
+
+#: admin/class-eggl-settings.php:481
+msgid "\"Full notice graphic\" is embedded directly in the email so it still shows if the recipient's mail client blocks remote images by default. \"Short text line\" keeps the email compact — the link opens the same official notice graphic in a new tab instead. \"Attachment\" keeps that same short text line but attaches the official notice graphic to the email as a file instead of linking or embedding it."
+msgstr ""
+
+#: admin/class-eggl-settings.php:486
+msgid "Show a small \"Powered by GARAN Labs\" credit under the notice"
+msgstr ""
+
+#: admin/class-eggl-settings.php:487
+msgid "Off by default. Turn on only if you want to display the credit on your site."
+msgstr ""
+
+#: admin/class-eggl-settings.php:492
+msgid "Also delete all settings when the plugin is deleted"
+msgstr ""
+
+#: admin/class-eggl-settings.php:493
+msgid "Off by default — settings survive a delete/reinstall. Tick only for a clean removal."
+msgstr ""
+
+#: admin/class-eggl-vendor-uploads.php:23
+#: admin/class-eggl-vendor-uploads.php:24
+#: admin/views/eggl-vendor-uploads-page.php:11
+msgid "Vendor GARAN Labels"
+msgstr ""
+
+#: admin/class-eggl-vendor-uploads.php:46
+msgid "Select or upload the vendor GARAN label image"
+msgstr ""
+
+#: admin/class-eggl-vendor-uploads.php:47
+msgid "Use this image"
+msgstr ""
+
+#: admin/views/eggl-settings-page.php:9
+msgid "EU Consumer Rights for WooCommerce – Guarantee Notice, GARAN Label, Withdrawal Button, Right to Repair, Omnibus Price & GPSR"
+msgstr ""
+
+#: admin/views/eggl-settings-page.php:10
+msgid "Display the harmonised EU legal-guarantee notice (Regulation (EU) 2025/1960) and the GARAN durability label on your product pages, in 24 languages. This plugin is a display helper and does not provide legal advice or guarantee compliance."
+msgstr ""
+
+#: admin/views/eggl-settings-page.php:18
+#: price-history/modules/chart/admin.php:159
+msgid "Display"
+msgstr ""
+
+#: admin/views/eggl-settings-page.php:71
+#: gpsr/includes/class-eggl-gpsr-settings.php:116
+#: price-history/admin/settings-api.php:946
+#: price-history/modules/price-compliance-manager/editor.php:420
+#: repair/includes/class-eggl-repair-settings.php:257
+msgid "Save changes"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:12
+msgid "If a manufacturer or vendor already supplies you with a ready-made GARAN durability label image for a product, upload it here — it then replaces this plugin's own generated label everywhere it would normally show for that product (product page, checkout, cart, and order-confirmation emails). Leave products without one alone; they keep using the label generated from their Brand/Model/Duration fields."
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:16
+msgid "Vendor GARAN label image saved."
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:18
+msgid "Vendor GARAN label image removed — this product now uses the generated label again."
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:20
+msgid "Could not save — choose a product and an image, and enter the duration in years."
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:24
+msgid "If a product has both a vendor image here and its own Brand/Model/Duration filled in under Product data → EU Guarantee, the vendor image wins: it always shows in place of the generated label graphic, wherever the label would normally appear. The compact preview badge (before a shopper clicks to expand it) still shows the duration you entered there, if any — only the full label graphic is replaced."
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:29
+msgid "Upload a vendor label for a product"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:37
+#: admin/views/eggl-vendor-uploads-page.php:83
+#: price-history/modules/price-compliance-manager/editor.php:270
+msgid "Product"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:40
+msgid "Search for a product…"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:46
+msgid "Label image"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:50
+msgid "Select or upload image"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:51
+#: admin/views/eggl-vendor-uploads-page.php:105
+#: gpsr/includes/class-eggl-gpsr-admin.php:95
+msgid "Remove"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:52
+msgid "Any image file from your Media Library. It will be shown as-is — full size in \"Full\" display mode, and inside the popup/nested panel in the other modes — in place of the generated label."
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:57
+msgid "Duration (years)"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:62
+msgid "Required — shown on the compact preview badge before a shopper clicks to see the full image (e.g. \"5 | GARAN\"). Doesn't require also filling in this product's own Duration field under Product data → EU Guarantee."
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:66
+msgid "Save vendor label for this product"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:73
+msgid "Products currently using a vendor label"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:77
+msgid "None yet."
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:82
+msgid "Image"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:84
+msgid "Badge duration"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:104
+msgid "Remove this vendor label? The product will go back to the generated label."
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:121
+msgid "&laquo; Previous"
+msgstr ""
+
+#: admin/views/eggl-vendor-uploads-page.php:122
+msgid "Next &raquo;"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-admin.php:16
+#: gpsr/includes/class-eggl-gpsr-settings.php:23
+#: gpsr/includes/class-eggl-gpsr-settings.php:24
+#: gpsr/includes/class-eggl-gpsr-settings.php:64
+#: gpsr/includes/class-eggl-gpsr-settings.php:91
+msgid "Product Safety (GPSR)"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-admin.php:34
+msgid "Select or upload a document"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-admin.php:35
+msgid "Use this file"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-admin.php:36
+msgid "Please choose a PDF, JPG or PNG file."
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-admin.php:50
+msgid "Show Product Safety tab"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-admin.php:51
+msgid "Adds a \"Product safety\" tab on the product page with the sections switched on below (General Product Safety Regulation (EU) 2023/988)."
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-admin.php:73
+#: gpsr/includes/class-eggl-gpsr-frontend.php:89
+msgid "Warnings & safety information"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-admin.php:73
+msgid "Warnings or safety information that must be shown on or with the product, in a language consumers can easily understand."
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-admin.php:77
+msgid "Safety information"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-admin.php:84
+#: gpsr/includes/class-eggl-gpsr-frontend.php:96
+msgid "Product documents"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-admin.php:84
+msgid "User guides, certificates and other documents that come with the product. PDF, JPG or PNG."
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-admin.php:94
+msgid "Choose file"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:16
+msgid "Manufacturer"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:17
+msgid "Contact details of the manufacturer, in case a buyer has product safety or compliance questions."
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:20
+msgid "Responsible person (EU/UK)"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:21
+msgid "Contact details of the economic operator in the EU (or UK) responsible for product safety — required when the manufacturer is established outside the EU."
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:29
+#: repair/includes/class-eggl-repair-privacy.php:61
+msgid "Name"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:30
+msgid "Street address"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:31
+msgid "Street address 2"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:32
+msgid "City"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:33
+msgid "Postal/ZIP code"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:34
+msgid "State/Province"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:35
+msgid "Country/region"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:36
+#: repair/includes/class-eggl-repair-privacy.php:63
+#: repair/templates/form-claim.php:188
+msgid "Phone"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:37
+msgid "Phone 2"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:38
+#: repair/templates/form-claim.php:161
+msgid "Email"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:39
+msgid "Website"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:46
+msgid "Certificate of Analysis"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:47
+msgid "Certificate of Conformity"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:48
+msgid "Declaration of Conformity"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:49
+msgid "Instructions for Use"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:50
+msgid "User Guide or Manual"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:51
+msgid "Safety Data Sheet"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:52
+msgid "Installation Instructions"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:53
+msgid "Troubleshooting Guide"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:54
+msgid "Other Safety Documents"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-fields.php:55
+msgid "Other Documents"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-frontend.php:15
+msgid "Product safety"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-settings.php:65
+msgid "Show the product safety information required by the General Product Safety Regulation (EU) 2023/988 — manufacturer, EU/UK responsible person, warnings and product documents — in a \"Product safety\" tab on your product pages. This plugin is a display helper and does not provide legal advice or guarantee compliance."
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-settings.php:76
+msgid "Switch the product safety feature on or off for the whole site."
+msgstr ""
+
+#. translators: %s: link to the WooCommerce Products list
+#: gpsr/includes/class-eggl-gpsr-settings.php:82
+#, php-format
+msgid "Product safety details are entered on each product: edit a product in %s and open the \"Product Safety (GPSR)\" tab in the product data box. Fill in the manufacturer, responsible person, warnings and documents there, and switch on \"Show Product Safety tab\" so they appear on that product's page."
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-settings.php:83
+#: price-history/modules/price-compliance-manager/editor.php:389
+msgid "Products"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-settings.php:93
+msgid "Show the Product Safety (GPSR) tab in the product editor and on product pages"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-settings.php:94
+msgid "When off, the tab is hidden everywhere. Product safety details already entered are kept and come back when you switch it on again."
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-settings.php:103
+msgid "What happens to product safety data when the plugin is removed."
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-settings.php:109
+msgid "Delete all product safety data when the plugin is deleted"
+msgstr ""
+
+#: gpsr/includes/class-eggl-gpsr-settings.php:110
+msgid "Removes every product's GPSR details and these settings. Uploaded documents stay in the Media Library. Deactivating the plugin never deletes anything."
+msgstr ""
+
+#: includes/class-eggl-deactivation-feedback.php:25
+msgid "Quick Feedback — 30 Seconds!"
+msgstr ""
+
+#: includes/class-eggl-deactivation-feedback.php:27
+msgid "Close"
+msgstr ""
+
+#: includes/class-eggl-deactivation-feedback.php:33
+msgid "Please let us know why you're deactivating — your feedback helps us improve the plugin."
+msgstr ""
+
+#: includes/class-eggl-deactivation-feedback.php:36
+msgid "Please tell us why you are deactivating the plugin…"
+msgstr ""
+
+#: includes/class-eggl-deactivation-feedback.php:43
+msgid "Submit & Deactivate"
+msgstr ""
+
+#: includes/class-eggl-deactivation-feedback.php:87
+msgid "Sending…"
+msgstr ""
+
+#. translators: %s: the brand text
+#: includes/class-eggl-garan-fit.php:84
+#, php-format
+msgid "Brand/Trademark \"%s\" is too wide for the label and will be squeezed to fit — shorten it if you can."
+msgstr ""
+
+#. translators: %s: the product name used as the model identifier
+#: includes/class-eggl-garan-fit.php:89
+#, php-format
+msgid "No Model identifier is set, so the product name \"%s\" is used — it is too wide for the label and will be squeezed. Enter a short Model identifier instead."
+msgstr ""
+
+#. translators: %s: the model identifier text
+#: includes/class-eggl-garan-fit.php:91
+#, php-format
+msgid "Model identifier \"%s\" is too wide for the label and will be squeezed to fit — shorten it if you can."
+msgstr ""
+
+#. translators: %s: the duration in years
+#: includes/class-eggl-garan-fit.php:95
+#, php-format
+msgid "Duration \"%s\" has too many digits for the label."
+msgstr ""
+
+#. translators: %1$s: number of deleted entries
+#: price-history/admin/admin.php:89
+#, php-format
+msgid "%1$s old entries have been successfully deleted."
+msgstr ""
+
+#: price-history/admin/admin.php:94
+msgid "30 days"
+msgstr ""
+
+#: price-history/admin/admin.php:95
+msgid "3 months"
+msgstr ""
+
+#: price-history/admin/admin.php:96
+msgid "6 months"
+msgstr ""
+
+#: price-history/admin/admin.php:97
+msgid "12 months"
+msgstr ""
+
+#: price-history/admin/admin.php:98
+msgid "Are you sure you want to proceed? This action will irreversibly delete old data."
+msgstr ""
+
+#: price-history/admin/admin.php:100
+msgid "No old data was found or deleted."
+msgstr ""
+
+#: price-history/admin/admin.php:101
+msgid "Continuing will permanently erase all entries associated with this product, and this action cannot be undone."
+msgstr ""
+
+#: price-history/admin/admin.php:102
+msgid "Are you sure you want to proceed? This action will irreversibly delete this data."
+msgstr ""
+
+#: price-history/admin/admin.php:103
+msgid "Set the lowest price for all variations:"
+msgstr ""
+
+#: price-history/admin/admin.php:126 price-history/admin/admin.php:127
+#: price-history/admin/settings.php:97 price-history/modules/chart/admin.php:57
+#: price-history/modules/chart/public.php:104
+msgid "Price History"
+msgstr ""
+
+#: price-history/admin/edit-product.php:58
+msgid "Product Price History"
+msgstr ""
+
+#: price-history/admin/edit-product.php:84
+msgid "Price history"
+msgstr ""
+
+#: price-history/admin/edit-product.php:85
+msgid "Every price change of this product is recorded automatically. The recorded prices back the \"lowest price in the last 30 days\" shown on sale items and the price history chart. Tick Hide to leave an entry out — for example a pricing mistake that was corrected within minutes."
+msgstr ""
+
+#: price-history/admin/edit-product.php:117
+msgid "This is a translated version of the original product. Price history is inherited from the original and cannot be edited here."
+msgstr ""
+
+#: price-history/admin/edit-product.php:121
+msgid "To ensure optimal performance, only a limited number of results are shown in the table."
+msgstr ""
+
+#. translators: 1: number of displayed results, 2: total number of results
+#: price-history/admin/edit-product.php:124
+#, php-format
+msgid "Displaying %1$d out of %2$d results."
+msgstr ""
+
+#: price-history/admin/edit-product.php:132
+#: price-history/modules/chart/public.php:102
+msgid "Price"
+msgstr ""
+
+#: price-history/admin/edit-product.php:133
+msgid "Recorded"
+msgstr ""
+
+#: price-history/admin/edit-product.php:135
+msgid "Hide"
+msgstr ""
+
+#: price-history/admin/edit-product.php:145
+msgid "Hide this entry"
+msgstr ""
+
+#: price-history/admin/edit-product.php:154
+msgid "No pricing data recorded since plugin activation - This message indicates that no pricing data has been saved in the database since the activation of the plugin. This can occur if the plugin was recently installed or if the product price has not changed since the activation of the plugin."
+msgstr ""
+
+#: price-history/admin/settings.php:46
+msgid "Price Compliance"
+msgstr ""
+
+#: price-history/admin/settings.php:63
+msgid "Multilingual"
+msgstr ""
+
+#: price-history/admin/settings.php:64
+msgid "Use your own translated strings."
+msgstr ""
+
+#: price-history/admin/settings.php:70
+msgid "Delete all price history data on uninstall"
+msgstr ""
+
+#: price-history/admin/settings.php:71
+msgid "When the plugin is deleted, also remove the Price History settings and every recorded price history entry from the database."
+msgstr ""
+
+#: price-history/admin/settings.php:90
+msgid "Price changes are recorded automatically for every product and variation. These settings apply to the whole module."
+msgstr ""
+
+#: price-history/admin/settings.php:91
+msgid "A price history chart on the product page. Hide it for a single product in that product's Product Price History tab."
+msgstr ""
+
+#: price-history/admin/settings.php:98
+msgid "Record every WooCommerce price change and show the EU Omnibus lowest price from the last 30 days, a price history chart, and the base price and digital price list required in Croatia. This module is a display helper and does not provide legal advice or guarantee compliance."
+msgstr ""
+
+#: price-history/admin/settings.php:181
+msgid ""
+"<strong>Attention:</strong> It appears that some required tables are missing in the database.<br>\n"
+"            Please click the button below to repair the database tables."
+msgstr ""
+
+#: price-history/admin/settings.php:183
+#: repair/includes/class-eggl-repair-claims.php:53
+#: repair/templates/form-claim.php:128
+msgid "Repair"
+msgstr ""
+
+#: price-history/includes/helper.php:344
+msgid "This feature is available on the {planName} plan. Please upgrade to access it."
+msgstr ""
+
+#: price-history/modules/anchor-price/admin.php:32
+msgid "Under the regulations currently in force in Croatia, traders must display a base price alongside the current price. For most products, this is the regular price applicable on September 10, 2026, while certain previously regulated product categories retain the May 2, 2025 reference date. The Base Price module helps you store and display this base price and its applicable date.<br><br><em>This information is provided for general guidance only and does not constitute legal advice.</em>"
+msgstr ""
+
+#: price-history/modules/anchor-price/admin.php:44
+#: price-history/modules/anchor-price/compliance.php:22
+#: price-history/modules/anchor-price/compliance.php:25
+#: price-history/modules/anchor-price/edit-product.php:86
+msgid "Base Price"
+msgstr ""
+
+#: price-history/modules/anchor-price/admin.php:72
+#: price-history/modules/anchor-price/compliance.php:24
+msgid "Reference Date"
+msgstr ""
+
+#: price-history/modules/anchor-price/admin.php:78
+msgid "Base Price Message"
+msgstr ""
+
+#: price-history/modules/anchor-price/admin.php:81
+msgid "Use {date} and {price} for the individual product’s saved reference date and base price."
+msgstr ""
+
+#: price-history/modules/anchor-price/admin.php:86
+msgid "Show on product page"
+msgstr ""
+
+#: price-history/modules/anchor-price/admin.php:92
+msgid "Show in archives"
+msgstr ""
+
+#: price-history/modules/anchor-price/admin.php:93
+msgid "Shop, category and other archive pages."
+msgstr ""
+
+#: price-history/modules/anchor-price/edit-product.php:49
+msgid "Click to edit"
+msgstr ""
+
+#: price-history/modules/anchor-price/edit-product.php:56
+msgid "Base Price Date"
+msgstr ""
+
+#: price-history/modules/anchor-price/edit-product.php:68
+msgid "Custom Date"
+msgstr ""
+
+#: price-history/modules/anchor-price/edit-product.php:89
+msgid "Enter a date and price, including zero. Clear both fields to remove the base price."
+msgstr ""
+
+#: price-history/modules/anchor-price/edit-product.php:110
+msgid "Custom date…"
+msgstr ""
+
+#: price-history/modules/anchor-price/edit-product.php:149
+msgid "Enter a reference date and base price."
+msgstr ""
+
+#: price-history/modules/anchor-price/helper.php:30
+msgid "Enter a valid reference date."
+msgstr ""
+
+#: price-history/modules/anchor-price/helper.php:44
+msgid "Enter a non-negative price using digits and a decimal separator."
+msgstr ""
+
+#: price-history/modules/anchor-price/helper.php:53
+msgid "Price on {date}: {price}"
+msgstr ""
+
+#: price-history/modules/anchor-price/helper.php:76
+msgid "Enter a Base Price message."
+msgstr ""
+
+#: price-history/modules/anchor-price/helper.php:148
+msgid "Base prices belong to simple products or individual variations."
+msgstr ""
+
+#: price-history/modules/chart/admin.php:32
+#: price-history/modules/chart/admin.php:188
+#: price-history/modules/price-compliance-manager/editor.php:396
+#: price-history/modules/price-compliance-manager/editor.php:397
+#: repair/includes/class-eggl-repair-list-table.php:60
+msgid "All"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:33
+#: price-history/modules/chart/admin.php:189
+msgid "Last 7 days"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:34
+#: price-history/modules/chart/admin.php:190
+msgid "Last 30 days"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:35
+#: price-history/modules/chart/admin.php:191
+msgid "Last 3 months"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:36
+#: price-history/modules/chart/admin.php:192
+msgid "Last 6 months"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:37
+#: price-history/modules/chart/admin.php:193
+msgid "Last 12 months"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:65
+msgctxt "Chart title"
+msgid "Price History"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:88
+msgid "Chart"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:98
+msgid "Bar"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:99
+msgid "Line"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:100
+msgid "Stepped line"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:109
+msgid "Always visible"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:110
+msgid "Collapsible – starts closed"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:111
+msgid "Collapsible – starts open"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:121
+msgid "Simple – icon, text and arrow"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:122
+msgid "Row – boxed, like the legal-guarantee notice"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:148
+msgid "Position"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:150
+msgid "Before product meta (SKU, Category, Tag)"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:151
+msgid "After product summary"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:152
+msgid "After product"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:161
+msgid "Collapsible hides the chart behind a clickable trigger (see Trigger style and Trigger text below); shoppers click it to show or hide the chart."
+msgstr ""
+
+#: price-history/modules/chart/admin.php:168
+msgid "Trigger style"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:170
+msgid "Simple shows just an icon, the text and an arrow, in your theme's own text style. Row puts them in a box like the legal-guarantee notice."
+msgstr ""
+
+#: price-history/modules/chart/admin.php:179
+msgid "Text shoppers click to show or hide the chart. Leave empty to use the chart title."
+msgstr ""
+
+#: price-history/modules/chart/admin.php:186
+msgid "Date range"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:200
+msgid "Minimum prices to display"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:208
+msgid "Show chart on variable products only when variation is selected"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:214
+msgid "Chart type"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:216
+msgid "Bar shows each recorded price as a column. Line connects the prices; Stepped line holds each price flat until the next change."
+msgstr ""
+
+#: price-history/modules/chart/admin.php:223
+msgid "Title"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:230
+msgid "Graph border color"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:231
+msgid "Colour of the bars, or of the line."
+msgstr ""
+
+#: price-history/modules/chart/admin.php:237
+msgid "Chart maximal width"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:261
+msgid "Chart text color"
+msgstr ""
+
+#: price-history/modules/chart/admin.php:267
+msgid "Chart background color"
+msgstr ""
+
+#: price-history/modules/chart/edit-product.php:37
+#, php-format
+msgid "Note that the chart won't be visible as you've set Minimum prices to display to %1$d, and there have been %2$d recorded price changes since the plugin activation."
+msgstr ""
+
+#: price-history/modules/chart/edit-product.php:61
+msgid "Hide chart"
+msgstr ""
+
+#: price-history/modules/chart/edit-product.php:62
+msgid "Don't show the price history chart on this product's page. Prices are still recorded."
+msgstr ""
+
+#. translators: 1: time period
+#: price-history/modules/chart/public.php:97
+#, php-format
+msgid "No price changes in %s"
+msgstr ""
+
+#: price-history/modules/chart/public.php:103
+#: repair/includes/class-eggl-repair-privacy.php:55
+msgid "Date"
+msgstr ""
+
+#: price-history/modules/chart/public.php:105
+msgid "Lowest:"
+msgstr ""
+
+#: price-history/modules/chart/public.php:106
+msgid "Highest:"
+msgstr ""
+
+#: price-history/modules/chart/public.php:107
+msgid "Average:"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:26
+#: price-history/modules/digital-price-list/router.php:123
+#: price-history/modules/digital-price-list/router.php:137
+msgid "Digital Price List"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:45
+msgid "Under the regulations currently in force in Croatia, traders and service providers with a website are required to publish current price lists online in a machine-readable CSV or XML format and keep previous versions publicly available for at least 30 days. The Digital Price List module automatically generates and publishes the required product price list for your WooCommerce store.<br><br><em>This information is provided for general guidance only and does not constitute legal advice.</em>"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:86
+msgid "Public Price List:"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:88
+msgid "Current CSV:"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:90
+msgid "Resolved Store / Outlet:"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:91
+msgid "not set"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:92
+msgid "Last Generated:"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:93
+msgid "never"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:95
+msgid "Rows:"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:98
+msgid "Next Scheduled Generation:"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:99
+msgid "not scheduled"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:101
+msgid "Generation Status:"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:102
+msgid "In progress…"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:105
+msgid "Last Error:"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:113
+msgid "Generate Now"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:123
+msgid "You cannot manage the Digital Price List."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:141
+msgid "Publishes a public, machine-readable CSV price list."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:146
+msgid "Automatic Generation"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:148
+msgid "Regenerate the price list automatically every day."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:153
+msgid "Scheduled Generation Time"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:156
+msgid "Store-timezone time (24h HH:MM) for the daily automatic generation."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:162
+msgid "Store / Outlet"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:168
+msgid "Store / Outlet Name"
+msgstr ""
+
+#. translators: %s: the site title used automatically when this is left empty.
+#: price-history/modules/digital-price-list/admin.php:171
+#, php-format
+msgid "Leave empty to use the site title (%s)."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:176
+msgid "Store / Outlet Address"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:178
+msgid "Leave empty to use the WooCommerce store address setting."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:183
+msgid "Outlet Type"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:185
+msgid "Label for this outlet, e.g. webshop, prodavaonica, servis. Defaults to webshop."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:190
+msgid "Outlet Identifier"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:192
+msgid "Short code or number identifying this outlet, used when you run more than one price list. Leave empty to default to 1."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:199
+msgid "Technical settings — the defaults work for most stores."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:204
+msgid "Price List Path"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:206
+msgid "Public URL path, e.g. price-list gives /price-list/current.csv."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:211
+msgid "File Name Pattern"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:213
+msgid "Placeholders: {store_name} {outlet_type} {address} {city} {postcode} {outlet_id} {sequence} {timestamp}. Leave empty for the automatic default."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:219
+#: price-history/modules/price-compliance-manager/editor.php:398
+#: repair/includes/class-eggl-repair-admin.php:286
+#: repair/includes/class-eggl-repair-list-table.php:30
+#: repair/includes/class-eggl-repair-privacy.php:60
+#: repair/templates/myaccount-claims.php:26
+msgid "Status"
+msgstr ""
+
+#: price-history/modules/digital-price-list/generator.php:161
+msgid "Could not create the price list storage directory."
+msgstr ""
+
+#: price-history/modules/digital-price-list/generator.php:183
+#: price-history/modules/digital-price-list/generator.php:279
+#: price-history/modules/price-compliance-manager/csv.php:124
+#: price-history/modules/price-compliance-manager/csv.php:181
+msgid "Could not write CSV."
+msgstr ""
+
+#: price-history/modules/digital-price-list/generator.php:213
+msgid "Could not read the product catalog."
+msgstr ""
+
+#: price-history/modules/digital-price-list/generator.php:275
+msgid "Could not create a temporary price list file."
+msgstr ""
+
+#: price-history/modules/digital-price-list/generator.php:303
+msgid "Could not continue writing the price list file."
+msgstr ""
+
+#: price-history/modules/digital-price-list/generator.php:338
+msgid "Could not archive the generated price list."
+msgstr ""
+
+#: price-history/modules/digital-price-list/generator.php:345
+msgid "Price list archived, but could not publish current.csv."
+msgstr ""
+
+#: price-history/modules/digital-price-list/generator.php:363
+#: price-history/modules/digital-price-list/rest.php:47
+msgid "Digital Price List is not enabled."
+msgstr ""
+
+#: price-history/modules/digital-price-list/generator.php:379
+msgid "Another Digital Price List generation is already running."
+msgstr ""
+
+#: price-history/modules/digital-price-list/mapper.php:78
+msgid "sale"
+msgstr ""
+
+#: price-history/modules/digital-price-list/router.php:140
+msgid "No price list has been generated yet."
+msgstr ""
+
+#: price-history/modules/digital-price-list/router.php:142
+msgid "Current Price List"
+msgstr ""
+
+#: price-history/modules/digital-price-list/router.php:148
+msgid "Previous Price Lists"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:29
+msgid "Lowest Price"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:46
+msgid "Lowest Price in the last 30 days: {lowest_price}"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:66
+msgid "Only on product page"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:72
+msgid "Only when product on-sale"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:78
+msgid "Inherit from regular price"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:79
+msgid "When insufficient price history information is available, the regular price will be displayed as the lowest price."
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:85
+msgid "Variable product price"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:87
+msgid "Range (min - max)"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:88
+msgid "Min"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:89
+msgid "Max"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:90
+#: price-history/modules/lowest-price/admin.php:99
+msgid "Don't display"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:97
+msgid "Regular price"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:100
+msgid "Show regular price"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:101
+msgid "Swap with lowest price — no message"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:102
+msgid "Swap with lowest price — include message"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:104
+msgid "Applies only when the product is on sale. Controls whether to show the regular price or replace it with the lowest price from the last 30 days, with optional message settings"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:110
+msgid "Text"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:111
+msgid "Placeholder for lowest price {lowest_price}"
+msgstr ""
+
+#: price-history/modules/lowest-price/admin.php:130
+msgid ""
+"The new Consumer Protection Act officially took effect in European Union (EU) on May 28, 2022, as published in Official Gazette No. 19/2022 The Act aims to enhance consumer protection by addressing unfair practices and modernizing rules. Key changes focus on price display for goods and services, with specific regulations for special forms of sales like special offers, sell-outs, and discounts.<br>\n"
+"            For special sales, prices must be displayed in two ways: <br>the current price during the sale period and <strong>the lowest price applied for the same goods in the 30 days prior to the sale's initiation.</strong> Traders are allowed to use percentages, percentage values, or cross out the previous price, as long as both the current and lowest prices are clearly presented numerically.<br><br><em>The content of this information is not intended as legal advice and should not be interpreted as such. If you have additional questions or find any aspect unclear, please consult with your regular legal advisor for further clarification.</em>"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/admin.php:38
+#: price-history/modules/price-compliance-manager/admin.php:39
+#: price-history/modules/price-compliance-manager/admin.php:54
+msgid "Price Compliance Manager"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/admin.php:50
+#: price-history/modules/price-compliance-manager/csv.php:92
+#: price-history/modules/price-compliance-manager/csv.php:94
+#: price-history/modules/price-compliance-manager/editor.php:79
+#: price-history/modules/price-compliance-manager/editor.php:180
+msgid "You cannot manage price compliance data."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/admin.php:55
+msgid "Edit price compliance data for many products on one screen, or export and import it as CSV. Filter the list to find products, and expand a variable product to edit its variations."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:37
+msgid "Import / Export"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:38
+msgid "Price compliance CSV"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:39
+msgid "Export"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:40
+msgid "Import"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:50
+msgid "Data to export"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:55
+msgid "Export CSV"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:57
+msgid "Generating CSV…"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:57
+msgid "CSV export failed. Please try again."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:59
+msgid "Exports products and variations matching the filters below."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:65
+msgid "Data to import"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:70
+msgid "Price compliance CSV file"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:72
+#: price-history/modules/price-compliance-manager/editor.php:50
+msgid "Import CSV"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:74
+msgid "Use a UTF-8 CSV with a product_id column (preferred) or, if product_id is absent, a sku column, plus the columns for the data sets selected above. Leave a row's columns for a data set empty to leave it unchanged; imported values always overwrite the current stored values."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:77
+msgid "CSV import progress"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:82
+msgid "Refresh table to review imported values"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:247
+msgid "Choose at least one data set to export."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:254
+msgid "Could not prepare CSV download."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:288
+msgid "The CSV file is empty."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:294
+msgid "Use a UTF-8 CSV file."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:298
+msgid "CSV column names must be unique."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:306
+msgid "CSV needs a product_id column, or a sku column if product_id is not available."
+msgstr ""
+
+#. translators: %s: CSV column name, e.g. "anchor_price_date".
+#: price-history/modules/price-compliance-manager/csv.php:315
+#, php-format
+msgid "CSV needs a column named %s for the selected data set."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:401
+msgid "Invalid import session."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:430
+msgid "Upload a non-empty CSV within the site upload limit."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:436
+msgid "Choose at least one data set to import."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:450
+msgid "Could not create a temporary import file."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:459
+msgid "Could not copy the complete CSV."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:474
+msgid "Could not start the import session."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:500
+msgid "Import is busy or expired. Retry, or upload the file again."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:504
+msgid "Import session expired or the store currency changed. Upload the file again."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:508
+msgid "Could not resume the CSV file."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/csv.php:525
+msgid "Could not save import progress. Review saved values before uploading again."
+msgstr ""
+
+#. translators: 1: processed rows, 2: updated values, 3: unchanged values, 4: skipped rows, 5: invalid values, 6: conflicts, 7: failed saves.
+#: price-history/modules/price-compliance-manager/csv.php:546
+#, php-format
+msgid "%1$s rows processed. %2$s updated. %3$s unchanged. %4$s skipped (missing or uneditable products). %5$s invalid. %6$s conflicts. %7$s failed saves."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:43
+msgid "Loading variations…"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:44
+msgid "Saving changes…"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:45
+msgid "No changes to save."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:46
+msgid "Save or discard your unsaved changes before changing filters or pages."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:47
+msgid "The request could not be completed. Your unsaved changes are still here. Please try again."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:48
+#: price-history/modules/price-compliance-manager/editor.php:291
+msgid "Show variations"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:49
+msgid "Hide variations"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:51
+msgid "Resume import"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:52
+msgid "Importing…"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:184
+#: price-history/modules/price-compliance-manager/editor.php:333
+msgid "Choose a valid data set to edit."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:187
+msgid "Save up to 100 changes at a time."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:195
+msgid "One of these products cannot be edited. Reload the page before saving."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:198
+#: price-history/modules/price-compliance-manager/editor.php:204
+msgid "Enter valid values for every field."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:238
+msgid "A change could not be saved. Reload to review its values before retrying."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:249
+msgid "A value changed since this page loaded. Reload before saving."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:270
+msgid "Variation"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:270
+msgid "SKU"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:270
+msgid "Regular Price"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:296
+msgid "See variations"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:311
+msgid "Edit individual variations below."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:311
+msgid "No permission to edit."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:326
+msgid "Choose a variable product."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:343
+msgid "No variations match this search."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:347
+msgid "Previous"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:347
+msgid "Next"
+msgstr ""
+
+#. translators: 1: current page number, 2: total number of pages.
+#: price-history/modules/price-compliance-manager/editor.php:352
+#, php-format
+msgid "Page %1$d of %2$d"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:362
+msgid "Nothing to edit yet"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:363
+msgid "This screen edits base prices in bulk. Enable Base Price first, then come back here."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:364
+msgid "Go to Base Price settings"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:377
+msgid "Changes saved."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:380
+msgid "Data to edit"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:389
+#: price-history/modules/price-compliance-manager/editor.php:396
+msgid "Set"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:389
+#: price-history/modules/price-compliance-manager/editor.php:396
+msgid "Not set"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:392
+msgid "A variable product counts as set when any variation has a value. Expand it to edit individual variations."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:395
+msgid "Search products / SKU"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:397
+msgid "Product type"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:397
+msgid "Simple"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:397
+msgid "Variable"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:406
+msgid "Product category"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:407
+msgid "All categories"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:408
+msgid "Filter"
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:415
+msgid "No products match your filters."
+msgstr ""
+
+#: price-history/modules/price-compliance-manager/editor.php:420
+msgid "Discard changes"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:35
+#: repair/includes/class-eggl-repair-admin.php:36
+#: repair/includes/class-eggl-repair-admin.php:133
+msgid "Right to Repair"
+msgstr ""
+
+#. translators: %s: claim number
+#: repair/includes/class-eggl-repair-admin.php:114
+#, php-format
+msgid "Defect claim #%s deleted."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:134
+msgid "Directive (EU) 2024/1799: when an item turns out to be defective within the legal guarantee, the customer chooses repair or replacement, and a repair extends the legal guarantee by 12 months. Customers report defects through the claim form; you handle the claims here. This plugin is a helper and does not provide legal advice."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:140
+msgid "Claims"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:160
+msgid "Claim updated. The customer has been emailed."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:161
+msgid "Nothing changed: pick a different status or write a message."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:162
+msgid "Please write the reason for the rejection — it is sent to the customer."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:163
+msgid "Claim deleted."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:164
+msgid "Bulk action applied."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:176
+msgid "Customers cannot report defects yet: publish the \"Report a defect\" page (see the Settings tab)."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:181
+msgid "Search claims"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:198
+msgid "All claims"
+msgstr ""
+
+#. translators: %s: claim number
+#: repair/includes/class-eggl-repair-admin.php:206
+#, php-format
+msgid "Defect claim #%s"
+msgstr ""
+
+#. translators: %s: date and time
+#: repair/includes/class-eggl-repair-admin.php:212
+#, php-format
+msgid "Received %s"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:217
+#: repair/includes/class-eggl-repair-list-table.php:26
+#: repair/includes/class-eggl-repair-privacy.php:56
+#: repair/templates/form-claim.php:30 repair/templates/order-select.php:25
+msgid "Order"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:223
+msgid "(order deleted)"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:227
+#: repair/includes/class-eggl-repair-list-table.php:28
+#: repair/includes/class-eggl-repair-privacy.php:57
+#: repair/templates/emails/claim-details.php:27
+#: repair/templates/emails/plain/claim-details.php:18
+#: repair/templates/myaccount-claims.php:24
+msgid "Items"
+msgstr ""
+
+#. translators: %s: date
+#: repair/includes/class-eggl-repair-admin.php:238
+#: repair/templates/form-claim.php:65
+#, php-format
+msgid "Legal guarantee until %s"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:239
+msgid "(extended after repair)"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:246
+msgid "Customer wants"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:249
+#: repair/includes/class-eggl-repair-privacy.php:59
+#: repair/templates/emails/claim-details.php:47
+#: repair/templates/emails/plain/claim-details.php:30
+msgid "Defect"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:253
+#: repair/templates/emails/claim-details.php:52
+#: repair/templates/emails/plain/claim-details.php:28
+msgid "Noticed on"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:258
+#: repair/includes/class-eggl-repair-settings.php:215
+#: repair/templates/emails/claim-details.php:65
+msgid "Photos"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:266
+msgid "Contact"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:280
+msgid "Update claim"
+msgstr ""
+
+#. translators: %d: number of months
+#: repair/includes/class-eggl-repair-admin.php:296
+#, php-format
+msgid "\"Repaired\" extends the legal guarantee of the claimed items by %d months and records the new end date on the order."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:300
+msgid "Message to the customer"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:301
+msgid "Optional — required when rejecting. E.g. how to send the item in."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:303
+msgid "Update and email customer"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:306
+msgid "Delete this claim permanently? Its photos are deleted too."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:306
+msgid "Delete claim"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:312
+msgid "History"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:344
+#: repair/includes/class-eggl-repair-claims.php:67
+#: repair/includes/class-eggl-repair-privacy.php:51
+#: repair/includes/class-eggl-repair-settings.php:170
+msgid "Defect claims"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:353
+msgid "No defect claims for this order."
+msgstr ""
+
+#. translators: 1: product name, 2: date
+#: repair/includes/class-eggl-repair-admin.php:371
+#, php-format
+msgid "%1$s: guarantee extended until %2$s"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-admin.php:375
+msgid "Guarantee extensions"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-claims.php:42
+#: repair/includes/class-eggl-repair-list-table.php:31
+msgid "Received"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-claims.php:43
+msgid "In progress"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-claims.php:44
+msgid "Repaired"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-claims.php:45
+msgid "Replaced"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-claims.php:46
+msgid "Refunded or price reduced"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-claims.php:47
+msgid "Rejected"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-claims.php:54
+#: repair/templates/form-claim.php:145
+msgid "Replacement"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-claims.php:68
+msgid "Defect claim"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-claims.php:251
+msgid "Please choose at least one item."
+msgstr ""
+
+#. translators: %s: order number
+#: repair/includes/class-eggl-repair-claims.php:257
+#, php-format
+msgid "Defect claim for order #%s"
+msgstr ""
+
+#. translators: 1: claim number, 2: chosen remedy (Repair/Replacement)
+#: repair/includes/class-eggl-repair-claims.php:284
+#, php-format
+msgid "Defect claim #%1$s received from the customer — requested remedy: %2$s."
+msgstr ""
+
+#. translators: 1: claim number, 2: new status
+#: repair/includes/class-eggl-repair-claims.php:321
+#, php-format
+msgid "Defect claim #%1$s: status changed to %2$s."
+msgstr ""
+
+#. translators: 1: product name, 2: date, 3: number of months, 4: claim number
+#: repair/includes/class-eggl-repair-claims.php:352
+#, php-format
+msgid "Legal guarantee for \"%1$s\" extended to %2$s (%3$d months for the repair under claim #%4$s)."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:151
+#: repair/includes/class-eggl-repair-form.php:182
+msgid "Your session has expired. Please try again."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:159
+msgid "Please enter your order number and the email address you ordered with."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:163
+msgid "Too many attempts. Please try again in an hour."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:169
+msgid "We could not find an order with this number and email address."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:173
+msgid "This order has no items that are still within the legal guarantee period."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:188
+msgid "We could not verify your order. Please look it up again."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:210
+msgid "Your claim could not be sent. Please wait a moment and try again."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:224
+msgid "Please choose the item(s) that are defective."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:227
+msgid "Please describe the defect (at least 10 characters)."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:230
+msgid "Please choose whether you would like a repair or a replacement."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:233
+msgid "Please enter your first and last name."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:236
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:246
+msgid "Too many claims sent from your connection. Please try again in an hour."
+msgstr ""
+
+#. translators: %d: maximum number of photos
+#: repair/includes/class-eggl-repair-form.php:301
+#, php-format
+msgid "Please attach no more than %d photos."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:319
+msgid "A photo could not be uploaded. Please try again."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:321
+msgid "Each photo must be 5 MB or smaller."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:325
+msgid "Photos must be JPG, PNG or WebP images."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:330
+msgid "Defect photo"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:353
+msgid "Defects cannot be reported online at the moment. Please contact us directly."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-form.php:429
+#: repair/templates/myaccount-claims.php:65
+msgid "Report a defect"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-list-table.php:25
+#: repair/includes/class-eggl-repair-privacy.php:54
+#: repair/templates/myaccount-claims.php:23
+msgid "Claim"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-list-table.php:27
+#: repair/templates/emails/claim-details.php:58
+#: repair/templates/emails/plain/claim-details.php:32
+msgid "Customer"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-list-table.php:29
+msgid "Wants"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-list-table.php:41
+msgid "Mark as in progress (emails customers)"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-list-table.php:42
+msgid "Delete"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-list-table.php:59
+#: repair/includes/class-eggl-repair-list-table.php:126
+msgid "Open"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-list-table.php:116
+msgid "No defect claims here."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-privacy.php:14
+#: repair/includes/class-eggl-repair-privacy.php:22
+msgid "Defect claims (right to repair)"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-privacy.php:58
+#: repair/templates/emails/claim-details.php:43
+#: repair/templates/emails/plain/claim-details.php:26
+msgid "Requested remedy"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-privacy.php:62
+#: repair/templates/form-lookup.php:37
+msgid "Email address"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-privacy.php:90
+msgid "Defect claims were anonymised but kept, as records of the legal guarantee."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:92
+msgctxt "repair page title"
+msgid "Report a defect"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:93
+msgctxt "repair page slug"
+msgid "report-a-defect"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:171
+msgid "Customers report a defect, choose repair or replacement, and you handle the claim under the Claims tab."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:174
+msgid "The claim form is not live yet: publish the \"Report a defect\" page to switch it on."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:176
+msgid "Edit the page"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:183
+msgid "Right to repair"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:184
+msgid "Let customers report defects and request repair or replacement"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:185
+msgid "When off, the form and the My account links disappear. Claims already received stay under the Claims tab."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:187
+msgid "Claim form page"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:193
+msgid "— Select a page —"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:196
+msgid "The page must contain the shortcode"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:198
+msgid "Orders that can be claimed"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:200
+msgid "Choose order statuses…"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:205
+msgid "Customers can report a defect only for orders with one of these statuses. Completed is recommended: the legal guarantee covers goods the customer has received, and its period runs from the completed date. Add a status such as \"Delivered\" from a shipping plugin if you use one. If none is chosen, Completed is used."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:207
+msgid "Legal guarantee period"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:208
+msgid "years from delivery"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:209
+msgid "Store default — at least 2 years in every EU country; some countries give more. A product can have its own period in its EU Guarantee tab (e.g. used goods). Customers can report defects for items still inside their period (plus any repair extensions)."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:211
+msgid "Extension after a repair"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:212
+msgid "months"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:213
+msgid "Directive (EU) 2024/1799 extends the seller's liability by 12 months when a defect is fixed by repair; member states may give more. Applied automatically to each item when you mark a claim \"Repaired\"."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:216
+msgid "Let customers attach photos of the defect"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:217
+msgid "Up to"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:217
+msgid "photos (JPG, PNG or WebP, 5 MB each)"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:219
+msgid "Header menu"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:220
+msgid "Show a \"Report a defect\" link in the header menu"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:221
+msgid "Added to the main header menu (classic menus, automatic page menus and block-theme navigation) while the claim page is published. When off, the page is also kept out of menus that list all pages automatically. A link you add to a menu by hand is always kept."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:223
+msgid "My account"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:224
+msgid "Show a \"Report a defect\" button next to eligible orders"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:225
+msgid "Also lists the order's defect claims and any guarantee extensions on the order page."
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:233
+msgid "Right to repair notice"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:234
+msgid "Sellers must tell consumers they can choose repair or replacement, and that choosing repair extends the legal guarantee. The notice is always shown on the claim form; it can also appear here:"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:238
+msgid "Product page"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:239
+msgid "Show the right to repair notice on product pages"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:246
+msgid "Order emails"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:247
+msgid "Add the notice to order confirmation emails"
+msgstr ""
+
+#: repair/includes/class-eggl-repair-settings.php:248
+msgid "Processing, completed and invoice emails, customer copies only — with a link to the claim form once its page is published."
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-claim-received.php:10
+#: repair/includes/emails/class-eggl-rr-email-claim-received.php:22
+msgid "Defect claim received"
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-claim-received.php:11
+msgid "Sent to the customer when they report a defect (right to repair)."
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-claim-received.php:18
+msgid "[{site_title}]: We received your defect claim #{claim_number}"
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-claim-updated.php:16
+msgid "Defect claim updated"
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-claim-updated.php:17
+msgid "Sent to the customer when you change the status of their defect claim or send them a message."
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-claim-updated.php:25
+msgid "[{site_title}]: Update on your defect claim #{claim_number} — {claim_status}"
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-claim-updated.php:29
+msgid "Update on your defect claim"
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-claim-updated.php:61
+msgid "We are now working on your defect claim."
+msgstr ""
+
+#. translators: %d: number of months
+#: repair/includes/emails/class-eggl-rr-email-claim-updated.php:64
+#, php-format
+msgid "Your item has been repaired. As required by EU law, your legal guarantee for the repaired item has been extended by %d months — see the new end date below."
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-claim-updated.php:66
+msgid "Your defective item has been replaced."
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-claim-updated.php:68
+msgid "Your claim has been settled with a refund or a price reduction."
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-claim-updated.php:70
+msgid "Unfortunately we cannot accept your defect claim."
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-new-claim.php:9
+#: repair/includes/emails/class-eggl-rr-email-new-claim.php:22
+msgid "New defect claim"
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-new-claim.php:10
+msgid "Sent to the shop when a customer reports a defect (right to repair)."
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-new-claim.php:18
+msgid "[{site_title}]: New defect claim #{claim_number} for order #{order_number}"
+msgstr ""
+
+#: repair/includes/emails/class-eggl-rr-email-new-claim.php:37
+msgid "Recipient(s)"
+msgstr ""
+
+#. translators: %s: admin email
+#: repair/includes/emails/class-eggl-rr-email-new-claim.php:40
+#, php-format
+msgid "Enter recipients (comma separated) for this email. Defaults to %s."
+msgstr ""
+
+#. translators: 1: claim number, 2: order number
+#: repair/templates/emails/claim-details.php:22
+#: repair/templates/emails/plain/claim-details.php:17
+#, php-format
+msgid "Defect claim #%1$s — order #%2$s"
+msgstr ""
+
+#. translators: %s: date
+#: repair/templates/emails/claim-details.php:35
+#: repair/templates/emails/plain/claim-details.php:23
+#, php-format
+msgid "Legal guarantee extended until %s"
+msgstr ""
+
+#. translators: %s: customer name
+#: repair/templates/emails/claim-received.php:22
+#: repair/templates/emails/claim-updated.php:25
+#: repair/templates/emails/plain/claim-received.php:16
+#: repair/templates/emails/plain/claim-updated.php:19
+#, php-format
+msgid "Hi %s,"
+msgstr ""
+
+#: repair/templates/emails/claim-received.php:24
+#: repair/templates/emails/claim-updated.php:27
+#: repair/templates/emails/plain/claim-received.php:16
+#: repair/templates/emails/plain/claim-updated.php:19
+msgid "Hi,"
+msgstr ""
+
+#: repair/templates/emails/claim-received.php:27
+#: repair/templates/emails/plain/claim-received.php:17
+msgid "Thank you for letting us know about the defect. We have received your claim and will get back to you as soon as possible."
+msgstr ""
+
+#. translators: %d: number of months
+#: repair/templates/emails/claim-received.php:30
+#: repair/templates/emails/plain/claim-received.php:19
+#, php-format
+msgid "Good to know: if the item is repaired, your legal guarantee for it is extended by %d months."
+msgstr ""
+
+#: repair/templates/emails/claim-updated.php:38
+#: repair/templates/emails/plain/claim-updated.php:22
+msgid "Reason:"
+msgstr ""
+
+#: repair/templates/emails/claim-updated.php:38
+#: repair/templates/emails/plain/claim-updated.php:22
+msgid "Message from us:"
+msgstr ""
+
+#: repair/templates/emails/new-claim.php:17
+#: repair/templates/emails/plain/new-claim.php:13
+msgid "A customer has reported a defect and asks for a free repair or replacement under the legal guarantee."
+msgstr ""
+
+#: repair/templates/emails/new-claim.php:18
+msgid "Open the claim"
+msgstr ""
+
+#: repair/templates/form-claim.php:41
+msgid "Which item is defective?"
+msgstr ""
+
+#: repair/templates/form-claim.php:61
+msgid "A claim for this item is already being handled."
+msgstr ""
+
+#: repair/templates/form-claim.php:73
+msgid "Quantity"
+msgstr ""
+
+#: repair/templates/form-claim.php:83 repair/templates/form-claim.php:87
+msgid "Describe the defect"
+msgstr ""
+
+#: repair/templates/form-claim.php:91
+msgid "What is wrong, and when does it happen?"
+msgstr ""
+
+#: repair/templates/form-claim.php:96
+msgid "When did you notice the defect?"
+msgstr ""
+
+#: repair/templates/form-claim.php:105
+msgid "Photos of the defect"
+msgstr ""
+
+#: repair/templates/form-claim.php:105
+msgid "optional"
+msgstr ""
+
+#: repair/templates/form-claim.php:108
+msgid "Add photos"
+msgstr ""
+
+#. translators: %d: maximum number of photos
+#: repair/templates/form-claim.php:112
+#, php-format
+msgid "Up to %d photos, JPG, PNG or WebP, 5 MB each."
+msgstr ""
+
+#: repair/templates/form-claim.php:122
+msgid "What would you like us to do?"
+msgstr ""
+
+#. translators: %d: number of months
+#: repair/templates/form-claim.php:132
+#, php-format
+msgid "Free of charge. Your legal guarantee for the repaired item is extended by %d months."
+msgstr ""
+
+#. translators: %d: number of months the legal guarantee is extended by
+#: repair/templates/form-claim.php:137
+#, php-format
+msgid "+%d months"
+msgstr ""
+
+#: repair/templates/form-claim.php:146
+msgid "Free of charge, with an item of the same kind."
+msgstr ""
+
+#: repair/templates/form-claim.php:150
+msgid "If the remedy you choose is impossible or would cost the seller disproportionately more than the other one, we will contact you about the alternative."
+msgstr ""
+
+#: repair/templates/form-claim.php:154
+msgid "Your contact details"
+msgstr ""
+
+#: repair/templates/form-claim.php:170
+msgid "First name"
+msgstr ""
+
+#: repair/templates/form-claim.php:179
+msgid "Last name"
+msgstr ""
+
+#: repair/templates/form-claim.php:211
+msgid "Send claim"
+msgstr ""
+
+#: repair/templates/form-lookup.php:20
+msgid "Or look up another order:"
+msgstr ""
+
+#: repair/templates/form-lookup.php:22
+msgid "Enter your order number and the email address you used for the order."
+msgstr ""
+
+#: repair/templates/form-lookup.php:29
+msgid "Order number"
+msgstr ""
+
+#: repair/templates/form-lookup.php:48
+msgid "Find my order"
+msgstr ""
+
+#. translators: %s: claim number
+#: repair/templates/form-sent.php:15
+#, php-format
+msgid "Thank you — we have received your defect claim #%s and sent a confirmation to your email address. We will get back to you as soon as possible."
+msgstr ""
+
+#: repair/templates/form-sent.php:19
+msgid "Report another defect for this order"
+msgstr ""
+
+#: repair/templates/myaccount-claims.php:17
+msgid "Defects and repairs"
+msgstr ""
+
+#: repair/templates/myaccount-claims.php:25
+msgid "Requested"
+msgstr ""
+
+#. translators: %s: date
+#: repair/templates/myaccount-claims.php:44
+#, php-format
+msgid "Guarantee extended until %s"
+msgstr ""
+
+#: repair/templates/order-select.php:29
+msgid "Please select an order"
+msgstr ""
+
+#. translators: 1: order number, 2: order date
+#: repair/templates/order-select.php:37
+#, php-format
+msgid "Order #%1$s from %2$s"
+msgstr ""
+
+#: repair/templates/order-select.php:45
+msgid "Continue"
+msgstr ""
+
+#: withdrawal/includes/admin/views/html-privacy-policy.php:7
+msgctxt "owb"
+msgid "When you submit a withdrawal request through our withdraw from contract form, we collect and store the following personal data for the sole purpose of fulfilling the legal traceability of consumer rights under EU Directive 2023/2673:"
+msgstr ""
+
+#: withdrawal/includes/admin/views/html-privacy-policy.php:10
+msgctxt "owb"
+msgid "Customer name and email address."
+msgstr ""
+
+#: withdrawal/includes/admin/views/html-privacy-policy.php:11
+msgctxt "owb"
+msgid "Order reference."
+msgstr ""
+
+#: withdrawal/includes/admin/views/html-privacy-policy.php:12
+msgctxt "owb"
+msgid "IP address and browser User-Agent string used to submit the request."
+msgstr ""
+
+#: withdrawal/includes/admin/views/html-privacy-policy.php:13
+msgctxt "owb"
+msgid "Date and time of the submission."
+msgstr ""
+
+#: withdrawal/includes/admin/views/html-privacy-policy.php:15
+msgctxt "owb"
+msgid "Additional information in case provided."
+msgstr ""
+
+#: withdrawal/includes/eggl-wd-core-functions.php:229
+#: withdrawal/src/Settings.php:82
+msgctxt "owb"
+msgid "Withdraw from contract"
+msgstr ""
+
+#: withdrawal/includes/eggl-wd-core-functions.php:980
+#, php-format
+msgctxt "owb"
+msgid "Customer requested an update to the original withdrawal: %1$s"
+msgstr ""
+
+#: withdrawal/includes/eggl-wd-core-functions.php:1025
+msgctxt "owb"
+msgid "Error while saving the withdrawal request."
+msgstr ""
+
+#: withdrawal/includes/eggl-wd-core-functions.php:1035
+#, php-format
+msgctxt "owb"
+msgid "A new %1$s has been submitted to this order"
+msgstr ""
+
+#: withdrawal/includes/eggl-wd-core-functions.php:1035
+#: withdrawal/src/Admin/Admin.php:1054
+msgctxt "owb"
+msgid "Partial withdrawal request"
+msgstr ""
+
+#: withdrawal/includes/eggl-wd-core-functions.php:1035
+#: withdrawal/src/Admin/Admin.php:1054
+msgctxt "owb"
+msgid "Full withdrawal request"
+msgstr ""
+
+#: withdrawal/includes/eggl-wd-core-functions.php:1087
+msgctxt "owb"
+msgid "A withdrawal request has been confirmed."
+msgstr ""
+
+#: withdrawal/includes/eggl-wd-core-functions.php:1163
+msgctxt "owb"
+msgid "A withdrawal request has been deleted."
+msgstr ""
+
+#: withdrawal/includes/eggl-wd-core-functions.php:1166
+msgctxt "owb"
+msgid "A withdrawal request has been deleted by the customer."
+msgstr ""
+
+#: withdrawal/includes/eggl-wd-core-functions.php:1212
+#, php-format
+msgctxt "owb"
+msgid "A withdrawal request has been rejected: %1$s"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-confirmed.php:44
+msgctxt "owb"
+msgid "Withdrawal request confirmed"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-confirmed.php:45
+#: withdrawal/src/Admin/Admin.php:1059
+msgctxt "owb"
+msgid "Confirms the withdrawal request to the customer."
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-confirmed.php:68
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-confirmed.php:77
+msgctxt "owb"
+msgid "Your withdrawal request has been confirmed."
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:51
+msgctxt "owb"
+msgid "Withdrawal request received"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:52
+msgctxt "owb"
+msgid "Confirm that the withdrawal request has been received."
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:78
+msgctxt "owb"
+msgid "Your partial withdrawal request has been received."
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:80
+msgctxt "owb"
+msgid "Your withdrawal request has been received."
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:92
+msgctxt "owb"
+msgid "We received your partial withdrawal request"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:94
+msgctxt "owb"
+msgid "We received your withdrawal request"
+msgstr ""
+
+#. translators: %s: list of placeholders
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:250
+#, php-format
+msgctxt "owb"
+msgid "Available placeholders: %s"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:254
+msgctxt "owb"
+msgid "Enable/Disable"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:256
+msgctxt "owb"
+msgid "Enable this email notification"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:260
+msgctxt "owb"
+msgid "Full withdrawal subject"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:268
+msgctxt "owb"
+msgid "Partial withdrawal subject"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:276
+msgctxt "owb"
+msgid "Full withdrawal email heading"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:284
+msgctxt "owb"
+msgid "Partial withdrawal email heading"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:292
+msgctxt "owb"
+msgid "Additional content"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:293
+msgctxt "owb"
+msgid "Text to appear below the main email content."
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:295
+msgctxt "owb"
+msgid "N/A"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:301
+msgctxt "owb"
+msgid "Email type"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-received.php:303
+msgctxt "owb"
+msgid "Choose which format of email to send."
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-rejected.php:44
+msgctxt "owb"
+msgid "Withdrawal request rejected"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-rejected.php:45
+msgctxt "owb"
+msgid "Informs the customer that their withdrawal request has been rejected."
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-rejected.php:69
+#: withdrawal/includes/emails/class-eggl-wd-email-customer-withdrawal-request-rejected.php:78
+msgctxt "owb"
+msgid "Your withdrawal request has been rejected."
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-deleted-withdrawal-request.php:38
+msgctxt "owb"
+msgid "Withdrawal request deleted"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-deleted-withdrawal-request.php:39
+msgctxt "owb"
+msgid "Withdrawal request deleted emails are sent to chosen recipient(s) when a customer deletes a withdrawal request."
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-deleted-withdrawal-request.php:67
+msgctxt "owb"
+msgid "[{site_title}]: Withdrawal request to {order_number} deleted"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-deleted-withdrawal-request.php:76
+msgctxt "owb"
+msgid "Withdrawal request deleted: {order_number}"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-deleted-withdrawal-request.php:202
+#: withdrawal/includes/emails/class-eggl-wd-email-new-withdrawal-request.php:200
+msgctxt "owb"
+msgid "Recipient(s)"
+msgstr ""
+
+#. translators: %s: WP admin email
+#: withdrawal/includes/emails/class-eggl-wd-email-deleted-withdrawal-request.php:205
+#: withdrawal/includes/emails/class-eggl-wd-email-new-withdrawal-request.php:203
+#, php-format
+msgctxt "owb"
+msgid "Enter recipients (comma separated) for this email. Defaults to %s."
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-new-withdrawal-request.php:37
+msgctxt "owb"
+msgid "New withdrawal request"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-new-withdrawal-request.php:38
+msgctxt "owb"
+msgid "New withdrawal request emails are sent to chosen recipient(s) when a customer submits a withdrawal request."
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-new-withdrawal-request.php:66
+msgctxt "owb"
+msgid "[{site_title}]: New withdrawal request to {order_number}"
+msgstr ""
+
+#: withdrawal/includes/emails/class-eggl-wd-email-new-withdrawal-request.php:75
+msgctxt "owb"
+msgid "New withdrawal request: {order_number}"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:65
+msgctxt "owb"
+msgid "Page is missing"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:66
+msgctxt "owb"
+msgid "Create page"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:69
+msgctxt "owb"
+msgid "Shortcode is missing"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:70
+msgctxt "owb"
+msgid "Add form to page"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:73
+msgctxt "owb"
+msgid "Invisible to visitors"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:74
+msgctxt "owb"
+msgid "Edit & publish page"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:77
+msgctxt "owb"
+msgid "Edit page"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:98
+msgctxt "owb"
+msgid "Valid"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:98
+#, php-format
+msgctxt "owb"
+msgid "Invalid: %1$s"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:105
+msgctxt "owb"
+msgid "View page"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:117 withdrawal/src/Admin/Privacy.php:19
+#: withdrawal/src/Admin/Privacy.php:28 withdrawal/src/Admin/Privacy.php:197
+msgctxt "owb"
+msgid "EU Order Withdrawal"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:122
+msgctxt "owb"
+msgid "Database Version"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:127
+msgctxt "owb"
+msgid "Overrides"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:134
+#, php-format
+msgctxt "owb"
+msgid "Version %1$s is out of date. The core version %2$s is available at: %3$s"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:145
+msgctxt "owb"
+msgid "Outdated templates"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:235
+msgctxt "owb"
+msgid "Reject selected withdrawal requests"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:235
+msgctxt "owb"
+msgid "The request could not be rejected. Please reload the page and try again."
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:237 withdrawal/src/Admin/Admin.php:1026
+#: withdrawal/src/Admin/Admin.php:1072
+#: withdrawal/src/Admin/WithdrawalTable.php:925
+msgctxt "owb"
+msgid "Reject withdrawal request"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:238 withdrawal/src/Admin/Admin.php:1064
+msgctxt "owb"
+msgid "Reason"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:238
+msgctxt "owb"
+msgid "(optional)"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:240
+msgctxt "owb"
+msgid "The customer receives this reason in the rejection email."
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:241
+msgctxt "owb"
+msgid "The same reason is sent to every selected customer in their rejection email. Requests that are not open any more are skipped."
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:244
+msgctxt "owb"
+msgid "Cancel"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:245 withdrawal/src/Admin/Admin.php:1060
+msgctxt "owb"
+msgid "Reject request"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:292 withdrawal/src/Admin/Admin.php:360
+#: withdrawal/src/Admin/Admin.php:747 withdrawal/src/Admin/Admin.php:1114
+#: withdrawal/src/Admin/Privacy.php:172 withdrawal/src/Package.php:667
+msgctxt "owb"
+msgid "Withdrawals"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:333
+msgctxt "owb"
+msgid "Settings"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:337
+msgctxt "owb"
+msgid "Requests"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:362
+msgctxt "owb"
+msgid "Configure the withdrawal button and form required by Directive (EU) 2023/2673. Customers use the withdrawal page to withdraw from a contract; each request then appears under Requests."
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:363
+msgctxt "owb"
+msgid "Withdrawal requests submitted through your withdrawal form. Confirm or reject each request — the customer is notified by email either way."
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:421
+msgctxt "owb"
+msgid "You do not have permission to change these settings."
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:440
+msgctxt "owb"
+msgid "Withdrawal page & button"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:441
+msgctxt "owb"
+msgid "Where customers submit a withdrawal, and where the withdrawal button is shown."
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:445
+msgctxt "owb"
+msgid "Withdrawal form"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:446
+msgctxt "owb"
+msgid "What customers fill in, and how guest requests are checked."
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:450
+msgctxt "owb"
+msgid "Rules & notifications"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:451
+msgctxt "owb"
+msgid "Which orders can be withdrawn, and how requests are handled."
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:469
+msgctxt "owb"
+msgid "Your settings have been saved."
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:497
+msgctxt "owb"
+msgid "More"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:504
+msgctxt "owb"
+msgid "Save changes"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:626
+msgctxt "owb"
+msgid "— Select a page —"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:776
+#, php-format
+msgctxt "owb-item-quantity"
+msgid "%1$s x %2$s"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:781
+#, php-format
+msgctxt "owb"
+msgid "%1$s received on %2$s @ %3$s by <a href=\"mailto:%4$s\">%5$s</a> %6$s"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:781
+msgctxt "owb"
+msgid "Partial withdrawal"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:781
+msgctxt "owb"
+msgid "Full withdrawal"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:787
+#: withdrawal/src/Admin/WithdrawalTable.php:1201
+msgctxt "owb"
+msgid "Reason:"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:788
+#: withdrawal/src/Admin/WithdrawalTable.php:1201
+msgctxt "owb"
+msgid "No reason given"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:797
+#: withdrawal/src/Admin/WithdrawalTable.php:1203
+#, php-format
+msgctxt "owb"
+msgid "Confirmed %1$s at %2$s"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:799
+#: withdrawal/src/Admin/WithdrawalTable.php:1197
+#, php-format
+msgctxt "owb"
+msgid "Rejected %1$s at %2$s"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:802
+msgctxt "owb"
+msgid "Delete withdrawal"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:911 withdrawal/src/Package.php:149
+#, php-format
+msgctxt "owb"
+msgid "Withdrawn %1$sx"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:917
+#, php-format
+msgctxt "owb"
+msgid "Requested %1$sx"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:942
+msgctxt "owb"
+msgid "Email address matches"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:942
+msgctxt "owb"
+msgid "E-mail address unknown"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:946
+msgctxt "owb"
+msgid "Confirm withdrawal requests"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:947
+msgctxt "owb"
+msgid "Reject withdrawal requests"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:948
+msgctxt "owb"
+msgid "Delete withdrawal requests"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:1020 withdrawal/src/Admin/Admin.php:1059
+#: withdrawal/src/Admin/WithdrawalTable.php:918
+msgctxt "owb"
+msgid "Confirm withdrawal request"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:1032
+#: withdrawal/src/Admin/WithdrawalTable.php:931
+msgctxt "owb"
+msgid "Delete withdrawal request"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:1056
+#, php-format
+msgctxt "owb"
+msgid "Received on %1$s @ %2$s by <a href=\"mailto:%3$s\">%4$s</a> %5$s"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:1059
+msgctxt "owb"
+msgid "Are you sure to confirm the withdrawal request?"
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:1060
+msgctxt "owb"
+msgid "Reject the withdrawal request by providing a reason for the rejection."
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:1065
+msgctxt "owb"
+msgid "Describe why you've rejected the withdrawal request."
+msgstr ""
+
+#: withdrawal/src/Admin/Admin.php:1072
+msgctxt "owb"
+msgid "Are you sure to reject the withdrawal request?"
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:76
+msgctxt "owb"
+msgid "Personal data removed."
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:79
+#, php-format
+msgctxt "owb"
+msgid "Removed personal data from withdrawal %s."
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:83
+#, php-format
+msgctxt "owb"
+msgid "Personal data within withdrawal %s has been retained."
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:121
+#: withdrawal/src/Admin/WithdrawalTable.php:1015
+#: withdrawal/src/Settings.php:129
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:42
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:30
+msgctxt "owb"
+msgid "Contract Identification"
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:122 withdrawal/src/Settings.php:127
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:87
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:267
+msgctxt "owb"
+msgid "First name"
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:123 withdrawal/src/Settings.php:128
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:107
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:287
+msgctxt "owb"
+msgid "Last name"
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:124
+#: withdrawal/src/Admin/WithdrawalTable.php:1007
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:44
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:32
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:56
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:236
+msgctxt "owb"
+msgid "Email"
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:125
+msgctxt "owb"
+msgid "Date received"
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:126 withdrawal/src/Settings.php:130
+#: withdrawal/src/Settings.php:141
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:130
+msgctxt "owb"
+msgid "Additional information"
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:127
+msgctxt "owb"
+msgid "IP Address"
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:128
+msgctxt "owb"
+msgid "User Agent"
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:129
+msgctxt "owb"
+msgid "Items"
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:130
+#: withdrawal/src/Admin/WithdrawalTable.php:331
+msgctxt "owb"
+msgid "Status"
+msgstr ""
+
+#: withdrawal/src/Admin/Privacy.php:173
+msgctxt "owb"
+msgid "User&#8217;s withdrawals data."
+msgstr ""
+
+#. translators: %s: orders count
+#: withdrawal/src/Admin/WithdrawalTable.php:96
+#, php-format
+msgctxt "owb"
+msgid "%s withdrawal status changed."
+msgid_plural "%s withdrawal statuses changed."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: orders count
+#: withdrawal/src/Admin/WithdrawalTable.php:104
+#, php-format
+msgctxt "owb"
+msgid "%s withdrawal moved to the Trash."
+msgid_plural "%s withdrawals moved to the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: orders count
+#: withdrawal/src/Admin/WithdrawalTable.php:108
+#, php-format
+msgctxt "owb"
+msgid "%s withdrawal restored from the Trash."
+msgid_plural "%s withdrawals restored from the Trash."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: orders count
+#: withdrawal/src/Admin/WithdrawalTable.php:112
+#, php-format
+msgctxt "owb"
+msgid "%s withdrawal permanently deleted."
+msgid_plural "%s withdrawals permanently deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: Search query.
+#: withdrawal/src/Admin/WithdrawalTable.php:244
+#, php-format
+msgctxt "owb"
+msgid "Search results for: %s"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:280
+msgctxt "owb"
+msgid "Search withdrawals"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:297
+msgctxt "owb"
+msgid "When you receive a new withdrawal, it will appear here."
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:327
+msgctxt "owb"
+msgid "Withdrawal"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:328
+msgctxt "owb"
+msgid "Order/Contract"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:329
+msgctxt "owb"
+msgid "Date"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:330
+msgctxt "owb"
+msgid "Address"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:332
+msgctxt "owb"
+msgid "Customer note"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:333
+msgctxt "owb"
+msgid "Actions"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:568
+msgctxt "owb"
+msgid "Restore"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:569
+msgctxt "owb"
+msgid "Delete permanently"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:573
+msgctxt "owb"
+msgid "Confirm"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:574
+msgctxt "owb"
+msgid "Reject"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:575
+msgctxt "owb"
+msgid "Move to Trash"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:710
+msgctxt "owb"
+msgid "All"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:801
+msgctxt "owb"
+msgid "Preview"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:816
+msgctxt "owb"
+msgid "Search for an order"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:820 withdrawal/src/Ajax.php:180
+#: withdrawal/src/WithdrawalOrder.php:115
+#, php-format
+msgctxt "owb"
+msgid "Order #%s"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:864
+#, php-format
+msgctxt "owb"
+msgid "Partial %s"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:864
+#, php-format
+msgctxt "owb"
+msgid "Full %s"
+msgstr ""
+
+#. translators: %s: human-readable time difference
+#: withdrawal/src/Admin/WithdrawalTable.php:965
+#, php-format
+msgctxt "owb-human-readable-time-diff"
+msgid "%s ago"
+msgstr ""
+
+#. translators: %s: withdrawal ID
+#: withdrawal/src/Admin/WithdrawalTable.php:989
+#, php-format
+msgctxt "owb"
+msgid "Withdrawal %s"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:991
+msgctxt "owb"
+msgid "Close modal panel"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:999
+msgctxt "owb"
+msgid "Contact Details"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:1002
+msgctxt "owb"
+msgid "Name"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:1012
+msgctxt "owb"
+msgid "Withdrawal Details"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:1020
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:47
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:36
+msgctxt "owb"
+msgid "Verification code"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:1025
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:58
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:46
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:48
+msgctxt "owb"
+msgid "Additional Information"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:1034
+msgctxt "owb"
+msgid "Logs"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:1068
+#, php-format
+msgctxt "owb"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:1106
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:74
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request-item-select.php:66
+msgctxt "owb"
+msgid "Product"
+msgstr ""
+
+#: withdrawal/src/Admin/WithdrawalTable.php:1107
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:75
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request-item-select.php:67
+msgctxt "owb"
+msgid "Quantity"
+msgstr ""
+
+#: withdrawal/src/Ajax.php:257
+msgctxt "owb"
+msgid "Sorry, no permission to view that order."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:321 withdrawal/src/Ajax.php:599
+msgctxt "owb"
+msgid "Thank you. We've received your withdrawal request. You'll receive a confirmation of your request by email."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:328
+msgctxt "owb"
+msgid "Please wait a little longer before submitting. We’re running a quick security check."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:333
+msgctxt "owb"
+msgid "Please enter your first name."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:337
+msgctxt "owb"
+msgid "Please enter your last name."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:341
+msgctxt "owb"
+msgid "Please check your email address."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:354 withdrawal/src/Ajax.php:451
+#: withdrawal/src/Ajax.php:467 withdrawal/src/Ajax.php:493
+#: withdrawal/src/Ajax.php:499 withdrawal/src/Ajax.php:505
+#: withdrawal/src/Ajax.php:534
+#, php-format
+msgctxt "owb"
+msgid "Sorry, we were unable to find an order based on the information you provided. Please try again - if the issue persists, please <a href=\"%s\">contact support</a> for help."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:376
+msgctxt "owb"
+msgid "Please select one or more items to withdraw."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:389
+msgctxt "owb"
+msgid "One ore more of the item(s) you've selected cannot be withdrawn. Please try again."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:422
+msgctxt "owb"
+msgid "Please provide information to identify the contract."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:426
+msgctxt "owb"
+msgid "Please enter additional information."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:539
+#, php-format
+msgctxt "owb"
+msgid "Sorry, but this order cannot be withdrawn. <a href=\"%s\">Contact support</a> for help."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:566
+msgctxt "owb"
+msgid "You've already submitted an identical withdrawal request for this order."
+msgstr ""
+
+#: withdrawal/src/Ajax.php:634 withdrawal/src/Ajax.php:657
+#, php-format
+msgctxt "owb"
+msgid "You've submitted too many different unverified withdrawal requests. <a href=\"%s\">Contact support</a> for help."
+msgstr ""
+
+#: withdrawal/src/DataStores/WithdrawalOrder.php:142
+#: withdrawal/src/DataStores/WithdrawalOrderCPT.php:95
+#: withdrawal/src/WithdrawalOrder.php:995
+#, php-format
+msgctxt "owb"
+msgid "Withdrawal status changed from %1$s to %2$s."
+msgstr ""
+
+#. translators: %s: Order date
+#: withdrawal/src/DataStores/WithdrawalOrder.php:340
+#: withdrawal/src/DataStores/WithdrawalOrderCPT.php:305
+#, php-format
+msgctxt "owb"
+msgid "Withdrawal &ndash; %s"
+msgstr ""
+
+#: withdrawal/src/DataStores/WithdrawalOrder.php:341
+#: withdrawal/src/DataStores/WithdrawalOrderCPT.php:306
+msgctxt "owb-order-date-format"
+msgid "M d, Y @ h:i A"
+msgstr ""
+
+#: withdrawal/src/Install.php:153
+msgctxt "owb-page-slug"
+msgid "contract-withdrawal"
+msgstr ""
+
+#: withdrawal/src/Install.php:154
+msgctxt "owb-page-title"
+msgid "Withdraw from contract"
+msgstr ""
+
+#: withdrawal/src/Package.php:106
+msgctxt "owb"
+msgid "Withdraw"
+msgstr ""
+
+#: withdrawal/src/Package.php:149 withdrawal/src/Package.php:1029
+#: withdrawal/src/Package.php:1080
+msgctxt "owb"
+msgid "Withdrawn"
+msgstr ""
+
+#: withdrawal/src/Package.php:154
+msgctxt "owb"
+msgid "Withdrawal requested"
+msgstr ""
+
+#: withdrawal/src/Package.php:154
+#, php-format
+msgctxt "owb"
+msgid "Withdrawal requested %1$sx"
+msgstr ""
+
+#: withdrawal/src/Package.php:554
+msgctxt "owb-email-preview"
+msgid "John"
+msgstr ""
+
+#: withdrawal/src/Package.php:555
+msgctxt "owb-email-preview"
+msgid "Doe"
+msgstr ""
+
+#: withdrawal/src/Package.php:558
+msgctxt "owb-email-preview"
+msgid "An example rejection reason."
+msgstr ""
+
+#: withdrawal/src/Package.php:586 withdrawal/src/Package.php:1041
+msgctxt "owb"
+msgid "Requested"
+msgstr ""
+
+#: withdrawal/src/Package.php:587 withdrawal/src/Package.php:1053
+msgctxt "owb"
+msgid "Confirmed"
+msgstr ""
+
+#: withdrawal/src/Package.php:588 withdrawal/src/Package.php:1065
+msgctxt "owb"
+msgid "Rejected"
+msgstr ""
+
+#: withdrawal/src/Package.php:751
+#, php-format
+msgctxt "owb"
+msgid "Sorry, we've detected a technical issue while submitting your withdrawal. Please try again - if the issue persists, please <a href=\"%s\">contact support</a> for help."
+msgstr ""
+
+#: withdrawal/src/Package.php:1017 withdrawal/src/Package.php:1079
+msgctxt "owb"
+msgid "Pending withdrawal"
+msgstr ""
+
+#: withdrawal/src/Settings.php:16
+msgctxt "owb"
+msgid "General"
+msgstr ""
+
+#: withdrawal/src/Settings.php:21
+msgctxt "owb"
+msgid "Configure the EU-compliant order withdrawal button (Directive (EU) 2023/2673). Customers use the withdrawal form page to withdraw from a contract; requests appear under the Requests tab."
+msgstr ""
+
+#: withdrawal/src/Settings.php:41
+msgctxt "owb"
+msgid "Withdrawal page"
+msgstr ""
+
+#: withdrawal/src/Settings.php:45
+msgctxt "owb"
+msgid "This page should contain your withdrawal form shortcode."
+msgstr ""
+
+#: withdrawal/src/Settings.php:56
+msgctxt "owb"
+msgid "Embed in footer"
+msgstr ""
+
+#: withdrawal/src/Settings.php:57
+msgctxt "owb"
+msgid "Embed the withdrawal button directly in the footer. Disable this option if you plan to embed the page manually."
+msgstr ""
+
+#: withdrawal/src/Settings.php:65
+msgctxt "owb"
+msgid "Display everywhere"
+msgstr ""
+
+#: withdrawal/src/Settings.php:66
+msgctxt "owb"
+msgid "Display the button on every page, not just on shop-related pages."
+msgstr ""
+
+#: withdrawal/src/Settings.php:77
+msgctxt "owb"
+msgid "Button text"
+msgstr ""
+
+#: withdrawal/src/Settings.php:78
+msgctxt "owb"
+msgid "Text of the withdrawal button in the footer and header menu, and of the [eggl_wd_order_withdrawal_button] shortcode. Leave empty to use \"Withdraw from contract\" in each visitor's language. The Directive asks for wording such as \"withdraw from contract here\" or an equally unambiguous phrase."
+msgstr ""
+
+#: withdrawal/src/Settings.php:87
+msgctxt "owb"
+msgid "Header menu"
+msgstr ""
+
+#: withdrawal/src/Settings.php:88
+msgctxt "owb"
+msgid "Show a \"Withdraw from contract\" link in the site's header menu."
+msgstr ""
+
+#: withdrawal/src/Settings.php:88
+msgctxt "owb"
+msgid "Added to the main header menu (desktop and mobile). While off, the withdrawal page is also kept out of the automatic page list some themes show when no menu has been set up."
+msgstr ""
+
+#: withdrawal/src/Settings.php:96
+msgctxt "owb"
+msgid "Guest validation"
+msgstr ""
+
+#: withdrawal/src/Settings.php:97
+msgctxt "owb"
+msgid "Choose how to validate guest withdrawal requests. Spam protection via a built-in honeypot field and IP limits apply."
+msgstr ""
+
+#: withdrawal/src/Settings.php:97
+msgctxt "owb"
+msgid "Please note: As to current legal interpretation a validation lock would mean that a consumer who makes a typo might no longer be able to submit their withdrawal within the prescribed time limit—which directly contradicts the protective purpose of Section 356a of the German Civil Code (BGB). Please seek legal advise before using."
+msgstr ""
+
+#: withdrawal/src/Settings.php:103
+msgctxt "owb"
+msgid "Enforce that the order number entered exists."
+msgstr ""
+
+#: withdrawal/src/Settings.php:104
+msgctxt "owb"
+msgid "Order must exist and email must match the one from the original order."
+msgstr ""
+
+#: withdrawal/src/Settings.php:105
+msgctxt "owb"
+msgid "Either order number or email address must exist."
+msgstr ""
+
+#: withdrawal/src/Settings.php:106
+msgctxt "owb"
+msgid "Do not validate"
+msgstr ""
+
+#: withdrawal/src/Settings.php:111
+msgctxt "owb"
+msgid "Partial withdrawals"
+msgstr ""
+
+#: withdrawal/src/Settings.php:112
+msgctxt "owb"
+msgid "Allow customers and verified guests to select which order items to withdraw."
+msgstr ""
+
+#: withdrawal/src/Settings.php:120
+msgctxt "owb"
+msgid "Mandatory fields"
+msgstr ""
+
+#: withdrawal/src/Settings.php:122
+msgctxt "owb"
+msgid "Select fields that should be mandatory while submitting a new withdrawal"
+msgstr ""
+
+#: withdrawal/src/Settings.php:142
+msgctxt "owb"
+msgid "Allow guests to enter additional information in a separate text field."
+msgstr ""
+
+#: withdrawal/src/Settings.php:150
+msgctxt "owb"
+msgid "Non-refundable"
+msgstr ""
+
+#: withdrawal/src/Settings.php:151
+msgctxt "owb"
+msgid "Choose certain product types to exclude from being withdrawn."
+msgstr ""
+
+#: withdrawal/src/Settings.php:162
+msgctxt "owb"
+msgid "Withdrawal period"
+msgstr ""
+
+#: withdrawal/src/Settings.php:163
+msgctxt "owb"
+msgid "Choose the number of days, starting with the orders' completed date, to accept withdrawals for orders."
+msgstr ""
+
+#: withdrawal/src/Settings.php:164
+msgctxt "owb"
+msgid "Days"
+msgstr ""
+
+#: withdrawal/src/Settings.php:164
+msgctxt "owb"
+msgid "Keep in mind that the withdrawal period does not begin until the customer receives the order. If necessary add a buffer period depending on your shipping process. Use 0 to make withdrawals available at any time."
+msgstr ""
+
+#: withdrawal/src/Settings.php:174
+msgctxt "owb"
+msgid "Unverified requests"
+msgstr ""
+
+#: withdrawal/src/Settings.php:175
+msgctxt "owb"
+msgid "Do not adjust order status for unverified requests."
+msgstr ""
+
+#: withdrawal/src/Settings.php:175
+msgctxt "owb"
+msgid "For some requests, the email address differs from the original stored within the order. Make sure these requests do not automatically set the pending withdrawal order status."
+msgstr ""
+
+#: withdrawal/src/Settings.php:183
+msgctxt "owb"
+msgid "Contact email"
+msgstr ""
+
+#: withdrawal/src/Settings.php:184
+msgctxt "owb"
+msgid "Please provide an email address where customers can contact you if they have any issues."
+msgstr ""
+
+#: withdrawal/src/Settings.php:194
+msgctxt "owb"
+msgid "My account page"
+msgstr ""
+
+#: withdrawal/src/Settings.php:195
+msgctxt "owb"
+msgid "On the my account page, add a link to create a new withdrawal request for the order in case available."
+msgstr ""
+
+#: withdrawal/src/Settings.php:195
+msgctxt "owb"
+msgid "Shown as a \"Withdraw\" button next to \"View\" in My account → Orders, and under \"Actions\" when the customer opens an order. It only appears for orders that can still be withdrawn: processing or completed, within the withdrawal period, with items left to withdraw, and once the withdrawal page is published."
+msgstr ""
+
+#: withdrawal/src/Settings.php:215
+msgctxt "owb"
+msgid "Virtual Product"
+msgstr ""
+
+#: withdrawal/src/Settings.php:216
+msgctxt "owb"
+msgid "Downloadable Product"
+msgstr ""
+
+#: withdrawal/src/WithdrawalItem.php:181
+#, php-format
+msgctxt "owb"
+msgid "Deleted item %1$s."
+msgstr ""
+
+#: withdrawal/src/WithdrawalItem.php:196
+#, php-format
+msgctxt "owb"
+msgid "Updated item from %1$s to %2$s."
+msgstr ""
+
+#: withdrawal/src/WithdrawalItem.php:198
+#, php-format
+msgctxt "owb"
+msgid "Added item %s."
+msgstr ""
+
+#: withdrawal/src/WithdrawalOrder.php:290
+msgctxt "owb-full-name-placeholder"
+msgid "Not specified"
+msgstr ""
+
+#. translators: 1: first name
+#: withdrawal/src/WithdrawalOrder.php:296
+#, php-format
+msgctxt "owb-first-name"
+msgid "%1$s"
+msgstr ""
+
+#. translators: 1: last name
+#: withdrawal/src/WithdrawalOrder.php:299
+#, php-format
+msgctxt "owb-last-name"
+msgid "%1$s"
+msgstr ""
+
+#. translators: 1: last name 2: last name
+#: withdrawal/src/WithdrawalOrder.php:302
+#, php-format
+msgctxt "owb-full-name"
+msgid "%1$s %2$s"
+msgstr ""
+
+#: withdrawal/src/WithdrawalOrder.php:419
+msgctxt "owb-order-number"
+msgid "Not specified"
+msgstr ""
+
+#: withdrawal/src/WithdrawalOrder.php:786
+#: withdrawal/src/WithdrawalOrder.php:787
+msgctxt "owb"
+msgid "WooCommerce"
+msgstr ""
+
+#: withdrawal/src/WithdrawalOrder.php:966
+#, php-format
+msgctxt "owb"
+msgid "Parent order changed from %1$s to %2$s."
+msgstr ""
+
+#. translators: %s: new order status
+#: withdrawal/src/WithdrawalOrder.php:998
+#, php-format
+msgctxt "owb"
+msgid "Withdrawal status set to %s."
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/admin-deleted-withdrawal-request.php:26
+#: withdrawal/templates/eggl-withdrawal/emails/plain/admin-deleted-withdrawal-request.php:24
+msgctxt "owb"
+msgid "A withdrawal request has been deleted:"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/admin-new-withdrawal-request.php:26
+#: withdrawal/templates/eggl-withdrawal/emails/plain/admin-new-withdrawal-request.php:24
+msgctxt "owb"
+msgid "You’ve received a new withdrawal request:"
+msgstr ""
+
+#. translators: %s: Customer full name
+#: withdrawal/templates/eggl-withdrawal/emails/customer-withdrawal-request-confirmed.php:33
+#: withdrawal/templates/eggl-withdrawal/emails/customer-withdrawal-request-received.php:34
+#: withdrawal/templates/eggl-withdrawal/emails/customer-withdrawal-request-rejected.php:33
+#: withdrawal/templates/eggl-withdrawal/emails/plain/customer-withdrawal-request-confirmed.php:29
+#: withdrawal/templates/eggl-withdrawal/emails/plain/customer-withdrawal-request-received.php:30
+#: withdrawal/templates/eggl-withdrawal/emails/plain/customer-withdrawal-request-rejected.php:29
+#, php-format
+msgctxt "owb"
+msgid "Hi %s,"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/customer-withdrawal-request-confirmed.php:35
+#: withdrawal/templates/eggl-withdrawal/emails/customer-withdrawal-request-received.php:36
+#: withdrawal/templates/eggl-withdrawal/emails/customer-withdrawal-request-rejected.php:35
+#: withdrawal/templates/eggl-withdrawal/emails/plain/customer-withdrawal-request-confirmed.php:31
+#: withdrawal/templates/eggl-withdrawal/emails/plain/customer-withdrawal-request-received.php:32
+#: withdrawal/templates/eggl-withdrawal/emails/plain/customer-withdrawal-request-rejected.php:31
+msgctxt "owb"
+msgid "Hi,"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/customer-withdrawal-request-confirmed.php:40
+#: withdrawal/templates/eggl-withdrawal/emails/plain/customer-withdrawal-request-confirmed.php:34
+msgctxt "owb"
+msgid "We’ve wanted to let you know that your withdrawal request has been reviewed and is hereby confirmed."
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/customer-withdrawal-request-received.php:41
+#: withdrawal/templates/eggl-withdrawal/emails/plain/customer-withdrawal-request-received.php:35
+#, php-format
+msgctxt "owb"
+msgid "We’ve received your withdrawal request on %1$s at %2$s and it is now being processed."
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/customer-withdrawal-request-rejected.php:40
+#: withdrawal/templates/eggl-withdrawal/emails/plain/customer-withdrawal-request-rejected.php:34
+msgctxt "owb"
+msgid "We regret to inform you that your withdrawal request has been rejected."
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/customer-withdrawal-request-rejected.php:46
+#: withdrawal/templates/eggl-withdrawal/emails/plain/customer-withdrawal-request-rejected.php:38
+msgctxt "owb"
+msgid "Reason for the rejection:"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:27
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:21
+msgctxt "owb"
+msgid "verified"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:27
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:21
+msgctxt "owb"
+msgid "unknown"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:38
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:26
+msgctxt "owb"
+msgid "Withdrawal summary"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:43
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:31
+msgctxt "owb"
+msgid "Received on"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:43
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:31
+#, php-format
+msgctxt "owb-datetime"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:45
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:33
+msgctxt "owb"
+msgid "Full name"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-details.php:66
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:53
+#, php-format
+msgctxt "owb"
+msgid "As you requested, we have deleted your original withdrawal request to %1$s."
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-edit-link.php:23
+msgctxt "owb"
+msgid "Edit withdrawal request"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-edit-link.php:23
+msgctxt "owb"
+msgid "Choose items"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-edit-link.php:27
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-edit-link.php:22
+msgctxt "owb"
+msgid "More than one matching order found"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-edit-link.php:29
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-edit-link.php:24
+msgctxt "owb"
+msgid "We could not find an order based on your criteria"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-edit-link.php:31
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-edit-link.php:26
+msgctxt "owb"
+msgid "Want to withdraw certain items only?"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-edit-link.php:37
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-edit-link.php:30
+msgctxt "owb"
+msgid "We found more than one order matching your criteria—please use the link below to edit your withdrawal or select a different order."
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/email-withdrawal-edit-link.php:39
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-edit-link.php:32
+msgctxt "owb"
+msgid "We could not find an order based on your criteria—please use the link below to select one of the orders matching your email address."
+msgstr ""
+
+#. translators: %s: Order link.
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-details.php:76
+#, php-format
+msgctxt "owb"
+msgid "View order: %s"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-edit-link.php:36
+#, php-format
+msgctxt "owb"
+msgid "Edit withdrawal request: %s"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/emails/plain/email-withdrawal-edit-link.php:38
+#, php-format
+msgctxt "owb"
+msgid "Choose items to withdraw now: %s"
+msgstr ""
+
+#. translators: 1: order number 2: order date
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request-item-select.php:30
+#, php-format
+msgctxt "owb"
+msgid "Order #%1$s was placed on %2$s."
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request-item-select.php:46
+msgctxt "owb"
+msgid "I want to select the items to cancel manually."
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request-item-select.php:63
+msgctxt "owb"
+msgid "Select all"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request-item.php:41
+msgctxt "owb"
+msgid "Non-withdrawable"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:36
+msgctxt "owb"
+msgid "Contract Identification, e.g. order number"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:71
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:251
+msgctxt "owb"
+msgid "Email (repeat)"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:182
+msgctxt "owb"
+msgid "Please select an order"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:186
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:193
+#, php-format
+msgctxt "owb"
+msgid "Order #%1$s"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:202
+msgctxt "owb"
+msgid "Order"
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:310
+#, php-format
+msgctxt "owb"
+msgid "Please delete my original withdrawal request to %1$s."
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:327
+#, php-format
+msgctxt "owb"
+msgid "Sorry, there are currently no orders available to withdraw. If you have questions regarding one of your orders, please <a href=\"%s\">contact support</a> for help."
+msgstr ""
+
+#: withdrawal/templates/eggl-withdrawal/forms/order-withdrawal-request.php:347
+msgctxt "owb"
+msgid "Confirm withdrawal"
+msgstr ""
+
+#: price-history/modules/digital-price-list/generator.php:425
+msgid "Could not continue writing a physical store price list file."
+msgstr ""
+
+#. translators: 1: physical store premises label, e.g. P-01; 2: the error message.
+#: price-history/modules/digital-price-list/generator.php:515
+#, php-format
+msgid "Store %1$s: %2$s"
+msgstr ""
+
+#: price-history/modules/digital-price-list/router.php:198
+#: price-history/modules/digital-price-list/admin.php:445
+msgid "Physical Stores"
+msgstr ""
+
+#. translators: %s: the physical store's address or premises label.
+#: price-history/modules/digital-price-list/admin.php:83
+#, php-format
+msgid "Physical store \"%s\" is missing its address, premises label or store number, so no price list will be generated for it until these are filled in."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:116
+msgid "Digital Price List is disabled. Tick \"Enable\" at the top and save changes before generating — nothing is generated or published while it is off."
+msgstr ""
+
+#. translators: 1: store premises label, e.g. P-01; 2: store address.
+#: price-history/modules/digital-price-list/admin.php:137
+#, php-format
+msgid "Store %1$s (%2$s):"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:142
+msgid "incomplete — fill in address, premises label and store number"
+msgstr ""
+
+#. translators: %s: number of rows.
+#: price-history/modules/digital-price-list/admin.php:145
+#, php-format
+msgid "(%s rows)"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:147
+msgid "not generated yet"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:212
+msgid "Store Type"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:213
+msgid "Store Address"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:214
+msgid "Business Premises Label"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:215
+msgid "Store Number"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:218
+msgid "All price list products"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:219
+msgid "Only the selected categories, tags and products"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:220
+msgid "All products except the selected categories, tags and products"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:232
+#: price-history/modules/digital-price-list/admin.php:233
+msgid "Product Selection"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:247
+msgid "Categories"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:248
+msgid "Search categories…"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:253
+msgid "Subcategories are included automatically."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:256
+msgid "Tags"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:257
+msgid "Search tags…"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:272
+msgid "A variable product covers all of its variations; pick single variations to narrow it down."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:279
+msgid "Remove store"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:339
+msgid "No physical stores yet. Only the webshop price list is generated."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:342
+msgid "Add Physical Store"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:343
+msgid "Save changes, then use Generate Now (or wait for the next scheduled run) to create the store price lists."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:446
+msgid "Each physical store gets its own copy of the price list on every generation, named in the required format, e.g. prodavaonica_Ilica 150 Zagreb_P-01_104_01.10.2026_07:45.csv."
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:479
+msgid "Physical Store File Name Pattern"
+msgstr ""
+
+#: price-history/modules/digital-price-list/admin.php:481
+msgid "Placeholders: {outlet_type} {address} {premises_label} {store_number} {date} (dd.mm.yyyy) {time} (HH:MM) {sequence} {timestamp} {store_name}. Values are used exactly as entered. Leave empty for the automatic default."
+msgstr ""

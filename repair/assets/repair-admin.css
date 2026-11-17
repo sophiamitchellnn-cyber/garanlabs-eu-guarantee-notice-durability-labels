@@ -1,0 +1,23 @@
+/* EU Guarantee & GARAN → Right to Repair */
+.eggl-rr-admin .eggl-rr-status{display:inline-block;padding:2px 9px;border-radius:999px;font-size:12px;font-weight:600;background:#eef0f3;color:#3c434a;vertical-align:middle}
+.eggl-rr-admin .eggl-rr-status--received{background:#fff4e5;color:#8a4b00}
+.eggl-rr-admin .eggl-rr-status--in_progress{background:#e8f1fb;color:#1d4f91}
+.eggl-rr-admin .eggl-rr-status--repaired,.eggl-rr-admin .eggl-rr-status--replaced,.eggl-rr-admin .eggl-rr-status--refunded{background:#e7f6ec;color:#1e6b3a}
+.eggl-rr-admin .eggl-rr-status--rejected{background:#fdf2f2;color:#9b1c1c}
+.eggl-rr-claim{display:grid;grid-template-columns:minmax(0,2fr) minmax(280px,1fr);gap:18px;align-items:start}
+@media (max-width:1100px){.eggl-rr-claim{grid-template-columns:1fr}}
+.eggl-rr-claim .eggl-card__head h2{display:flex;align-items:center;gap:10px}
+.eggl-rr-claim__details{display:grid;grid-template-columns:150px 1fr;gap:10px 18px;margin:0}
+.eggl-rr-claim__details dt{font-weight:600;color:#50575e}
+.eggl-rr-claim__details dd{margin:0}
+.eggl-rr-claim__details dd p:first-child{margin-top:0}
+.eggl-rr-claim__item{margin-bottom:6px}
+.eggl-rr-claim__photos img{width:96px;height:96px;object-fit:cover;border-radius:6px;margin:0 6px 6px 0}
+.eggl-rr-claim__side .eggl-card__body{padding:16px 22px}
+.eggl-rr-claim__delete{margin:12px 0 0}
+.eggl-rr-claim__delete .submitdelete{color:#b32d2e}
+.eggl-rr-claim__log{margin:0;padding-left:18px}
+.eggl-rr-claim__log li{margin-bottom:10px}
+.eggl-rr-claim__log .description{display:block}
+.eggl-rr-admin .wp-list-table .column-claim{width:9%}
+.eggl-rr-admin .wp-list-table .column-status{width:14%}

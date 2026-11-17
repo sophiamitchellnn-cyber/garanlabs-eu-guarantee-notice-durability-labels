@@ -1,0 +1,268 @@
+/* EU Guarantee Notice & GARAN Labels — admin settings screen
+   Modern card layout: one floating card per settings group, clean rows,
+   a single teal accent (matching the plugin's storefront brand color). */
+
+.eggl-settings{
+  --eggl-ink:#0f172a;
+  --eggl-muted:#64748b;
+  --eggl-border:#e7eaee;
+  --eggl-field-border:#d7dce2;
+  --eggl-accent:#0f766e;
+  --eggl-accent-dark:#0b3b36;
+  --eggl-bg-soft:#f8fafc;
+  max-width:80%;
+  margin: 0 auto;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+.eggl-page-header{margin:20px 0 20px}
+.eggl-page-header h1{font-size:21px;font-weight:700;color:var(--eggl-ink);margin:0 0 6px;padding:0;letter-spacing:-.01em}
+.eggl-settings .eggl-lede{color:var(--eggl-muted);font-size:13.5px;line-height:1.65;margin:0}
+
+/* Tabs — segmented pill control */
+.eggl-tabs{display:inline-flex;flex-wrap:wrap;gap:2px;max-width:100%;box-sizing:border-box;background:var(--eggl-bg-soft);border:1px solid var(--eggl-border);
+  border-radius:10px;padding:3px;margin-bottom:22px}
+/* Narrow screens: tabs wrap onto a second line instead of widening the page (e.g. Price History's
+   five tabs need ~460px). Wrapping keeps every tab visible, unlike a sideways-scrolling bar. */
+@media (max-width:600px){
+  .eggl-tabs{display:flex}
+  .eggl-tabs__item{flex:1 1 auto;padding:7px 12px;text-align:center}
+}
+.eggl-tabs__item{display:inline-block;padding:7px 18px;border-radius:8px;font-size:13px;font-weight:600;
+  color:var(--eggl-muted);text-decoration:none;transition:background .12s ease,color .12s ease}
+.eggl-tabs__item:hover{color:var(--eggl-ink)}
+.eggl-tabs__item.is-active{background:#fff;color:var(--eggl-accent-dark);box-shadow:0 1px 2px rgba(15,23,42,.08),0 0 0 1px rgba(15,23,42,.04)}
+.eggl-tabs__item:focus-visible{outline:2px solid var(--eggl-accent);outline-offset:2px}
+
+/* Cards — one per settings section, full width */
+.eggl-card{background:#fff;border-radius:14px;border:1px solid rgba(15,23,42,.07);
+  box-shadow:0 1px 2px rgba(15,23,42,.04),0 12px 28px -12px rgba(15,23,42,.12);
+  margin-bottom:18px;overflow:hidden}
+.eggl-card__head{padding:16px 22px 14px;border-bottom:1px solid var(--eggl-border)}
+.eggl-card__head h2{font-size:14.5px;font-weight:700;color:var(--eggl-ink);margin:0;padding:0}
+.eggl-card__head p{margin:5px 0 0;font-size:12.5px;color:var(--eggl-muted);line-height:1.55;}
+.eggl-card__body{padding:22px}
+
+/* Rows */
+.eggl-row{display:flex;align-items:flex-start;gap:20px;padding:14px 0;border-bottom:1px solid var(--eggl-border)}
+.eggl-row:last-child{border-bottom:0}
+.eggl-row__label{flex:0 0 200px}
+.eggl-row__label label{font-weight:600;font-size:13px;color:var(--eggl-ink)}
+.eggl-row__control{flex:1 1 auto;min-width:0}
+.eggl-row__control .description{margin:6px 0 0;font-size:12px;color:var(--eggl-muted);line-height:1.55;max-width:520px}
+
+@media (max-width: 680px){
+  .eggl-row{flex-direction:column;gap:8px}
+  .eggl-row__label{flex-basis:auto}
+}
+
+/* Selects — a fixed width (not just min-width) so every dropdown is the
+   same size regardless of how long its selected option's text is. */
+.eggl-row__control select{width:520px;max-width:100%;border:1px solid var(--eggl-field-border);
+  border-radius:8px;padding:7px 14px;font-size:13px;color:var(--eggl-ink);background-color:#fff}
+.eggl-row__control select:focus{border-color:var(--eggl-accent);box-shadow:0 0 0 3px rgba(15,118,110,.15);outline:none}
+
+/* Number-input field (e.g. GARAN badge width) */
+.eggl-dim-field{display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:600;color:var(--eggl-ink)}
+.eggl-dim-field input[type="number"]{width:110px;border:1px solid var(--eggl-field-border);border-radius:8px;
+  padding:7px 10px;font-size:13px;font-weight:400;color:var(--eggl-ink)}
+.eggl-dim-field input[type="number"]:focus{border-color:var(--eggl-accent);box-shadow:0 0 0 3px rgba(15,118,110,.15);outline:none}
+
+/* Toggle switch — a native checkbox restyled, same markup/name/value as before */
+.eggl-toggle{display:flex;align-items:flex-start;gap:10px;cursor:pointer;max-width:560px}
+.eggl-toggle__input{position:absolute;opacity:0;width:1px;height:1px;margin:-1px;overflow:hidden}
+.eggl-toggle__track{flex:0 0 auto;width:38px;height:21px;background:#cbd2d9;border-radius:999px;position:relative;
+  transition:background .12s ease;margin-top:1px}
+.eggl-toggle__thumb{position:absolute;top:2px;left:2px;width:17px;height:17px;background:#fff;border-radius:50%;
+  box-shadow:0 1px 2px rgba(0,0,0,.25);transition:transform .12s ease}
+.eggl-toggle__input:checked + .eggl-toggle__track{background:var(--eggl-accent)}
+.eggl-toggle__input:checked + .eggl-toggle__track .eggl-toggle__thumb{transform:translateX(17px)}
+.eggl-toggle__input:focus-visible + .eggl-toggle__track{outline:2px solid var(--eggl-accent);outline-offset:2px}
+.eggl-toggle__text{font-size:13px;color:var(--eggl-ink);line-height:1.5}
+
+/* Save button */
+.eggl-form .button-primary{background:var(--eggl-accent);border-color:var(--eggl-accent-dark);color:#fff;
+  border-radius:8px;font-weight:600;font-size:13px;padding:7px 20px;height:auto;box-shadow:none;text-shadow:none;
+  margin-top:6px}
+.eggl-form .button-primary:hover,.eggl-form .button-primary:focus{background:var(--eggl-accent-dark);border-color:var(--eggl-accent-dark)}
+
+/* Save button floats at the bottom of the viewport while scrolling, then docks in
+ * its normal place under the last card once scrolled there (position:sticky).
+ * The full-width row ignores clicks so it never blocks the fields beneath it;
+ * only the button itself is clickable. */
+.eggl-settings .eggl-form > p.submit{position:sticky;bottom:24px;z-index:20;display:flex;justify-content:flex-end;
+  margin:16px 0px 24px 0;padding:0;pointer-events:none}
+.eggl-settings .eggl-form > p.submit .button-primary{pointer-events:auto;margin:0;padding:10px 24px;font-size:13.5px;
+  box-shadow:0 8px 24px rgba(15,23,42,.18),0 2px 6px rgba(15,23,42,.12)}
+.eggl-settings .eggl-form > p.submit .button-primary:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+@media (max-width: 782px){
+  .eggl-settings .eggl-form > p.submit{bottom:16px;margin-right:12px}
+}
+
+.eggl-badge-ok{color:var(--eggl-accent);font-weight:600}
+
+.eggl-vendor-image-preview:empty{display:none}
+.eggl-vendor-image-preview{margin-bottom:8px}
+.eggl-vendor-image-remove{margin-left:8px;color:#b32d2e}
+/* select2 only copies the source <select>'s "width" style when resolving its own container's
+   size — the cap has to live here instead, or the search field stretches to fill the entire
+   row (this page has no other reason to bound .eggl-row__control's own width). */
+.eggl-vendor-uploads .select2-container{max-width:600px}
+/* Taller product-search field, to match this page's other 34px-tall inputs — select2's own
+   default (28px) reads small next to them. Selection box, its text line-height, and the
+   dropdown arrow all have to move together or the text/arrow drift off-center. */
+.eggl-vendor-uploads .select2-container--default .select2-selection--single{height:40px}
+.eggl-vendor-uploads .select2-container--default .select2-selection--single .select2-selection__rendered{line-height:38px;font-size:14px}
+.eggl-vendor-uploads .select2-container--default .select2-selection--single .select2-selection__arrow{height:38px}
+.eggl-vendor-uploads .tablenav{padding:14px 0 18px}
+.eggl-vendor-uploads .tablenav-pages{float:none;text-align:right}
+
+/* Status panel (EGGL_Health) at the top of the settings page. */
+.eggl-health{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 18px}
+@media (max-width: 960px){.eggl-health{grid-template-columns:1fr}}
+.eggl-health__item{background:#fff;border:1px solid var(--eggl-border);border-left-width:4px;border-radius:8px;
+  padding:10px 14px;font-size:13px;line-height:1.55;color:var(--eggl-ink)}
+.eggl-health__item strong{display:block;margin-bottom:2px}
+.eggl-health__item--good{border-left-color:var(--eggl-accent)}
+.eggl-health__item--recommended{border-left-color:#dba617;background:#fffdf5}
+.eggl-health__item--critical{border-left-color:#d63638;background:#fff8f8}
+
+/* Withdrawals screen (withdrawal/src/Admin) — same card layout as the other pages. */
+.eggl-withdrawals .eggl-page-header h1 .subtitle{font-size:13px;font-weight:400;color:var(--eggl-muted);margin-left:10px}
+.eggl-withdrawals .eggl-row__control input.eggl-wd-text-input{width:520px;max-width:100%;border:1px solid var(--eggl-field-border);
+  border-radius:8px;padding:7px 12px;font-size:13px;color:var(--eggl-ink)}
+.eggl-withdrawals .eggl-row__control input.eggl-wd-text-input:focus{border-color:var(--eggl-accent);box-shadow:0 0 0 3px rgba(15,118,110,.15);outline:none}
+.eggl-withdrawals .eggl-wd-inline-field{flex-direction:row;align-items:center;gap:8px;font-weight:400}
+.eggl-withdrawals .eggl-row__control .select2-container{max-width:520px}
+.eggl-withdrawals .eggl-row__control .select2-container--default .select2-selection--multiple{border-color:var(--eggl-field-border);border-radius:8px;min-height:36px}
+.eggl-withdrawals .eggl-row__control .description + .description{margin-top:4px}
+.eggl-withdrawals .withdrawal-page-status{display:inline-block;margin-top:2px;padding:2px 10px;border-radius:999px;font-weight:600;font-size:12px;text-decoration:none}
+.eggl-withdrawals .withdrawal-page-valid{background:#e6f4f1;color:var(--eggl-accent-dark)}
+.eggl-withdrawals .withdrawal-page-invalid{background:#fcf0f1;color:#b32d2e}
+
+/* Requests list table inside a card */
+.eggl-withdrawals .eggl-wd-card .eggl-card__body{padding:16px 22px 22px}
+.eggl-withdrawals .eggl-wd-card .subsubsub{float:none;margin:0 0 10px}
+.eggl-withdrawals .eggl-wd-card .search-box{margin:0 0 8px}
+.eggl-withdrawals .eggl-wd-card .search-box input[type="search"]{border:1px solid var(--eggl-field-border);border-radius:8px;padding:4px 10px;min-height:32px}
+.eggl-withdrawals .eggl-wd-card .tablenav{height:auto;margin:6px 0}
+.eggl-withdrawals .eggl-wd-card .wp-list-table{border:1px solid var(--eggl-border);border-radius:10px;overflow:hidden;box-shadow:none}
+.eggl-withdrawals .eggl-wd-card .wp-list-table thead th,.eggl-withdrawals .eggl-wd-card .wp-list-table thead td,
+.eggl-withdrawals .eggl-wd-card .wp-list-table tfoot th,.eggl-withdrawals .eggl-wd-card .wp-list-table tfoot td{background:var(--eggl-bg-soft)}
+.eggl-withdrawals .eggl-wd-card .woocommerce-BlankState{padding:40px 0;text-align:center}
+.eggl-withdrawals .eggl-wd-card .woocommerce-BlankState-message{color:var(--eggl-muted);font-size:15px;font-weight:500;margin:0}
+.eggl-withdrawals .eggl-wd-card .woocommerce-BlankState-message:before{color:var(--eggl-accent);opacity:.35}
+/* Requests tab: the list table needs the whole screen width, not the 80% settings column. */
+.eggl-settings.eggl-withdrawals--requests{max-width:none;margin:0 20px 0 0}
+.eggl-withdrawals--requests .eggl-wd-card .wp-list-table{width:100%}
+/* Withdrawal page status: badge (not a link) + labelled action buttons */
+.eggl-withdrawals .eggl-wd-page-status-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:2px}
+.eggl-withdrawals .eggl-wd-page-status-row .withdrawal-page-status{margin-top:0;cursor:default}
+.eggl-withdrawals .eggl-wd-page-action.button{display:inline-flex;align-items:center;gap:4px;border-radius:6px;font-weight:600}
+.eggl-withdrawals .eggl-wd-page-action .dashicons{font-size:14px;width:14px;height:14px}
+.eggl-withdrawals .eggl-wd-page-action--primary.button{background:var(--eggl-accent);border-color:var(--eggl-accent-dark);color:#fff}
+.eggl-withdrawals .eggl-wd-page-action--primary.button:hover,.eggl-withdrawals .eggl-wd-page-action--primary.button:focus{background:var(--eggl-accent-dark);border-color:var(--eggl-accent-dark);color:#fff}
+
+/* Price History screens (price-history/) — same card layout as the other pages. */
+.eggl-ph-settings .eggl-row__control input[type="text"]:not(.wp-color-picker-field),
+.eggl-ph-settings .eggl-row__control input[type="date"],
+.eggl-ph-settings .eggl-row__control textarea{width:520px;max-width:100%;border:1px solid var(--eggl-field-border);
+  border-radius:8px;padding:7px 12px;font-size:13px;color:var(--eggl-ink)}
+.eggl-ph-settings .eggl-row__control input[type="number"]{width:110px;border:1px solid var(--eggl-field-border);
+  border-radius:8px;padding:7px 10px;font-size:13px;color:var(--eggl-ink)}
+.eggl-ph-settings .eggl-row__control input[type="text"]:focus,.eggl-ph-settings .eggl-row__control input[type="date"]:focus,
+.eggl-ph-settings .eggl-row__control input[type="number"]:focus,.eggl-ph-settings .eggl-row__control textarea:focus{
+  border-color:var(--eggl-accent);box-shadow:0 0 0 3px rgba(15,118,110,.15);outline:none}
+.eggl-ph-settings .eggl-row__control .description:empty{display:none}
+.eggl-ph-settings .eggl-row.is-disabled{opacity:.45;pointer-events:none}
+/* Number + unit select on one line (e.g. chart width). */
+.eggl-ph-settings .eggl-ph-unit-field{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.eggl-ph-settings .eggl-ph-unit-field select{width:90px}
+.eggl-ph-settings .eggl-ph-unit-field .description:not(:empty){flex-basis:100%}
+/* Module explanations shown as the card intro. */
+.eggl-ph-settings .eggl-card__head .eggl-ph-plugin-panel-description p{margin:5px 0 0;font-size:12.5px;color:var(--eggl-muted);line-height:1.55;max-width:860px}
+.eggl-ph-settings .eggl-card__head .eggl-ph-alert{margin:12px 0 0}
+.eggl-ph-settings .eggl-card__head .eggl-ph-alert .button{margin-left:6px}
+/* Digital Price List status block. */
+.eggl-ph-settings .eggl-row__control > .eggl-ph-dpl-status{background:var(--eggl-bg-soft);border:1px solid var(--eggl-border);border-radius:10px;
+  padding:12px 16px;font-size:13px;line-height:1.75;color:var(--eggl-ink)}
+.eggl-ph-settings .eggl-row__control > .eggl-ph-dpl-status p{margin:0 0 8px}
+.eggl-ph-settings .eggl-row__control > .eggl-ph-dpl-status p:last-child{margin:0}
+/* "Multilingual" locks the text fields (assets/build/admin.js). */
+.eggl-ph-settings .eggl-row__control .disabled.multilingual{cursor:no-drop;pointer-events:none;background:var(--eggl-bg-soft)}
+.eggl-ph-settings .eggl-ph-visible-tooltip{display:inline-block;margin-top:6px;padding:1px 8px;border-radius:999px;
+  background:#e6f4f1;color:var(--eggl-accent-dark);font-size:11.5px;font-weight:600}
+
+/* Price Compliance Manager — needs the whole screen width for its table. */
+.eggl-settings.eggl-ph-pcm-page{max-width:none;margin:0 20px 0 0}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv,
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-overview,
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-module{background:#fff;border-radius:14px;border:1px solid rgba(15,23,42,.07);
+  box-shadow:0 1px 2px rgba(15,23,42,.04),0 12px 28px -12px rgba(15,23,42,.12);padding:18px 22px;margin:0 0 18px}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv h2{font-size:14.5px;font-weight:700;color:var(--eggl-ink);margin:0 0 12px}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-overview strong{color:var(--eggl-accent-dark)}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .description{color:var(--eggl-muted);font-size:12px}
+/* Export / Import switch — segmented pill control like .eggl-tabs */
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv .eggl-ph-pcm-csv-tabs{display:inline-flex;gap:2px;background:var(--eggl-bg-soft);
+  border:1px solid var(--eggl-border);border-radius:10px;padding:3px;margin:0 0 4px}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv .eggl-ph-pcm-csv-tabs .nav-tab{background:transparent;border:0;border-radius:8px;
+  padding:6px 16px;font-size:13px;font-weight:600;color:var(--eggl-muted);line-height:1.4}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv .eggl-ph-pcm-csv-tabs .nav-tab:hover{color:var(--eggl-ink)}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv .eggl-ph-pcm-csv-tabs .nav-tab-active{background:#fff;color:var(--eggl-accent-dark);
+  box-shadow:0 1px 2px rgba(15,23,42,.08),0 0 0 1px rgba(15,23,42,.04)}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv .eggl-ph-pcm-csv-progress{background:var(--eggl-bg-soft);border-color:var(--eggl-border);border-radius:10px}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv progress{accent-color:var(--eggl-accent)}
+/* Export and Import panels share one layout: the "Data to …" checkboxes on their own line, then
+   the action row (Export CSV / file picker + Import CSV). The import form used to put all three
+   side by side while export stacked them. */
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv form{display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin:16px 0 8px}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv fieldset{flex:1 1 100%;display:flex;flex-wrap:wrap;gap:6px 18px;
+  margin:0;padding:0;border:0;min-width:0}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv legend{float:left;width:100%;padding:0;margin:0 0 2px;
+  font-size:12px;font-weight:600;color:var(--eggl-ink)}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv fieldset label{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--eggl-ink)}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv fieldset input[type="checkbox"]{margin:0}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv .button{height:40px;min-height:40px;line-height:38px;padding:0 18px}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv .spinner{margin:0}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv .description{margin:0}
+/* File picker styled like the plugin's secondary buttons instead of the browser's grey default. */
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv input[type="file"]{max-width:100%;font-size:13px;color:var(--eggl-muted)}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv input[type="file"]::file-selector-button{height:40px;margin-right:10px;padding:0 16px;
+  border:1px solid var(--eggl-field-border);border-radius:8px;background:#fff;color:var(--eggl-ink);font:inherit;font-weight:500;cursor:pointer}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv input[type="file"]::file-selector-button:hover{border-color:var(--eggl-accent);color:var(--eggl-accent-dark)}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-csv input[type="file"]:focus-visible{outline:2px solid var(--eggl-accent);outline-offset:2px;border-radius:8px}
+/* Filters */
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters{margin:0 0 14px}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters label{font-size:12px;color:var(--eggl-ink)}
+/* Every filter control the same 40px height, in normal-weight 13px text: the labels are bold and
+   WordPress's select line-height made the selects 48px next to a 34px search box and 40px button. */
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters input,
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters select,
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-module select{box-sizing:border-box;height:40px;min-height:40px;
+  border:1px solid var(--eggl-field-border);border-radius:8px;padding:0 10px;font-size:13px;font-weight:400;line-height:normal;
+  color:var(--eggl-ink);background-color:#fff}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters select,
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-module select{padding-right:30px;min-width:110px}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters input[type="search"]{width:240px}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters input:focus,
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters select:focus{border-color:var(--eggl-accent);box-shadow:0 0 0 3px rgba(15,118,110,.15);outline:none}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters .button{height:40px;min-height:40px;line-height:38px;padding:0 18px}
+@media (max-width:600px){
+  .eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters label{flex:1 1 calc(50% - 6px);min-width:0}
+  .eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters label:first-of-type{flex-basis:100%}
+  .eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters input[type="search"],
+  .eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters select{width:100%;max-width:none;min-width:0}
+  .eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-filters .button{flex:1 1 100%}
+}
+/* Products table. position:relative makes the scroll box the containing block of the inputs'
+   absolutely positioned screen-reader labels; otherwise they sit outside it and widen the whole
+   page on narrow screens instead of scrolling with the table. */
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-table-scroll{position:relative}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-products{border:1px solid var(--eggl-border);border-radius:10px;overflow:hidden;box-shadow:none}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-products thead th{background:var(--eggl-bg-soft);font-weight:600}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-products .eggl-ph-pcm-value{border-radius:6px}
+.eggl-ph-pcm-page #eggl-ph-price-compliance-manager .eggl-ph-pcm-products .eggl-ph-pcm-changed{border-color:var(--eggl-accent);box-shadow:0 0 0 1px var(--eggl-accent)}
+/* Buttons */
+.eggl-ph-pcm-page .button-primary{background:var(--eggl-accent);border-color:var(--eggl-accent-dark);color:#fff;border-radius:8px;font-weight:600}
+.eggl-ph-pcm-page .button-primary:hover,.eggl-ph-pcm-page .button-primary:focus{background:var(--eggl-accent-dark);border-color:var(--eggl-accent-dark);color:#fff}
+.eggl-ph-pcm-page .button:not(.button-primary){border-radius:8px}

@@ -1,0 +1,49 @@
+<?php
+/**
+ * Customer withdrawal request confirmed email
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/emails/plain/customer-withdrawal-request-confirmed.php.
+ *
+ * HOWEVER, on occasion EU OWB will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @package EGGL/Withdrawal/Templates
+ * @version 2.3.1
+ */
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+$email_improvements_enabled = \EGGL\Withdrawal\Package::has_email_improvements_enabled();
+$withdrawal_name            = $withdrawal->get_formatted_full_name( false, 'email' );
+
+echo "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n";
+echo esc_html( wp_strip_all_tags( $email_heading ) );
+echo "\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n\n";
+
+if ( ! empty( $withdrawal_name ) ) {
+	/* translators: %s: Customer full name */
+	echo sprintf( esc_html_x( 'Hi %s,', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ), esc_html( $withdrawal_name ) ) . "\n\n";
+} else {
+	echo esc_html_x( 'Hi,', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) . "\n\n";
+}
+
+echo esc_html_x( 'We’ve wanted to let you know that your withdrawal request has been reviewed and is hereby confirmed.', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) . "\n\n";
+
+/**
+ * Show user-defined additional content - this is set in each email's settings.
+ */
+if ( $additional_content ) {
+	echo esc_html( wp_strip_all_tags( wptexturize( $additional_content ) ) );
+}
+
+do_action( 'eggl_wd_withdrawal_request_details', $order, $sent_to_admin, $plain_text, $email, $withdrawal );
+
+do_action( 'eggl_wd_withdrawal_request_meta', $order, $sent_to_admin, $plain_text, $email, $withdrawal );
+
+echo "\n\n----------------------------------------\n\n";
+
+echo wp_kses_post( apply_filters( 'woocommerce_email_footer_text', get_option( 'woocommerce_email_footer_text' ) ) );

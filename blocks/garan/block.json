@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "eggl/garan",
+  "title": "GARAN Label",
+  "category": "widgets",
+  "icon": "awards",
+  "description": "Manually place a GARAN durability label (Annex II) anywhere in your content, with its own duration, brand, and model.",
+  "textdomain": "garanlabs-eu-guarantee-notice-durability-labels",
+  "attributes": {
+    "useProductData": { "type": "boolean", "default": true },
+    "years": { "type": "number", "default": 0 },
+    "brand": { "type": "string", "default": "" },
+    "model": { "type": "string", "default": "" }
+  },
+  "supports": {
+    "html": false,
+    "multiple": true
+  }
+}

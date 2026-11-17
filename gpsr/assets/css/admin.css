@@ -1,0 +1,82 @@
+/* EU Guarantee & GARAN — product data "Product Safety (GPSR)" tab */
+
+.eggl_gpsr_options_tab a::before{font-family:dashicons;content:"\f160" !important;}
+
+#eggl_gpsr_data.woocommerce_options_panel{min-height:0}
+
+#eggl_gpsr_data .eggl-gpsr-section__head{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:16px;
+    padding:12px 12px 4px;
+}
+#eggl_gpsr_data .eggl-gpsr-section__head h4{margin:0 0 4px;font-size:14px;}
+#eggl_gpsr_data .eggl-gpsr-section__head p.description{margin:0;padding:0;}
+#eggl_gpsr_data .eggl-gpsr-section__body{padding-bottom:8px;}
+#eggl_gpsr_data [hidden]{display:none !important;}
+
+/* Switch — the visible part of the section's checkbox. */
+#eggl_gpsr_data .eggl-gpsr-switch{
+    position:relative;
+    flex:0 0 auto;
+    float:none;
+    width:36px;
+    height:20px;
+    margin:2px 0 0;
+    padding:0;
+}
+#eggl_gpsr_data .eggl-gpsr-switch input{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    margin:0;
+    opacity:0;
+    cursor:pointer;
+    z-index:1;
+}
+#eggl_gpsr_data .eggl-gpsr-switch__slider{
+    position:absolute;
+    inset:0;
+    background:#c3c4c7;
+    border-radius:20px;
+    transition:background .2s;
+}
+#eggl_gpsr_data .eggl-gpsr-switch__slider::before{
+    content:"";
+    position:absolute;
+    left:2px;
+    top:2px;
+    width:16px;
+    height:16px;
+    background:#fff;
+    border-radius:50%;
+    transition:transform .2s;
+}
+#eggl_gpsr_data .eggl-gpsr-switch input:checked + .screen-reader-text + .eggl-gpsr-switch__slider{background:#2271b1;}
+#eggl_gpsr_data .eggl-gpsr-switch input:checked + .screen-reader-text + .eggl-gpsr-switch__slider::before{transform:translateX(16px);}
+#eggl_gpsr_data .eggl-gpsr-switch input:focus-visible + .screen-reader-text + .eggl-gpsr-switch__slider{box-shadow:0 0 0 2px #fff,0 0 0 4px #2271b1;}
+
+/* Documents */
+#eggl_gpsr_data .eggl-gpsr-docs{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+    gap:10px;
+    padding:4px 12px 4px;
+}
+#eggl_gpsr_data .eggl-gpsr-doc{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:6px 10px;
+    padding:10px;
+    border:1px solid #dcdcde;
+    border-radius:4px;
+    background:#f6f7f7;
+}
+#eggl_gpsr_data .eggl-gpsr-doc__label{flex:1 0 100%;font-weight:600;}
+#eggl_gpsr_data .eggl-gpsr-doc__file{flex:1 0 100%;word-break:break-all;color:#50575e;}
+#eggl_gpsr_data .eggl-gpsr-doc__file:empty{display:none;}
+
+#eggl_gpsr_data .eggl-gpsr-hint{padding:0 12px;color:#646970;font-style:italic;}

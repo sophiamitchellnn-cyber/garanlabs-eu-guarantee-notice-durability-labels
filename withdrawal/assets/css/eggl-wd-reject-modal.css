@@ -1,0 +1,27 @@
+/* "Reject withdrawal request" popup (Requests table + WooCommerce orders list). */
+.eggl-wd-reject-dialog{width:min(520px,calc(100vw - 32px));max-width:none;padding:0;border:0;border-radius:14px;
+  box-shadow:0 24px 48px -12px rgba(15,23,42,.35),0 0 0 1px rgba(15,23,42,.06);color:#0f172a}
+.eggl-wd-reject-dialog::backdrop{background:rgba(15,23,42,.45)}
+.eggl-wd-reject-dialog form{padding:22px 24px 20px;margin:0}
+.eggl-wd-reject-dialog h2{font-size:16px;font-weight:700;margin:0 0 16px;padding:0;line-height:1.4}
+.eggl-wd-reject-dialog__number{font-weight:400;color:#64748b}
+.eggl-wd-reject-dialog label{display:block;font-weight:600;font-size:13px;margin-bottom:6px}
+.eggl-wd-reject-dialog__optional{font-weight:400;color:#64748b}
+.eggl-wd-reject-dialog textarea{width:100%;min-height:110px;box-sizing:border-box;border:1px solid #d7dce2;border-radius:8px;padding:9px 12px;font-size:13px;resize:vertical}
+.eggl-wd-reject-dialog textarea:focus{border-color:#0f766e;box-shadow:0 0 0 3px rgba(15,118,110,.15);outline:none}
+.eggl-wd-reject-dialog .description{margin:6px 0 0;font-size:12px;color:#64748b}
+.eggl-wd-reject-dialog__error{margin:12px 0 0!important}
+.eggl-wd-reject-dialog__error[hidden]{display:none}
+.eggl-wd-reject-dialog__actions{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}
+.eggl-wd-reject-dialog__actions .button{border-radius:8px;min-height:34px;padding:0 16px}
+.eggl-wd-reject-dialog__submit.button-primary{background:#b32d2e;border-color:#8a2424}
+.eggl-wd-reject-dialog__submit.button-primary:hover,.eggl-wd-reject-dialog__submit.button-primary:focus{background:#8a2424;border-color:#8a2424}
+.eggl-wd-reject-dialog__submit.is-busy{opacity:.7;cursor:progress}
+
+/* Outcome details under the status in the Requests table and the order's Withdrawals box. */
+.eggl-wd-status-date,.eggl-wd-rejection-reason{display:block;margin-top:6px;font-size:12px;line-height:1.45;color:#50575e;white-space:normal}
+.eggl-wd-rejection-reason strong{color:#b32d2e}
+#eggl-wd-order-withdrawals .withdrawal-outcome{margin:6px 0 4px}
+#eggl-wd-order-withdrawals .withdrawal-rejection-reason{margin:4px 0 6px;padding:8px 10px;background:#fdf2f2;border-left:3px solid #b32d2e;border-radius:3px;font-size:12px}
+#eggl-wd-order-withdrawals .withdrawal-rejection-reason strong{color:#b32d2e}
+#eggl-wd-order-withdrawals .withdrawal-rejection-reason p{margin:2px 0 0}

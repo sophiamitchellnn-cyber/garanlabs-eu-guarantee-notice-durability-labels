@@ -1,0 +1,175 @@
+/* Right to repair — notice, claim form and My account section.
+   The form uses WooCommerce's own field markup (woocommerce_form_field), so inputs, labels and
+   buttons look exactly like the withdrawal form and the checkout in any theme. Colours below follow
+   the theme: currentColor plus the block-theme contrast/base presets where available. */
+
+.eggl-rr{
+  box-sizing:border-box;
+  --eggl-rr-ink:var(--wp--preset--color--contrast,#1f2328);
+  --eggl-rr-on-ink:var(--wp--preset--color--base,#fff);
+  --eggl-rr-line:color-mix(in srgb,currentColor 18%,transparent);
+  --eggl-rr-soft:color-mix(in srgb,currentColor 4%,transparent);
+  --eggl-rr-muted:color-mix(in srgb,currentColor 65%,transparent);
+  --eggl-rr-accent:#0f766e;
+  --eggl-rr-radius:10px;
+  max-width:720px;
+}
+@supports not (color:color-mix(in srgb,red 50%,blue)){
+  .eggl-rr{--eggl-rr-line:#d6d9de;--eggl-rr-soft:#f7f8fa;--eggl-rr-muted:#5f6670}
+}
+
+/* Notice */
+.eggl-rr-notice{display:flex;gap:14px;align-items:flex-start;max-width:var(--eggl-notice-width,720px);
+  margin:0 0 1.75rem;padding:16px 18px;background:#f4fbfa;border:1px solid #cfe8e4;border-left:4px solid #0f766e;
+  border-radius:10px;box-sizing:border-box}
+.eggl-rr-notice__icon{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;
+  border-radius:999px;background:#0f766e;color:#fff;line-height:0}
+.eggl-rr-notice__icon svg{width:18px;height:18px}
+.eggl-rr-notice__text strong{display:block;margin-bottom:3px;color:#0b3b36}
+.eggl-rr-notice__text p{margin:0;font-size:.92em;line-height:1.5;color:#244b47}
+.eggl-rr-notice__text p.eggl-rr-notice__period{margin:0 0 4px;font-weight:600;color:#0b3b36}
+.eggl-rr-notice__link{display:inline-block;margin-top:8px;font-weight:600;color:#0f766e}
+
+/* Lookup */
+.eggl-rr__intro,.eggl-rr__or{margin:0 0 1rem}
+.eggl-rr__heading{margin:0 0 .75rem}
+.eggl-rr__orders{list-style:none;margin:0 0 1.5rem;padding:0;display:grid;gap:10px}
+.eggl-rr__order-card{display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:center;padding:14px 18px;
+  border:1px solid var(--eggl-rr-line);border-radius:var(--eggl-rr-radius);text-decoration:none;color:inherit;
+  transition:border-color .15s ease,box-shadow .15s ease}
+.eggl-rr__order-card:hover,.eggl-rr__order-card:focus-visible{border-color:var(--eggl-rr-ink);box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.eggl-rr__order-card-title{font-weight:600}
+.eggl-rr__order-card-meta{grid-column:1;font-size:.88em;color:var(--eggl-rr-muted)}
+.eggl-rr__order-card-arrow{grid-column:2;grid-row:1 / span 2;font-size:1.3em}
+
+/* Order summary chip */
+.eggl-rr__order-summary{display:inline-flex;flex-wrap:wrap;align-items:baseline;gap:8px;margin:0 0 1.5rem;padding:8px 14px;
+  background:var(--eggl-rr-soft);border:1px solid var(--eggl-rr-line);border-radius:999px;font-size:.95em}
+.eggl-rr__order-summary-label,.eggl-rr__order-summary-date{color:var(--eggl-rr-muted)}
+
+/* Sections */
+.eggl-rr__form .eggl-rr__section{border:0;margin:0 0 2rem;padding:0;min-width:0}
+.eggl-rr__section-title{display:flex;align-items:center;gap:10px;width:100%;margin:0 0 1rem;padding:0;
+  font-size:1.1em;font-weight:700;line-height:1.3}
+.eggl-rr__step{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;
+  border-radius:999px;background:var(--eggl-rr-ink);color:var(--eggl-rr-on-ink);font-size:.8em;font-weight:700}
+.eggl-rr .required{visibility:visible;color:var(--wc-red,#a00);font-weight:700;text-decoration:none;border:0}
+.eggl-rr__section-title .required{margin-left:-6px}
+.eggl-rr__form .form-row{margin-bottom:1rem}
+.eggl-rr__form .form-row textarea{min-height:130px;width:100%;box-sizing:border-box}
+.eggl-rr__form .form-row input.input-text,.eggl-rr__form .form-row textarea{width:100%;box-sizing:border-box}
+.eggl-rr__label-hidden > label{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.eggl-rr__form .form-row-wide,.eggl-rr__submit{clear:both}
+.eggl-rr__form fieldset::after{content:"";display:table;clear:both}
+@media (max-width:600px){.eggl-rr .eggl-rr__form .form-row-first,.eggl-rr .eggl-rr__form .form-row-last,.woocommerce .eggl-rr form .form-row-first,.woocommerce .eggl-rr form .form-row-last{width:100%;float:none}}
+
+/* Item cards */
+.eggl-rr__items{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.eggl-rr__item{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;padding:12px 16px;border:1px solid var(--eggl-rr-line);
+  border-radius:var(--eggl-rr-radius);transition:border-color .15s ease,background-color .15s ease}
+.eggl-rr__item:has(.eggl-rr__check:checked){border-color:var(--eggl-rr-ink);background:var(--eggl-rr-soft)}
+.eggl-rr__item.is-disabled{opacity:.55}
+.eggl-rr__item-main{flex:1 1 260px;display:flex;align-items:center;gap:14px;margin:0;cursor:pointer;font-weight:400}
+.eggl-rr__item.is-disabled .eggl-rr__item-main{cursor:not-allowed}
+.eggl-rr__check{flex:0 0 auto;width:20px;height:20px;margin:0;accent-color:var(--eggl-rr-ink)}
+.eggl-rr__item-thumb{flex:0 0 56px;width:56px;height:56px;line-height:0}
+.eggl-rr__item-thumb img{width:56px;height:56px;object-fit:cover;border-radius:8px;display:block;margin:0}
+.eggl-rr__item-text{display:flex;flex-direction:column;min-width:0}
+.eggl-rr__item-name{font-weight:600}
+.eggl-rr__item-meta{font-size:.86em;color:var(--eggl-rr-muted)}
+.eggl-rr__qty{display:flex;align-items:center;gap:8px;margin:0;font-size:.9em;color:var(--eggl-rr-muted)}
+.eggl-rr .eggl-rr__qty input.input-text{width:5.5em;text-align:center;height:auto;min-height:0;line-height:1.5}
+
+/* Photo drop area */
+.eggl-rr .eggl-rr__form .form-row label.eggl-rr__dropzone,.eggl-rr__dropzone{position:relative;display:flex;line-height:1.4;margin:0;flex-direction:column;align-items:center;justify-content:center;gap:4px;
+  padding:22px 16px;border:1.5px dashed var(--eggl-rr-line);border-radius:var(--eggl-rr-radius);text-align:center;cursor:pointer;
+  transition:border-color .15s ease,background-color .15s ease}
+.eggl-rr__dropzone:hover,.eggl-rr__dropzone:focus-within,.eggl-rr__dropzone.has-files{border-color:var(--eggl-rr-ink);background:var(--eggl-rr-soft)}
+.eggl-rr__dropzone-icon{color:var(--eggl-rr-muted)}
+.eggl-rr__dropzone-text{display:block;font-weight:600}
+.eggl-rr__dropzone-hint{display:block;font-size:.85em;color:var(--eggl-rr-muted)}
+.eggl-rr__dropzone input[type=file]{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer}
+
+/* Repair / replacement option cards */
+.eggl-rr__choices{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:600px){.eggl-rr__choices{grid-template-columns:1fr}}
+.eggl-rr__choice{position:relative;display:flex;gap:12px;align-items:flex-start;margin:0;padding:16px;border:1px solid var(--eggl-rr-line);
+  border-radius:var(--eggl-rr-radius);cursor:pointer;font-weight:400;transition:border-color .15s ease,box-shadow .15s ease,background-color .15s ease}
+.eggl-rr__choice:hover{border-color:var(--eggl-rr-ink)}
+.eggl-rr__choice input{position:absolute;opacity:0;pointer-events:none}
+.eggl-rr__choice:has(input:checked){border-color:var(--eggl-rr-ink);box-shadow:inset 0 0 0 1px var(--eggl-rr-ink);background:var(--eggl-rr-soft)}
+.eggl-rr__choice:has(input:focus-visible){outline:2px solid var(--eggl-rr-ink);outline-offset:2px}
+.eggl-rr__choice-icon{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:12px;
+  background:var(--eggl-rr-soft);border:1px solid var(--eggl-rr-line)}
+.eggl-rr__choice:has(input:checked) .eggl-rr__choice-icon{background:var(--eggl-rr-ink);border-color:var(--eggl-rr-ink);color:var(--eggl-rr-on-ink)}
+.eggl-rr__choice-text{display:flex;flex-direction:column;gap:4px;font-size:.92em;line-height:1.45;padding-right:34px}
+.eggl-rr__choice:has(.eggl-rr__badge) .eggl-rr__choice-text{padding-right:0}
+.eggl-rr__choice:has(.eggl-rr__badge) .eggl-rr__choice-text strong{padding-right:90px}
+.eggl-rr__choice-text strong{font-size:1.08em}
+.eggl-rr__badge{position:absolute;top:14px;right:14px;padding:2px 8px;border-radius:999px;background:#0f766e;color:#fff;font-size:.78em;font-weight:700}
+.eggl-rr__choice::after{content:"";position:absolute;top:16px;right:16px;width:18px;height:18px;border-radius:999px;border:1.5px solid var(--eggl-rr-line)}
+.eggl-rr__choice:has(.eggl-rr__badge)::after{display:none}
+.eggl-rr__choice:has(input:checked)::after{border-color:var(--eggl-rr-ink);box-shadow:inset 0 0 0 4px var(--eggl-rr-on-ink);background:var(--eggl-rr-ink)}
+.eggl-rr__hint{margin:.75rem 0 0;font-size:.85em;color:var(--eggl-rr-muted)}
+
+.eggl-rr__submit{margin-top:.5rem}
+.eggl-rr__submit .button{min-width:180px}
+.eggl-rr__hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;overflow:hidden}
+.eggl-rr__sent{margin-bottom:1rem}
+
+/* Status badges (My account) */
+.eggl-rr-status{display:inline-block;padding:2px 10px;border-radius:999px;font-size:.85em;font-weight:600;background:#eef0f3;color:#3c434a}
+.eggl-rr-status--received{background:#fff4e5;color:#8a4b00}
+.eggl-rr-status--in_progress{background:#e8f1fb;color:#1d4f91}
+.eggl-rr-status--repaired,.eggl-rr-status--replaced,.eggl-rr-status--refunded{background:#e7f6ec;color:#1e6b3a}
+.eggl-rr-status--rejected{background:#fdf2f2;color:#9b1c1c}
+.eggl-rr-account{margin-top:2rem}
+.eggl-rr-account__message{margin-top:4px;font-size:.9em}
+.eggl-rr-account__message p{margin:0}
+
+.eggl-rr *,.eggl-rr *::before,.eggl-rr *::after{box-sizing:border-box}
+.eggl-rr__item-text{overflow-wrap:anywhere}
+
+/* Choose an order */
+.eggl-rr__form--select{margin:0 0 1.75rem;padding:0;border:0;background:none}
+.eggl-rr__form--select .form-row{margin-bottom:0}
+.eggl-rr form.eggl-rr__form--select .form-row select{display:block;width:100%;max-width:100%;box-sizing:border-box;height:auto;min-height:calc(1.618em + 1.2360939432em);padding-top:.618em;padding-bottom:.618em;padding-right:2.6em;line-height:1.5;cursor:pointer;
+  -webkit-appearance:none;-moz-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-size:16px;background-position:right .9em center}
+/* Block themes: same padding WooCommerce gives text fields there. */
+body.woocommerce-uses-block-theme .eggl-rr form.eggl-rr__form--select .form-row select{padding:.9rem 2.8em .9rem 1.1rem;font-size:var(--wp--preset--font-size--small,1rem)}
+.eggl-rr__form--select .eggl-rr__select-submit{margin:12px 0 0}
+.eggl-rr__form--select.is-js .eggl-rr__select-submit{display:none}
+.eggl-rr__form--select.is-loading{opacity:.6;pointer-events:none}
+.eggl-rr__form--claim{margin-top:0}
+
+/* Theme-proofing (classic themes such as Storefront style fieldsets, legends and half-width rows themselves). */
+.eggl-rr form.eggl-rr__form fieldset.eggl-rr__section{background:none;border:0;padding:0;margin:0 0 2rem;box-shadow:none}
+.eggl-rr form.eggl-rr__form fieldset.eggl-rr__section > legend.eggl-rr__section-title{float:none;width:100%;margin:0 0 1rem;padding:0;border:0;background:none;
+  font-size:1.1em;font-weight:700;color:inherit;line-height:1.3}
+.eggl-rr .eggl-rr__grid{display:grid;grid-template-columns:1fr 1fr;gap:0 20px}
+.eggl-rr .eggl-rr__grid > .form-row{float:none;width:auto;margin-left:0;margin-right:0;clear:none;grid-column:1 / -1}
+.eggl-rr .eggl-rr__grid > .form-row-first{grid-column:1}
+.eggl-rr .eggl-rr__grid > .form-row-last{grid-column:2}
+@media (max-width:600px){.eggl-rr .eggl-rr__grid > .form-row-first,.eggl-rr .eggl-rr__grid > .form-row-last{grid-column:1 / -1}}
+.eggl-rr form.eggl-rr__form .form-row{float:none;width:auto;margin-left:0;margin-right:0}
+.eggl-rr .eggl-rr__grid > .form-row-first,.eggl-rr .eggl-rr__grid > .form-row-last{float:none;width:auto}
+
+
+.eggl-rr ul.eggl-rr__items,.eggl-rr ul.eggl-rr__orders,.eggl-rr ul.eggl-rr__errors{margin-left:0;margin-right:0;padding-left:0;list-style:none}
+.eggl-rr ul.eggl-rr__items > li{margin-left:0}
+
+/* My account → Orders: when "Report a defect" makes the action buttons wrap, keep space between the rows. */
+.woocommerce-orders-table__cell-order-actions:has(.eggl-repair){line-height:1}
+.woocommerce-orders-table__cell-order-actions:has(.eggl-repair) .button{margin-top:4px;margin-bottom:4px;vertical-align:middle}
+
+/* Product page: compact right-to-repair row (shares .eggl-row with the legal-guarantee notice). */
+.eggl-widget.eggl-rr-compact{margin-top:8px}
+.eggl-widget--notice + .eggl-rr-compact,.eggl-widget + .eggl-rr-compact{margin-top:-4px}
+.eggl-rr-compact__panel{margin-top:4px;padding:12px 16px;background:#f8f9fb;border:1px solid #e2e5eb;border-radius:12px;font-size:14px;line-height:1.5}
+/* Right to repair: plain row, no box (the legal-guarantee row keeps its own look). */
+.eggl-widget.eggl-rr-compact .eggl-row,.eggl-widget.eggl-rr-compact button.eggl-row:hover{background:none;border:0;border-radius:0;box-shadow:none;padding-left:0;padding-right:0}
+.eggl-rr-compact__panel p{margin:0}
+.eggl-rr-compact__panel p + p{margin-top:6px;color:#4b5563}
+.eggl-rr-compact__period{font-weight:600}

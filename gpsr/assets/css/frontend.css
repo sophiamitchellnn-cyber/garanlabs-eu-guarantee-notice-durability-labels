@@ -1,0 +1,21 @@
+/* EU Guarantee & GARAN — "Product safety" tab on the product page */
+
+.eggl-gpsr{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+}
+.eggl-gpsr__block{
+    padding:16px;
+    border:1px solid rgba(0,0,0,.12);
+    border-radius:6px;
+}
+.eggl-gpsr__block h3{margin:0 0 12px;font-size:1.05em;}
+.eggl-gpsr__block p:last-child{margin-bottom:0;}
+.eggl-gpsr__table{width:100%;margin:0;border:0;}
+.eggl-gpsr__table th,
+.eggl-gpsr__table td{padding:4px 8px 4px 0;border:0;text-align:left;vertical-align:top;background:none;}
+.eggl-gpsr__table th{width:40%;font-weight:600;}
+.eggl-gpsr__table td{word-break:break-word;}
+.eggl-gpsr__docs{margin:0;padding-left:1.2em;}
+.eggl-gpsr__docs li{margin:0 0 6px;}

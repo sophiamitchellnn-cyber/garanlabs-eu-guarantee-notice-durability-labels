@@ -1,0 +1,1 @@
+.eggl-ph-anchor-price,.eggl-ph-lowest-price{font-size:.8rem}.eggl-ph-anchor-price:has(+:is(.eggl-ph-lowest-price,.eggl-ph-anchor-price):not([hidden])),.eggl-ph-lowest-price:has(+:is(.eggl-ph-lowest-price,.eggl-ph-anchor-price):not([hidden])){margin-bottom:0}

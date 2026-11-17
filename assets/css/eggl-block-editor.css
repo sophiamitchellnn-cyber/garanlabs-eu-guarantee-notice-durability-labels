@@ -1,0 +1,8 @@
+/* Block editor only: layout for the GARAN Label block's fields + live preview. */
+.eggl-block-garan{padding:8px}
+.eggl-block-garan__note{margin:8px 0 0;font-size:12px;color:#757575;max-width:480px}
+.eggl-block-garan__body{display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start;margin-top:8px}
+.eggl-block-garan__fields{flex:1 1 240px;min-width:220px}
+.eggl-block-garan__preview{flex:1 1 220px;min-width:180px;max-width:320px}
+.eggl-block-garan__preview svg{width:100%;height:auto;display:block}
+.eggl-block-notice{padding:4px}

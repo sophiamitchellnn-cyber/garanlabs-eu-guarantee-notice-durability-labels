@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "eggl/notice",
+  "title": "EU Guarantee Notice",
+  "category": "widgets",
+  "icon": "shield",
+  "description": "Manually place the harmonised EU legal-guarantee notice (Regulation (EU) 2025/1960) anywhere in your content.",
+  "textdomain": "garanlabs-eu-guarantee-notice-durability-labels",
+  "supports": {
+    "html": false,
+    "multiple": true
+  }
+}

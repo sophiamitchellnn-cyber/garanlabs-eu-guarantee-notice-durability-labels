@@ -1,0 +1,40 @@
+<?php
+/**
+ * Email withdrawal edit link
+ *
+ * This template can be overridden by copying it to yourtheme/woocommerce/emails/plain/email-withdrawal-edit-link.php.
+ *
+ * HOWEVER, on occasion EU OWB will need to update template files and you
+ * (the theme developer) will need to copy the new files to your theme to
+ * maintain compatibility. We try to do this as little as possible, but it does
+ * happen. When this occurs the version of the template file will be bumped and
+ * the readme will list any important changes.
+ *
+ * @package EGGL/Withdrawal/Templates
+ * @version 2.4.0
+ */
+defined( 'ABSPATH' ) || exit;
+
+$has_multiple       = eggl_wd_order_withdrawal_request_has_multiple_orders( $withdrawal );
+$needs_order_select = eggl_wd_order_withdrawal_request_needs_order_select( $withdrawal );
+?>
+<?php if ( $has_multiple ) : ?>
+	<?php echo esc_html_x( 'More than one matching order found', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) . "\n\n"; ?>
+<?php elseif ( $needs_order_select ) : ?>
+	<?php echo esc_html_x( 'We could not find an order based on your criteria', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ); ?>
+<?php else : ?>
+	<?php echo esc_html_x( 'Want to withdraw certain items only?', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) . "\n\n"; ?>
+<?php endif; ?>
+
+<?php if ( $has_multiple ) : ?>
+	<?php echo esc_html_x( 'We found more than one order matching your criteria—please use the link below to edit your withdrawal or select a different order.', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) . "\n\n"; ?>
+<?php elseif ( $needs_order_select ) : ?>
+	<?php echo esc_html_x( 'We could not find an order based on your criteria—please use the link below to select one of the orders matching your email address.', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ) . "\n\n"; ?>
+<?php endif; ?>
+
+<?php if ( $has_multiple || $needs_order_select ) : ?>
+	<?php echo sprintf( esc_html_x( 'Edit withdrawal request: %s', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ), esc_url( $edit_withdrawal_link ) ) . "\n\n"; ?>
+<?php else : ?>
+	<?php echo sprintf( esc_html_x( 'Choose items to withdraw now: %s', 'owb', 'garanlabs-eu-guarantee-notice-durability-labels' ), esc_url( $edit_withdrawal_link ) ) . "\n\n"; ?>
+	<?php
+endif;
