@@ -66,10 +66,17 @@ class Product_Mapper
         return (string) apply_filters('eggl_ph_dpl_brand', $brand, $product);
     }
 
-    /** Unit of measure for the unit price; source chosen in settings (see Unit_Price). */
+    /**
+     * Unit of measure: the unit-price source chosen in settings (see Unit_Price); products without one
+     * (e.g. sold per piece) get the fallback unit meta key or default unit, if configured.
+     */
     public static function unit(\WC_Product $product)
     {
-        return (string) apply_filters('eggl_ph_dpl_unit', Unit_Price::resolve($product)['unit'], $product);
+        $unit = Unit_Price::resolve($product)['unit'];
+        if ($unit === '') {
+            $unit = Unit_Price::fallback_unit($product);
+        }
+        return (string) apply_filters('eggl_ph_dpl_unit', $unit, $product);
     }
 
     public static function unit_price(\WC_Product $product)

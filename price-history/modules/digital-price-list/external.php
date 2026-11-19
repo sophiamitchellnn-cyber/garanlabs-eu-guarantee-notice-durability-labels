@@ -26,6 +26,9 @@ class External_Source
     const SETTLE_SECONDS = 60;
     const DEFAULT_MAX_BYTES = 50 * MB_IN_BYTES;
     const DELIMITERS = [',', ';', "\t", '|'];
+    // Seconds a remote URL fetch may take in total; past that the fetch is recorded as rejected and the
+    // other stores and the generation carry on (filterable: eggl_ph_dpl_external_timeout).
+    const REMOTE_TIMEOUT = 20;
 
     public function __construct()
     {
@@ -233,13 +236,50 @@ class External_Source
         return wp_tempnam($prefix);
     }
 
+    /**
+     * A remote URL that points to a .csv file on this site itself (e.g. in the uploads folder) as a local
+     * path, or null. Reading it from disk avoids an HTTP request to our own server, which can hang when
+     * the PHP workers are busy or the server can't reach its own public address. Only real .csv files
+     * inside the WordPress folders are accepted, so a URL can never publish e.g. wp-config.php.
+     */
+    public static function local_path($url)
+    {
+        $strip = static fn($value) => untrailingslashit(preg_replace('#^https?://#i', '', (string) $value));
+        $target = $strip(strtok((string) $url, '?#'));
+        $upload = wp_upload_dir(null, false);
+        $bases = [
+            $strip($upload['baseurl']) => $upload['basedir'],
+            $strip(content_url())      => WP_CONTENT_DIR,
+            $strip(site_url())         => ABSPATH,
+            $strip(home_url())         => ABSPATH,
+        ];
+        foreach ($bases as $base_url => $base_dir) {
+            if ($base_url === '' || stripos($target, $base_url . '/') !== 0) {
+                continue;
+            }
+            $path = realpath(trailingslashit($base_dir) . rawurldecode(substr($target, strlen($base_url) + 1)));
+            $root = realpath($base_dir);
+            if ($path && $root && strpos($path, trailingslashit($root)) === 0 && is_file($path) && strtolower(pathinfo($path, PATHINFO_EXTENSION)) === 'csv') {
+                return $path;
+            }
+            return null; // Same site, but not a plain file (e.g. a script generating the CSV): fetch over HTTP.
+        }
+        return null;
+    }
+
     public static function fetch_remote($store_id, $url)
     {
+        $local = self::local_path($url);
+        if ($local !== null) {
+            return self::import($store_id, $local, 'url', basename($local));
+        }
+
         $tmp = self::tempnam('eggl-ph-dpl-remote');
+        $timeout = max(1, (int) apply_filters('eggl_ph_dpl_external_timeout', self::REMOTE_TIMEOUT, $url));
         // CDNs such as Cloudflare cache .csv files by default; a unique query string and no-cache headers get a fresh copy.
         $response = wp_safe_remote_get(add_query_arg('eggl_ph_nocache', time(), $url), [
             'headers'             => ['Cache-Control' => 'no-cache', 'Pragma' => 'no-cache'],
-            'timeout'             => 60,
+            'timeout'             => $timeout,
             'stream'              => true,
             'filename'            => $tmp,
             'limit_response_size' => self::max_bytes(),

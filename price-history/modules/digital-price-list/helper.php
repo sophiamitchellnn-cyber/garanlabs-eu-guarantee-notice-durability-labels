@@ -44,6 +44,8 @@ class Helper
             // One price list for all stores (čl. 6(4)): the webshop list carries ZA_SVA_PRODAJNA_MJESTA instead of store data.
             'all_stores_list'      => 0,
             'csv_delimiter'        => ';',
+            // Decimal point by default (89.99); a comma (89,99) matches ERP exports that use one, so all of a trader's files look alike.
+            'csv_decimal'          => '.',
             'csv_bom'              => 1,
             'csv_columns'          => '',
             'oib'                  => '',
@@ -58,6 +60,10 @@ class Helper
             'unit_ratio'           => '1',
             // Off by default: product weight is usually the shipping weight, not the unit-price quantity.
             'unit_weight_fallback' => 0,
+            // Unit column only, when no unit-price source has a unit: a product meta key (e.g. a theme's
+            // unit of measurement field), then a fixed default such as "kom". The unit price is unaffected.
+            'unit_fallback_meta'    => '',
+            'unit_fallback_default' => '',
             // External (ERP) store price lists: see External_Source.
             'external_required_columns' => '',
             'external_deadline'         => '08:00',
@@ -70,10 +76,13 @@ class Helper
     const STORE_SCOPES = ['all', 'include', 'exclude'];
     const PRICE_LIST_TYPES = ['roba', 'usluge'];
     const DELIMITERS = [';', ','];
+    const DECIMALS = ['.', ','];
     // Default file names follow Pravilnik o načinu objave cjenika proizvoda (NN 132/2026) čl. 6(3): OIB, store
     // type, address, premises label, goods/services, storage number, YYYYMMDD_HHMM. A saved earlier default
     // (listed below) is migrated to the current one; a custom pattern is kept as typed.
-    const STORE_FILENAME_PATTERN = '{oib}_{outlet_type}_{address}_{premises_label}_{price_list_type}_{store_number}_{timestamp_hr}';
+    // "Broj pohrane" is the storage (version) number, so stores use the same incrementing {sequence} as the
+    // webshop; the store itself is already identified by its address and premises label.
+    const STORE_FILENAME_PATTERN = '{oib}_{outlet_type}_{address}_{premises_label}_{price_list_type}_{sequence}_{timestamp_hr}';
     const FILENAME_PATTERN = '{oib}_{outlet_type}_{address}_{outlet_id}_{price_list_type}_{sequence}_{timestamp_hr}';
     // Čl. 6(4): a single price list for all stores uses this text in place of the store data.
     const ALL_STORES_LABEL = 'ZA_SVA_PRODAJNA_MJESTA';
@@ -86,6 +95,8 @@ class Helper
         // Its {time} ':' is blocked in URLs by many firewalls.
         '{outlet_type}_{address}_{premises_label}_{store_number}_{date}_{time}',
         '{outlet_type}_{address}_{premises_label}_{store_number}_{timestamp_hr}',
+        // 2.2.5 default: used the fixed store number as the storage number.
+        '{oib}_{outlet_type}_{address}_{premises_label}_{price_list_type}_{store_number}_{timestamp_hr}',
     ];
 
     /** Default CSV layout: field => column header, in the order of the goods price list items (Pravilnik čl. 3). */
@@ -333,6 +344,7 @@ class Helper
             'filename_underscores' => !empty($settings['filename_underscores']),
             'all_stores_list'      => !empty($settings['all_stores_list']),
             'csv_delimiter'        => in_array($settings['csv_delimiter'] ?? '', self::DELIMITERS, true) ? $settings['csv_delimiter'] : self::defaults('csv_delimiter'),
+            'csv_decimal'          => in_array($settings['csv_decimal'] ?? '', self::DECIMALS, true) ? $settings['csv_decimal'] : self::defaults('csv_decimal'),
             'csv_bom'              => array_key_exists('csv_bom', $settings) ? !empty($settings['csv_bom']) : (bool) self::defaults('csv_bom'),
             'csv_columns'          => self::csv_columns_text(self::parse_csv_columns($settings['csv_columns'] ?? '') ?: self::default_csv_columns()),
             'oib'                  => preg_replace('/[^0-9A-Za-z]/', '', (string) ($settings['oib'] ?? '')),
@@ -345,6 +357,8 @@ class Helper
             'unit_meta_price'      => self::meta_key($settings['unit_meta_price'] ?? ''),
             'unit_ratio'           => Unit_Price::number($settings['unit_ratio'] ?? '') ?? (float) self::defaults('unit_ratio'),
             'unit_weight_fallback' => !empty($settings['unit_weight_fallback']),
+            'unit_fallback_meta'    => self::meta_key($settings['unit_fallback_meta'] ?? ''),
+            'unit_fallback_default' => sanitize_text_field($settings['unit_fallback_default'] ?? ''),
             'external_required_columns' => implode(', ', External_Source::parse_columns($settings['external_required_columns'] ?? '')),
             'external_deadline'         => is_string($settings['external_deadline'] ?? null) && preg_match('/^([01]\d|2[0-3]):[0-5]\d$/D', $settings['external_deadline']) ? $settings['external_deadline'] : self::defaults('external_deadline'),
             'external_alert_email'      => implode(', ', array_filter(array_map('sanitize_email', array_map('trim', explode(',', (string) ($settings['external_alert_email'] ?? '')))), 'is_email')),

@@ -9,6 +9,7 @@ if (!defined('ABSPATH')) {
 class DPL_Admin
 {
     const GENERATE_ACTION = 'eggl_ph_dpl_generate_now';
+    const STATUS_AJAX_ACTION = 'eggl_ph_dpl_status';
 
     public function __construct()
     {
@@ -18,6 +19,7 @@ class DPL_Admin
         // The settings form reads the raw option; show a saved earlier default pattern as the current default.
         add_filter('option_' . Helper::SETTINGS, [Helper::class, 'migrate_patterns']);
         add_action('admin_post_' . self::GENERATE_ACTION, [$this, 'generate_now']);
+        add_action('wp_ajax_' . self::STATUS_AJAX_ACTION, [self::class, 'ajax_status']);
         add_action('eggl_ph_form_top', [$this, 'panel_description']);
         add_action('admin_enqueue_scripts', [self::class, 'enqueue_assets'], 20);
     }
@@ -87,6 +89,9 @@ class DPL_Admin
                 ), 'warning');
             }
         }
+        if ($settings['csv_delimiter'] === ',' && $settings['csv_decimal'] === ',') {
+            add_settings_error(Helper::SETTINGS, 'eggl_ph_dpl_decimal_delimiter', __('The column separator and the decimal separator are both a comma, so every price will be wrapped in quotes. Use a semicolon as the column separator with a decimal comma.', 'garanlabs-eu-guarantee-notice-durability-labels'), 'warning');
+        }
         Generator::reschedule($settings);
         if ($settings['enable']) {
             External_Source::prepare_dirs(array_filter($settings['stores'], static function ($store) {
@@ -109,6 +114,50 @@ class DPL_Admin
      */
     public static function render_status()
     {
+        self::render_status_box();
+        if (!Generator::is_running()) {
+            return;
+        }
+        // While a run is in progress, refresh the Status box every few seconds until it finishes.
+?>
+        <script>
+        (function() {
+            var poll = function() {
+                var box = document.querySelector('.eggl-ph-dpl-status-box');
+                var nonce = box && box.querySelector('input[name="nonce"]');
+                if (!box || !nonce || !window.fetch) return;
+                var body = new URLSearchParams({action: <?php echo wp_json_encode(self::STATUS_AJAX_ACTION); ?>, nonce: nonce.value});
+                fetch(<?php echo wp_json_encode(admin_url('admin-ajax.php')); ?>, {method: 'POST', credentials: 'same-origin', body: body})
+                    .then(function(r) { return r.json(); })
+                    .then(function(r) {
+                        if (!r || !r.success) return;
+                        box.outerHTML = r.data.html;
+                        if (r.data.running) setTimeout(poll, 5000);
+                    })
+                    .catch(function() { setTimeout(poll, 15000); });
+            };
+            setTimeout(poll, 5000);
+        })();
+        </script>
+<?php
+    }
+
+    /** The Status box's current HTML and whether a run is still in progress, for the polling script above. */
+    public static function ajax_status()
+    {
+        if (!current_user_can('manage_woocommerce')) {
+            wp_send_json_error(null, 403);
+        }
+        check_ajax_referer(self::nonce_action(), 'nonce');
+        ob_start();
+        self::render_status_box();
+        wp_send_json_success(['html' => ob_get_clean(), 'running' => Generator::is_running()]);
+    }
+
+    private static function render_status_box()
+    {
+        // Before reading the status: releasing a dead run records why, and that message belongs in this render.
+        Generator::recover_stale();
         $status = Helper::status();
         $store  = Helper::get_store_info();
         // Generator::reschedule() uses Action Scheduler, not WP-Cron, so read the next run from there.
@@ -118,7 +167,7 @@ class DPL_Admin
         $location = trim(preg_replace('/\s+/', ' ', $store['address'] . ' ' . $store['city']));
         $resolved = implode(' — ', array_filter([$store['name'], $location], fn($part) => trim((string) $part) !== ''));
 ?>
-        <div class="eggl-ph-plugin-panel-description eggl-ph-dpl-status">
+        <div class="eggl-ph-plugin-panel-description eggl-ph-dpl-status eggl-ph-dpl-status-box">
             <?php if (empty(Helper::settings()['enable'])): ?>
                 <p><strong style="color:#b32d2e;"><?php esc_html_e('Digital Price List is disabled. Tick "Enable" at the top and save changes before generating — nothing is generated or published while it is off.', 'garanlabs-eu-guarantee-notice-durability-labels'); ?></strong></p>
             <?php endif; ?>
@@ -158,9 +207,27 @@ class DPL_Admin
                         <?php esc_html_e('not generated yet', 'garanlabs-eu-guarantee-notice-durability-labels'); ?><br>
                     <?php endif; ?>
                 <?php endforeach; ?>
-                <?php if (Generator::is_running()): ?>
+                <?php $progress = Generator::progress(); ?>
+                <?php if ($progress): ?>
                     <strong><?php esc_html_e('Generation Status:', 'garanlabs-eu-guarantee-notice-durability-labels'); ?></strong>
-                    <?php esc_html_e('In progress…', 'garanlabs-eu-guarantee-notice-durability-labels'); ?><br>
+                    <?php
+                    echo esc_html($progress['total']
+                        ? sprintf(
+                            /* translators: 1: products processed so far; 2: total products. */
+                            __('In progress: %1$s / %2$s products', 'garanlabs-eu-guarantee-notice-durability-labels'),
+                            number_format_i18n(min($progress['processed'], $progress['total'])),
+                            number_format_i18n($progress['total'])
+                        )
+                        : __('In progress…', 'garanlabs-eu-guarantee-notice-durability-labels'));
+                    if ($progress['started']) {
+                        echo ' ' . esc_html(sprintf(
+                            /* translators: 1: time the run started; 2: time of its last activity (both HH:MM:SS). */
+                            __('(started %1$s, last activity %2$s; updates automatically)', 'garanlabs-eu-guarantee-notice-durability-labels'),
+                            wp_date('H:i:s', $progress['started']),
+                            wp_date('H:i:s', $progress['last_activity'] ?: $progress['started'])
+                        ));
+                    }
+                    ?><br>
                 <?php endif; ?>
                 <?php if ($status['error'] !== ''): ?>
                     <strong style="color:#b32d2e;"><?php esc_html_e('Last Error:', 'garanlabs-eu-guarantee-notice-durability-labels'); ?></strong>
@@ -168,7 +235,8 @@ class DPL_Admin
                 <?php endif; ?>
             </p>
             <p>
-                <?php wp_nonce_field(self::nonce_action(), 'nonce'); ?>
+                <?php // No referer field: Generate Now returns to the page via the settings form's own one (or the Referer header), even after an AJAX refresh. ?>
+                <?php wp_nonce_field(self::nonce_action(), 'nonce', false); ?>
                 <button class="button" type="submit" name="action" value="<?php echo esc_attr(self::GENERATE_ACTION); ?>"
                     formaction="<?php echo esc_url(admin_url('admin-post.php')); ?>" formmethod="post">
                     <?php esc_html_e('Generate Now', 'garanlabs-eu-guarantee-notice-durability-labels'); ?>
@@ -614,6 +682,17 @@ class DPL_Admin
                 'desc'    => '',
             ],
             [
+                'name'    => 'csv_decimal',
+                'type'    => 'select',
+                'label'   => __('Decimal Separator', 'garanlabs-eu-guarantee-notice-durability-labels'),
+                'default' => Helper::defaults('csv_decimal'),
+                'options' => [
+                    '.' => __('Point (89.99)', 'garanlabs-eu-guarantee-notice-durability-labels'),
+                    ',' => __('Comma (89,99)', 'garanlabs-eu-guarantee-notice-durability-labels'),
+                ],
+                'desc'    => __('For prices, unit prices and net quantities in the generated CSV files. Match it to your external (ERP) files so all price lists of your stores use the same format. External files are published as received.', 'garanlabs-eu-guarantee-notice-durability-labels'),
+            ],
+            [
                 'name'    => 'csv_bom',
                 'type'    => 'checkbox',
                 'label'   => __('UTF-8 BOM', 'garanlabs-eu-guarantee-notice-durability-labels'),
@@ -690,6 +769,22 @@ class DPL_Admin
                 'label'   => __('Weight Fallback', 'garanlabs-eu-guarantee-notice-durability-labels'),
                 'default' => Helper::defaults('unit_weight_fallback'),
                 'desc'    => __('When no other source has a value, calculate the unit price from the product weight and the shop weight unit. Leave off if your product weights are shipping weights.', 'garanlabs-eu-guarantee-notice-durability-labels')
+            ],
+            [
+                'name'        => 'unit_fallback_meta',
+                'type'        => 'text',
+                'label'       => __('Fallback Unit Meta Key', 'garanlabs-eu-guarantee-notice-durability-labels'),
+                'default'     => Helper::defaults('unit_fallback_meta'),
+                'placeholder' => 'woodmart_price_unit_of_measure',
+                'desc'        => __('Optional. For products whose unit-price source above gives no unit (e.g. sold per piece, pair or pack): product meta key to fill the unit column from. Only the unit column is filled; no unit price is calculated.', 'garanlabs-eu-guarantee-notice-durability-labels')
+            ],
+            [
+                'name'        => 'unit_fallback_default',
+                'type'        => 'text',
+                'label'       => __('Default Unit', 'garanlabs-eu-guarantee-notice-durability-labels'),
+                'default'     => Helper::defaults('unit_fallback_default'),
+                'placeholder' => 'kom',
+                'desc'        => __('Optional. Unit for products that still have none after the fallback meta key, e.g. kom. Leave empty to keep the unit column empty for them.', 'garanlabs-eu-guarantee-notice-durability-labels')
             ],
             [
                 'name'  => 'info-stores',

@@ -23,7 +23,11 @@ class Generator
     const PRICE_PROPS = ['price', 'regular_price', 'sale_price', 'date_on_sale_from', 'date_on_sale_to', 'status', 'sku', 'global_unique_id'];
     const BATCH_SIZE = 200;
     const LOCK_OPTION = 'eggl_ph_dpl_generation_lock';
-    const LOCK_TTL = 10 * MINUTE_IN_SECONDS;
+    // A run with no heartbeat (one per batch of BATCH_SIZE products) for this long is treated as dead:
+    // its lock is released and its tmp files removed, so a hung process can't block generation for good.
+    const LOCK_TTL = 15 * MINUTE_IN_SECONDS;
+    // Price columns (and net quantity) that follow the Decimal Separator setting in the CSV.
+    const DECIMAL_FIELDS = ['retail_price', 'unit_price', 'base_price', 'anchor_price', 'net_quantity'];
     const RETENTION_DAYS = 30;
     const STATE_OPTION = 'eggl_ph_dpl_generation_state';
     const SEQUENCE_OPTION = 'eggl_ph_dpl_generation_sequence';
@@ -149,16 +153,12 @@ class Generator
     private static function lock()
     {
         $token = wp_generate_password(12, false);
-        if (add_option(self::LOCK_OPTION, ['time' => time(), 'token' => $token], '', 'no')) {
+        $lock = ['time' => time(), 'token' => $token, 'started' => time(), 'processed' => 0, 'total' => 0];
+        if (add_option(self::LOCK_OPTION, $lock, '', 'no')) {
             return $token;
         }
-        $current = get_option(self::LOCK_OPTION, null);
-        $locked_at = is_array($current) ? (int) ($current['time'] ?? 0) : 0;
-        if ($locked_at && time() - $locked_at > self::LOCK_TTL) {
-            delete_option(self::LOCK_OPTION);
-            if (add_option(self::LOCK_OPTION, ['time' => time(), 'token' => $token], '', 'no')) {
-                return $token;
-            }
+        if (self::recover_stale() && add_option(self::LOCK_OPTION, $lock, '', 'no')) {
+            return $token;
         }
         return false;
     }
@@ -187,10 +187,67 @@ class Generator
         return is_array($current) && ($current['token'] ?? null) === $token;
     }
 
-    /** Pushes the lock's staleness clock forward; a legitimately slow large-catalog run must not be reclaimed as crashed mid-way. */
-    private static function renew_lock($token)
+    /**
+     * Heartbeat: pushes the lock's staleness clock forward (a legitimately slow large-catalog run must
+     * not be reclaimed as crashed mid-way) and records progress for the admin Status box.
+     */
+    private static function renew_lock(array $state)
     {
-        update_option(self::LOCK_OPTION, ['time' => time(), 'token' => $token], false);
+        update_option(self::LOCK_OPTION, [
+            'time'      => time(),
+            'token'     => $state['token'],
+            'started'   => (int) ($state['started_at'] ?? time()),
+            'processed' => (int) ($state['processed'] ?? 0),
+            'total'     => (int) ($state['total'] ?? 0),
+        ], false);
+    }
+
+    /**
+     * Progress of the run in progress for the Status box, or null when none is running:
+     * started/last_activity timestamps and processed/total product counts (total 0 = still starting).
+     */
+    public static function progress()
+    {
+        if (!self::is_running()) {
+            return null;
+        }
+        $lock = get_option(self::LOCK_OPTION, null);
+        $lock = is_array($lock) ? $lock : [];
+        return [
+            'started'       => (int) ($lock['started'] ?? $lock['time'] ?? 0),
+            'last_activity' => (int) ($lock['time'] ?? 0),
+            'processed'     => (int) ($lock['processed'] ?? 0),
+            'total'         => (int) ($lock['total'] ?? 0),
+        ];
+    }
+
+    /**
+     * Releases a lock with no heartbeat for LOCK_TTL (e.g. a process that hung or was killed), together
+     * with its saved progress and tmp files, and records why in the Status box. Returns true if it did.
+     */
+    public static function recover_stale()
+    {
+        $current = get_option(self::LOCK_OPTION, null);
+        if ($current === null || $current === false) {
+            return false;
+        }
+        $locked_at = is_array($current) ? (int) ($current['time'] ?? 0) : 0;
+        if ($locked_at && time() - $locked_at <= self::LOCK_TTL) {
+            return false;
+        }
+        $state = self::state();
+        if ($state !== null) {
+            self::discard_tmp($state);
+            self::clear_state();
+        }
+        self::unlock();
+        self::cleanup_tmp();
+        Helper::set_status(['error' => sprintf(
+            /* translators: %d: number of minutes. */
+            __('The previous generation stopped responding for more than %d minutes and was cancelled. The previously published price lists were kept.', 'garanlabs-eu-guarantee-notice-durability-labels'),
+            (int) (self::LOCK_TTL / MINUTE_IN_SECONDS)
+        )]);
+        return true;
     }
 
     private static function state()
@@ -217,9 +274,10 @@ class Generator
         return $sequence;
     }
 
-    /** True while a generation run (this tick or a chained continuation) is in progress. */
+    /** True while a generation run (this tick or a chained continuation) is in progress; a dead run is released first. */
     public static function is_running()
     {
+        self::recover_stale();
         return self::state() !== null || (bool) get_option(self::LOCK_OPTION, false);
     }
 
@@ -244,11 +302,22 @@ class Generator
     private static function use_format($state)
     {
         self::$delimiter = $state['format']['delimiter'] ?? ';';
+        self::$decimal = $state['format']['decimal'] ?? '.';
     }
 
-    /** The row's values in the layout's column order. */
+    /** Snapshotted per run like the delimiter: '.' or ','. */
+    private static $decimal = '.';
+
+    /** The row's values in the layout's column order, prices using the run's decimal separator. */
     private static function layout_row(array $row, array $columns)
     {
+        if (self::$decimal !== '.') {
+            foreach (self::DECIMAL_FIELDS as $field) {
+                if (isset($row[$field]) && is_string($row[$field]) && preg_match('/^-?\d+\.\d+$/D', $row[$field])) {
+                    $row[$field] = str_replace('.', self::$decimal, $row[$field]);
+                }
+            }
+        }
         return array_map(static fn($field) => $row[$field] ?? '', array_keys($columns));
     }
 
@@ -326,6 +395,29 @@ class Generator
             $keep = $lists['current']['filename'] ?? '';
             foreach (glob($dir . '/*.csv') ?: [] as $file) {
                 if (basename($file) !== $keep && filemtime($file) < $cutoff) {
+                    wp_delete_file($file);
+                }
+            }
+        }
+        self::cleanup_tmp();
+    }
+
+    /**
+     * Removes tmp files older than LOCK_TTL that a killed or hung run (or interrupted publish) left in
+     * the price list folders. Younger ones may belong to a run or an external import still in progress.
+     */
+    public static function cleanup_tmp()
+    {
+        $dirs = [Helper::upload_dir(), Helper::archive_dir()];
+        foreach (array_keys(Helper::stores()) as $store_id) {
+            $dirs[] = Helper::store_dir($store_id);
+            $dirs[] = Helper::store_archive_dir($store_id);
+        }
+        $cutoff = time() - self::LOCK_TTL;
+        foreach ($dirs as $dir) {
+            foreach (glob($dir . '/*.tmp') ?: [] as $file) {
+                $mtime = filemtime($file);
+                if (is_file($file) && $mtime !== false && $mtime < $cutoff) {
                     wp_delete_file($file);
                 }
             }
@@ -416,17 +508,26 @@ class Generator
         $filename = Helper::build_filename($sequence, $now->format('Ymd-His'));
         $archive_path = Helper::archive_dir() . '/' . $filename;
 
+        $max_id = (int) $wpdb->get_var("SELECT MAX(ID) FROM {$wpdb->posts}");
+        // Same fixed SQL fragment as product_ids(); only %d values are interpolated.
+        // phpcs:ignore PluginCheck.Security.DirectDB.UnescapedDBParameter, WordPress.DB.PreparedSQL.NotPrepared
+        $total = (int) $wpdb->get_var($wpdb->prepare("SELECT COUNT(*) FROM {$wpdb->posts} p " . self::purchasable_join_where() . ' AND p.ID <= %d', $max_id));
         $state = [
             'tmp_path'     => $archive_path . '.tmp',
             'archive_path' => $archive_path,
             'filename'     => $filename,
             'cursor'       => 0,
-            'max_id'       => (int) $wpdb->get_var("SELECT MAX(ID) FROM {$wpdb->posts}"),
+            'max_id'       => $max_id,
             'count'        => 0,
+            // Products looked at so far (incl. ones not exported) out of the catalog size, for the Status box.
+            'processed'    => 0,
+            'total'        => $total,
+            'started_at'   => time(),
             'token'        => $token,
             'stores'       => [],
             'format'       => [
                 'delimiter' => Helper::settings()['csv_delimiter'],
+                'decimal'   => Helper::settings()['csv_decimal'],
                 'bom'       => Helper::settings()['csv_bom'],
                 'columns'   => Helper::csv_columns(),
             ],
@@ -559,6 +660,12 @@ class Generator
                         $state['stores'][$store_id]['count']++;
                     }
                 }
+                $state['processed'] = (int) ($state['processed'] ?? 0) + count($ids);
+                if (!self::own_lock($state['token'])) {
+                    // Released as dead (or taken over) while this batch ran: stop without touching the new owner's files.
+                    self::fail(__('This generation was cancelled because it stopped responding.', 'garanlabs-eu-guarantee-notice-durability-labels'));
+                }
+                self::renew_lock($state);
                 if (wp_cache_supports('flush_runtime')) {
                     wp_cache_flush_runtime();
                 }
@@ -633,6 +740,7 @@ class Generator
             return new \WP_Error('eggl_ph_dpl_disabled', __('Digital Price List is not enabled.', 'garanlabs-eu-guarantee-notice-durability-labels'));
         }
 
+        self::recover_stale();
         $state = self::state();
         // A resumed state whose lock was reclaimed (e.g. a stuck continuation past LOCK_TTL, picked
         // up again later by a separate trigger such as the daily schedule) is orphaned: discard it
@@ -658,31 +766,38 @@ class Generator
                 return new \WP_Error('eggl_ph_dpl_failed', $error->getMessage());
             }
         } else {
-            self::renew_lock($state['token']);
+            self::renew_lock($state);
         }
 
         try {
             $done = self::process_batches($state);
-        } catch (\Throwable $error) {
-            self::discard_tmp($state);
-            self::clear_state();
-            self::unlock();
-            Helper::set_status(['error' => $error->getMessage()]);
-            return new \WP_Error('eggl_ph_dpl_failed', $error->getMessage());
-        }
-
-        if (!$done) {
-            if (!function_exists('as_enqueue_async_action')) {
+            if (!$done && !function_exists('as_enqueue_async_action')) {
                 // Action Scheduler is expected (bundled with the required WooCommerce dependency);
                 // fall back to finishing synchronously rather than stalling forever with no chain.
                 while (!$done) {
                     $done = self::process_batches($state);
                 }
-            } else {
-                self::save_state($state);
-                as_enqueue_async_action(self::CONTINUE_HOOK, [], '', false);
-                return ['in_progress' => true, 'rows' => $state['count']];
             }
+        } catch (\Throwable $error) {
+            // A run that lost its lock must not delete or unlock what now belongs to another run.
+            if (self::own_lock($state['token'] ?? null)) {
+                self::discard_tmp($state);
+                self::clear_state();
+                self::unlock();
+                Helper::set_status(['error' => $error->getMessage()]);
+            }
+            return new \WP_Error('eggl_ph_dpl_failed', $error->getMessage());
+        }
+
+        if (!self::own_lock($state['token'] ?? null)) {
+            // Released as dead while the last batch ran; never publish over (or alongside) the new owner.
+            return new \WP_Error('eggl_ph_dpl_failed', __('This generation was cancelled because it stopped responding.', 'garanlabs-eu-guarantee-notice-durability-labels'));
+        }
+
+        if (!$done) {
+            self::save_state($state);
+            as_enqueue_async_action(self::CONTINUE_HOOK, [], '', false);
+            return ['in_progress' => true, 'rows' => $state['count'], 'processed' => $state['processed'] ?? 0, 'total' => $state['total'] ?? 0];
         }
 
         try {

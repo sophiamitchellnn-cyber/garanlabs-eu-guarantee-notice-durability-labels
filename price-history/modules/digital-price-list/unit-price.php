@@ -90,6 +90,17 @@ class Unit_Price
         return $empty;
     }
 
+    /**
+     * The price list's unit column when resolve() found no unit: the configured fallback meta key
+     * (variations inherit the parent's), else the fixed default unit, else ''. Never affects the unit price.
+     */
+    public static function fallback_unit(\WC_Product $product)
+    {
+        $settings = Helper::settings();
+        $unit = self::clean_unit(self::meta($product, $settings['unit_fallback_meta']));
+        return $unit !== '' ? $unit : $settings['unit_fallback_default'];
+    }
+
     /** Reads a meta value from the product, falling back to the parent product for a variation. */
     private static function meta(\WC_Product $product, $key)
     {

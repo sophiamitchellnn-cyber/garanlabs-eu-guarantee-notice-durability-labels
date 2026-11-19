@@ -14,6 +14,15 @@
 
 if (!defined('ABSPATH')) exit;
 
+// A second copy of this plugin under another folder name (e.g. a GitHub ZIP unpacked as "...-main")
+// would redeclare everything and cause a fatal error; stay inactive and say so instead.
+if (defined('EGGL_VERSION')) {
+    add_action('admin_notices', function () {
+        echo '<div class="notice notice-error"><p>' . esc_html__('Two copies of "EU Consumer Rights for WooCommerce" are installed in different plugin folders. Only the first one is running. Deactivate the extra copy and remove its folder (e.g. over FTP/SSH) rather than deleting it in Plugins, so the shared settings are not touched.', 'garanlabs-eu-guarantee-notice-durability-labels') . '</p></div>';
+    });
+    return;
+}
+
 define('EGGL_VERSION', '2.2.5');
 define('EGGL_FILE', __FILE__);
 define('EGGL_PATH', plugin_dir_path(__FILE__));
